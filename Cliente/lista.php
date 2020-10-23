@@ -1,17 +1,15 @@
 <?php
-    require "../conexion/conexion.php";
-    $dep=$_POST['departamento'];
+require_once "../conexion/conexion.php";
+$select = "<label for='municipio'>Municipio: </label><br><select name='Id_Municipio' id='municipio'>";
+if ($_POST['departamento'] != 0) {
+    $dep = $_POST['departamento'];
 
-    $sql="SELECT id_Municipio, nombre FROM tblmunicipios WHERE Id_departamento='$dep'";
-
-    $result=mysqli_query($conn,$sql);
-
-    $cadena="<label> Municipio </label>
-             <select id='municipio' name='municipio'>";
-
-    while ($row=mysqli_fetch_row($result)){
-        $cadena=$cadena.'<option value='.$row[0].'>'.utf8_encode($row[1]).'</option>';
+    $sel = $conn->query("SELECT * FROM tblmunicipios WHERE Id_Departamento='$dep'");
+    while ($row=$sel->fetch_array()) {
+        $select = $select.'<option value="'.$row[0].'">'.$row[3].'</option>';
     }
-
-    echo $cadena."</select>";
+}else{
+    $select = $select.'<option value="ninguno" disabled selected>-Seleccione un Municipio-</option>';          
+}
+echo $select.'</select><br><br>';
 ?>

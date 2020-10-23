@@ -14,8 +14,6 @@
     <form action="insertar_empresa.php" method="post">
         <fieldset>
             <legend>Datos de la Empresa</legend>
-            <label for="nit">NIT de la Empresa: </label><br>
-            <input type="text" name="NIT_Empresa" id="nit" placeholder="Nit de la Empresa" required><br><br>
             <label for="rut">RUT de la Empresa: </label><br>
             <input type="text" name="RUT_Empresa" id="rut" placeholder="Rut de la Empresa" required><br><br>
             <label for="nombre">Nombre de la Empresa: </label><br>

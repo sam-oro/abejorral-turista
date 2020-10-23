@@ -17,14 +17,14 @@
     <main class="col-md-12 text-center main-login">
         <div class="div-login col-md-12 text-center">
             <img src="../../img/logo-color.png" alt="">
-            <form action="">
+            <form action="validar_login.php" method="post">
 
                 <label for="">Correo</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="Usuario">
 
                 <label for="">Contrasenia</label>
-                <input type="passaword" class="form-control">
-
+                <input type="passaword" class="form-control" name="Contraseña">
+                <input type="submit" value="Ingresar" class="form-control">
                 <h3 class="recu-contr"><a href="#">Olvidaste tu contrasenia?</a></h3>
             </form>
         </div>

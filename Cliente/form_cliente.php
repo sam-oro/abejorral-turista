@@ -10,9 +10,14 @@
     <link rel="stylesheet" type="text/css" href="">
     <title>Registro Cliente</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--inportacion boostrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
+<div class="container form-group">
     <h1>Registrar Cliente</h1>
+    
     <form action="ingreso/ingresar_cliente.php" name="add_form" method="post">
         <fieldset class="fieldset">
             <legend>Información del cliente</legend>
@@ -47,7 +52,7 @@
                 ?>
             </select>
             <br><br>
-            <div class="col" id="mun"></div>
+            <div id="mun"></div>
             <fieldset>
                 <legend>Datos de Usuario</legend>
                 <label>Correo</label><br>
@@ -60,8 +65,9 @@
                 <input type="password" name="com-contraseña" id="com-contraseña" class="form-control" placeholder="Confirme la contraseña">
             </fieldset>
         </fieldset>
-        <input type="submit" value="Enviar" class="boton">
+        <input type="submit" value="Enviar" class="btn btn-primary">
     </form>
+</div>
     <script type="text/javascript">
         $(document).ready(function(){
             recargarLista();

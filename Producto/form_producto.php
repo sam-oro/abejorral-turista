@@ -10,6 +10,9 @@
         <link rel="stylesheet" type="text/css" href="">
         <title>Registro Producto</title>
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <!--inportacion boostrap-->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">  
     </head>
     <body>
         <header class="navbar navbar-expand-md navbar-dark" id="nav">
@@ -116,7 +119,7 @@
                                     </div>
                                 </fieldset>
 
-                                <input type="submit" value="Enviar" class="boton ">
+                                <input type="submit" value="Enviar" class="btn btn-primary ">
 
                             </div>
                         

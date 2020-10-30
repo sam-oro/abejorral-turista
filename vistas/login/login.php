@@ -22,10 +22,12 @@
                 <label for="">Correo</label>
                 <input type="text" class="form-control" name="Usuario">
 
-                <label for="">Contrasenia</label>
+                <label for="">Contraseña</label>
                 <input type="passaword" class="form-control" name="Contraseña">
-                <input type="submit" value="Ingresar" class="form-control">
-                <h3 class="recu-contr"><a href="#">Olvidaste tu contrasenia?</a></h3>
+                
+                <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
+
+                <h3 class="recu-contr"><a href="#">Olvidaste tu contraseña?</a></h3>
             </form>
         </div>
     </main>

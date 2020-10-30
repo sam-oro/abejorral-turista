@@ -8,6 +8,13 @@ body {
     font-size: 1rem;
 }
 
+footer {
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
 header {
     margin: 0px;
 }
@@ -71,6 +78,22 @@ p {
 }
 
 
+/* Footer */
+
+.fab {
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+
+.ppp {
+    font-size: 1rem;
+}
+
+.red-soci a {
+    margin: 0 1rem;
+}
+
+
 /* Contendio imagen*/
 
 .bg-img {
@@ -106,7 +129,7 @@ p {
     padding: 5rem;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1200px) {
     .main-login {
         padding: 6rem 13rem 0 13rem;
     }
@@ -114,6 +137,16 @@ p {
     input[type=passaword] {
         width: 100%;
     }
+    .bg-login {
+        padding: 5rem 10rem;
+    }
+    .div-login form {
+        margin: 0rem 5rem;
+    }
+}
+
+.div-login label {
+    margin-top: 2rem;
 }
 
 .div-login {
@@ -123,16 +156,12 @@ p {
     border-radius: 1rem;
 }
 
-.div-login form {
-    margin-top: 2rem;
-}
-
 .div-login img {
     width: 16rem;
 }
 
 .recup-contr {
-    margin: 5rem;
+    margin: 5rem 0;
 }
 
 .div-login h3 {
@@ -150,4 +179,9 @@ p {
 .recu-contr a:hover {
     text-decoration: none;
     color: #E5573E;
+}
+
+.logo-foot img {
+    margin: 2rem;
+    width: 55%;
 }

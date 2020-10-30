@@ -1,5 +1,5 @@
 <?php
-require_once "../conexion/conexion.php";
+require_once "../../conexion/conexion.php";
 
 $Rut = $_POST['RUT_Empresa'];
 $Nombre = $_POST['Nombre'];

@@ -14,23 +14,16 @@ if (mysqli_connect_errno()){
     echo "Fallo al conectar con la base de datos";
     exit();
 }
-?>
-<?php 
+
 $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
 
 while ($row=$sel->fetch_array()) {
-?>
-<?php echo $row[1] ?>  <?php echo $row[2] ?>
-<?php
 
-echo('<iframe width="560" height="315" src="'.$row[2].'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');	
+    echo "Titulo: ".$row[1]."<br>";
+    echo "Ruta: ".$row[2]."<br>";
+
+    echo('<iframe width="560" height="315" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
 }
 ?>
-
-    
 </body>
 </html>
-
-
-
-    

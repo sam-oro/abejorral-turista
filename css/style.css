@@ -185,3 +185,53 @@ p {
     margin: 2rem;
     width: 55%;
 }
+
+/* MAPS */
+
+#map {
+	height: 750px;
+	width: 100%;
+}
+
+/* Form Cliente*/
+
+main{
+    background-color: #fff;
+    padding: 0 5rem;
+}
+.legend{
+    color: #57758d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    width: 270px;
+}
+
+.legend1{
+    color: #57758d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    width: 200px;
+}
+
+.boton{
+    background-color: #5bc1e7;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: .4rem;
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: #57758d;
+}

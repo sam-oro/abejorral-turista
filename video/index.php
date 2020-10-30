@@ -19,8 +19,8 @@ $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
 
 while ($row=$sel->fetch_array()) {
 
-    echo $row[1]."<br>";
-    echo $row[2]."<br>";
+    echo "Titulo: ".$row[1]."<br>";
+    echo "Ruta: ".$row[2]."<br>";
 
     echo('<iframe width="560" height="315" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
 }

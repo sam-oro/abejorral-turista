@@ -34,7 +34,7 @@ if ($_POST['url'] != "") {
         //Vuelve a evaluar si existe el directorio para despues guardar el video en el
         if(file_exists('videos')){
 
-            //Guarda una copia del video seleccionado en el directorio, si se guardo correctamente se realiza la consulta de UPDATE para el video del Index, si no saca un mensaje de alerta
+            //Guarda una copia del video seleccionado en el directorio, si se guardo correctamente se realiza la consulta de UPDATE para el video del Index, si no saca un mensaje
             if (move_uploaded_file($guardado, 'videos/'.$nombv)) {
 
                 //Renombra el video para que tenga el nombre de la pagina en la que va a ir ubicada

@@ -18,7 +18,7 @@
             <h1>Agregar Empresa</h1>
             </div>
             <div>
-            <form action="insertar_empresa.php" method="post">
+            <form action="insertar_empresa.php" method="POST">
                 <fieldset>
                     <legend class="legend">Datos de la Empresa</legend>
                     <label for="rut">RUT de la Empresa: </label><br>

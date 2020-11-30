@@ -16,11 +16,11 @@ if ($_POST['url'] != "") {
 
     if ($up) {
         echo "<script> 	alert('Video actualizado correctamente');</script>";
-        echo "<script> 	location.href='../../index.php'; </script>";
+        echo "<script> 	location.href='../../vistas/ecotour/ecotour.php'; </script>";
     }
     else{
         echo "<script> 	alert('No se pudo actaulizar el video');</script>";
-        echo "<script> 	location.href='../../index.php'; </script>";
+        echo "<script> 	location.href='../../vistas/ecotour/ecotour.php'; </script>";
     }
 }else{
     //Si URL esta vacio se toman los datos que traiga del selector de ficheros
@@ -48,11 +48,11 @@ if ($_POST['url'] != "") {
 
                 if ($up) {
                     echo "<script> 	alert('Video actualizado correctamente');</script>";
-                    echo "<script> 	location.href='../../index.php'; </script>";
+                    echo "<script> 	location.href='../../vistas/ecotour/ecotour.php'; </script>";
                 }
                 else{
                     echo "<script> 	alert('No se pudo actaulizar el video');</script>";
-                    echo "<script> 	location.href='../../index.php'; </script>";
+                    echo "<script> 	location.href='../../vistas/ecotour/ecotour.php'; </script>";
                 }
             }else{
                 echo "Archivo no se pudo guardar ya sea por el tamaño o porque la extenxion no es .mp4";
@@ -68,11 +68,11 @@ if ($_POST['url'] != "") {
 
             if ($up) {
                 echo "<script> 	alert('Video actualizado correctamente');</script>";
-                echo "<script> 	location.href='../../index.php'; </script>";
+                echo "<script> 	location.href='../../vistas/ecotour/ecotour.php'; </script>";
             }
             else{
                 echo "<script> 	alert('No se pudo actaulizar el video');</script>";
-                echo "<script> 	location.href='../../index.php'; </script>";
+                echo "<script> 	location.href='../../vistas/ecotour/ecotour.php'; </script>";
             }
         }else{
             echo "Archivo no se pudo guardar ya sea por el tamaño o porque la extenxion no es .mp4";

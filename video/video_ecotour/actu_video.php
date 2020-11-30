@@ -1,5 +1,5 @@
 <?php
-include '../conexion/conexion.php';
+include '../../conexion/conexion.php';
 
 $nombre = $_POST['nombre'];
 
@@ -12,13 +12,15 @@ if ($_POST['url'] != "") {
     $varPHP = str_replace('watch?v=', 'embed/', $url);
 
     //Se realiza la consulta de UPDATE para el video del Index
-    $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='1'");
+    $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='2'");
 
     if ($up) {
-        echo "<script> 	location.href='form_video.php'; </script>";
+        echo "<script> 	alert('Video actualizado correctamente');</script>";
+        echo "<script> 	location.href='../../index.php'; </script>";
     }
     else{
-        echo "<script> 	location.href='form_video.php';</script>";
+        echo "<script> 	alert('No se pudo actaulizar el video');</script>";
+        echo "<script> 	location.href='../../index.php'; </script>";
     }
 }else{
     //Si URL esta vacio se toman los datos que traiga del selector de ficheros
@@ -34,21 +36,23 @@ if ($_POST['url'] != "") {
         //Vuelve a evaluar si existe el directorio para despues guardar el video en el
         if(file_exists('videos')){
 
-            //Guarda una copia del video seleccionado en el directorio, si se guardo correctamente se realiza la consulta de UPDATE para el video del Index, si no saca un mensaje
+            //Guarda una copia del video seleccionado en el directorio, si se guardo correctamente se realiza la consulta de UPDATE para el video, si no saca un mensaje
             if (move_uploaded_file($guardado, 'videos/'.$nombv)) {
 
                 //Renombra el video para que tenga el nombre de la pagina en la que va a ir ubicada
-                rename( 'videos/'.$nombv, 'videos/index.mp4');
+                rename( 'videos/'.$nombv, 'videos/ecotour.mp4');
                 echo "Archivo Guardado con exito";
 
-                $varPHP="videos/index.mp4";
-                $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='1'");
+                $varPHP="videos/ecotour.mp4";
+                $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='2'");
 
                 if ($up) {
-                    echo "<script> 	location.href='form_video.php'; </script>";
+                    echo "<script> 	alert('Video actualizado correctamente');</script>";
+                    echo "<script> 	location.href='../../index.php'; </script>";
                 }
                 else{
-                    echo "<script> 	location.href='form_video.php';</script>";
+                    echo "<script> 	alert('No se pudo actaulizar el video');</script>";
+                    echo "<script> 	location.href='../../index.php'; </script>";
                 }
             }else{
                 echo "Archivo no se pudo guardar ya sea por el tamaño o porque la extenxion no es .mp4";
@@ -56,17 +60,19 @@ if ($_POST['url'] != "") {
         }
     }else{
         if(move_uploaded_file($guardado, 'videos/'.$nombv)) {
-            rename( 'videos/'.$nombv, 'videos/index.mp4');
+            rename( 'videos/'.$nombv, 'videos/ecotour.mp4');
             echo "Archivo Guardado con exito";
 
-            $varPHP="videos/index.mp4";
-            $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='1'");
+            $varPHP="videos/ecotour.mp4";
+            $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='2'");
 
             if ($up) {
-                echo "<script> 	location.href='form_video.php'; </script>";
+                echo "<script> 	alert('Video actualizado correctamente');</script>";
+                echo "<script> 	location.href='../../index.php'; </script>";
             }
             else{
-                echo "<script> 	location.href='form_video.php';</script>";
+                echo "<script> 	alert('No se pudo actaulizar el video');</script>";
+                echo "<script> 	location.href='../../index.php'; </script>";
             }
         }else{
             echo "Archivo no se pudo guardar ya sea por el tamaño o porque la extenxion no es .mp4";

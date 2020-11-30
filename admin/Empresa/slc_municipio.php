@@ -1,6 +1,6 @@
 <?php
 require_once "../../conexion/conexion.php";
-$select = "<label for='municipio'>Municipio: </label><br><select name='Id_Municipio' id='municipio'>";
+$select = "<label class='label-frm' for='municipio'>Municipio: </label><br><select class='form-control' name='Id_Municipio' id='municipio'>";
 if ($_POST['departamento'] != 0) {
     $dep = $_POST['departamento'];
 

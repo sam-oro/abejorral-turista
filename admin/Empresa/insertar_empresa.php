@@ -6,11 +6,11 @@ $Nombre = $_POST['Nombre'];
 $Cel = $_POST['Cel'];
 $Telefono = $_POST['Telefono'];
 $Correo = $_POST['Correo'];
-//$Id_Municipio = $_POST['Id_Municipio'];
+$Id_Municipio = $_POST['Id_Municipio'];
 $Direccion = $_POST['Direccion'];
 $Ubicacion = $_POST['Ubicacion'];
 
-$sql = $conn->query("INSERT INTO tblempresa (RUT_Empresa,Nombre,Cel,Telefono,Correo,Id_Municipio,Direccion,Ubicacion) VALUES ('$Rut', '$Nombre', '$Cel', '$Telefono', '$Correo', 22 , '$Direccion', '$Ubicacion')");
+$sql = $conn->query("INSERT INTO tblempresa (RUT_Empresa,Nombre,Cel,Telefono,Correo,Id_Municipio,Direccion,Ubicacion) VALUES ('$Rut', '$Nombre', '$Cel', '$Telefono', '$Correo', '$Id_Municipio' , '$Direccion', '$Ubicacion')");
 
 
 if ($sql) {

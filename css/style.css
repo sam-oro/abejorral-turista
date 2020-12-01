@@ -3,9 +3,22 @@
     margin: 0;
 }
 
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 body {
-    /* font-family: 'Roboto Condensed', sans-serif; */
     font-size: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
 }
 
 footer {
@@ -15,102 +28,129 @@ footer {
     width: 100%;
 }
 
-header {
-    margin: 0px;
-}
 
-.container {
+/* Recursos */
+
+.contenedor {
     margin: 0px;
     padding: 0px;
 }
 
-.row {
-    padding: 0;
-    margin: 0;
+.btn-color {
+    background-color: #99C355;
+    color: #ffffff;
+    border: none;
+    font-size: 1.3rem;
+    padding: 0.3rem 2rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
-p {
-    font-size: 2rem;
-}
-
-
-/* Header */
-
-
-/* .navheader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-} */
-
-.nav-prin {
-    padding-right: 9rem;
-}
-
-.bg-header {
-    background-color: #E5573E;
-}
-
-.log-home {
-    padding: 1rem;
-}
-
-.log-home img {
-    max-width: 10rem;
-}
-
-.navbar a {
+.btn-color:hover {
+    cursor: pointer;
+    background-color: #F97838;
     color: #ffffff;
 }
 
-.navbar a:hover {
-    color: #FA7838;
-}
-
-.dropdown-menu {
-    background-color: #FA7838;
-}
-
-.collapse {
-    justify-content: right;
-    display: block;
+.btn-invi {
+    background-color: rgba(0, 0, 0, 0);
+    color: #4d4d4d;
+    border: none;
+    border-radius: 0.5rem;
 }
 
 
 /* Footer */
 
-.fab {
-    margin-top: 1rem;
-    font-size: 3rem;
+.footer {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #f3f3f3;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 2rem;
 }
 
-.ppp {
-    font-size: 1rem;
+.redes i {
+    color: #4b4b4b;
+    font-size: 1.5rem;
 }
 
-.red-soci a {
-    margin: 0 1rem;
+.redes i:hover {
+    color: #99C355;
+    font-size: 1.8rem;
+}
+
+.contach {
+    color: #4b4b4b;
+    text-decoration: none;
+}
+
+.contach:hover {
+    color: #99C355;
+    text-decoration: none;
+}
+
+.copy {
+    color: #4b4b4b;
 }
 
 
-/* Contendio imagen*/
+/* index */
 
-.bg-img {
+.bg-index {
     padding-top: 8rem;
     background-image: url(../img/Abejorral-Ant1.JPG);
-    height: 500px;
-    opacity: 0.9;
+    height: 60vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.bg-img h1 {
+.bg-index h1 {
     color: #ffffff;
     text-shadow: 4px 4px 10px #000000;
     text-align: center;
     font-size: 5rem;
+    filter: brightness(100%);
+    text-transform: uppercase;
+}
+
+.iconos-index a {
+    text-decoration: none;
+}
+
+.iconos-index h3 {
+    color: #F97838;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.iconos-index h3:hover {
+    color: #99C355;
+}
+
+.iconos-index img {
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .iconos-index img {
+        padding: 5rem;
+    }
+    .iconos-index h3 {
+        margin-top: -4rem;
+        font-size: 1.8rem;
+    }
+    .bg-index h1 {
+        font-size: 3rem;
+    }
 }
 
 
@@ -118,13 +158,72 @@ p {
 
 .bg-login {
     background-image: url(../img/bg-login.jpg);
-    height: 100vh;
+    min-height: 100vh;
     opacity: 0.9;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 6rem 10rem;
 }
 
+.login {
+    background-color: rgba(255, 255, 255, 0.60);
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.login img {
+    width: 35%;
+}
+
+.login h3 {
+    line-height: 1.2rem;
+}
+
+@media only screen and (max-width: 1050px) {
+    .bg-login {
+        padding: 3rem 5rem;
+    }
+    .login {
+        padding: 2rem 4rem;
+    }
+    .login img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .bg-login {
+        padding: 1.5rem 2.5rem;
+    }
+    .login {
+        padding: 1rem 2rem;
+    }
+    .login img {
+        width: 80%;
+    }
+}
+
+input {
+    width: 10px;
+}
+
+.recu-contr a {
+    text-decoration: none;
+    color: #FA7838;
+    font-size: 1rem;
+}
+
+.recu-contr a:hover {
+    color: #99C355;
+    font-size: 1.05rem;
+}
+
+
+/* 
 .main-login {
     padding: 5rem;
 }
@@ -171,10 +270,7 @@ p {
     color: #FA7838;
 }
 
-.recu-contr a {
-    text-decoration: none;
-    color: #FA7838;
-}
+
 
 .recu-contr a:hover {
     text-decoration: none;
@@ -184,22 +280,25 @@ p {
 .logo-foot img {
     margin: 2rem;
     width: 55%;
-}
+} */
+
 
 /* MAPS */
 
 #map {
-	height: 750px;
-	width: 100%;
+    height: 750px;
+    width: 100%;
 }
+
 
 /* Forms */
 
-main{
+main {
     background-color: #fff;
     padding: 0 5rem;
 }
-.legend{
+
+.legend {
     color: #57758d;
     font-size: 1.5rem;
     font-weight: bold;
@@ -208,7 +307,7 @@ main{
     width: 3500px;
 }
 
-.legend1{
+.legend1 {
     color: #57758d;
     font-size: 1.5rem;
     font-weight: bold;
@@ -217,7 +316,7 @@ main{
     width: 300px;
 }
 
-.label-frm{
+.label-frm {
     color: #fa7838;
     font-size: 1rem;
     text-align: left;
@@ -225,25 +324,6 @@ main{
     width: 100%;
 }
 
-textarea{
+textarea {
     width: 100%;
-}
-
-.boton{
-    background-color: #5bc1e7;
-    color: #ffffff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1.3rem;
-    padding: 1rem 3rem;
-    margin-top: 1rem;
-    display: inline-block;
-    text-align: center;
-    border: none;
-    border-radius: .4rem;
-}
-
-.boton:hover{
-    cursor: pointer;
-    background-color: #57758d;
 }

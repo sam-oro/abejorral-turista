@@ -20,10 +20,10 @@
             <form action="validar_login.php" method="post">
 
                 <label for="">Correo</label>
-                <input type="text" class="form-control" name="Usuario">
+                <input type="text" class="otro form-control" name="Usuario">
 
                 <label for="">Contraseña</label>
-                <input type="passaword" class="form-control" name="Contraseña">
+                <input type="passaword" class="otro form-control" name="Contraseña">
                 
                 <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
 

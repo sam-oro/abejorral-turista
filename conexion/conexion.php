@@ -1,8 +1,12 @@
 <?php
-    $usuario = "root";
-    $contrasena = "";
-    $servidor = "localhost";
-    $basededatos = "abejorral";
 
-    $conn = mysqli_connect( $servidor, $usuario, $contrasena, $basededatos) or die ("No se ha podido conectar al servidor de Base de datos");
+    //Los otros jaja
+// $conn = new mysqli('localhost','root','','car_wash');
+// $URL = "http://localhost/GIT/eco-car-wash/";
+
+
+    //Samir
+$conn = new mysqli('localhost','root','','abejorral','33065');
+$URL = "http://localhost:8080/abejorral/";
+
 ?>

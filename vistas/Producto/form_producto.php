@@ -70,7 +70,7 @@
                                     
                                                     while ($row=$sel->fetch_array()) {
                                                 ?>
-                                                    <option value="<?php echo $row[0] ?>"> <?php echo $row[0] ?></option>
+                                                    <option value="<?php echo $row[0] ?>"> <?php echo $row[1] ?></option>
                                                 <?php	
                                                 }
                                                 ?>

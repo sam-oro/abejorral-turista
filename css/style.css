@@ -21,11 +21,13 @@ p {
     font-weight: 300;
 }
 
-footer {
-    position: relative;
-    left: 0px;
-    bottom: 0px;
+textarea {
     width: 100%;
+}
+
+main {
+    background-color: #fff;
+    padding: 0 5rem;
 }
 
 
@@ -57,6 +59,36 @@ footer {
     color: #4d4d4d;
     border: none;
     border-radius: 0.5rem;
+}
+
+.sesiones {
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sesiones h2 {
+    color: #fff;
+    text-shadow: 4px 4px 10px #000000;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.sesiones h2:hover {
+    color: #FA7838;
+}
+
+.sesiones a {
+    text-decoration: none;
 }
 
 
@@ -223,66 +255,6 @@ input {
 }
 
 
-/* 
-.main-login {
-    padding: 5rem;
-}
-
-@media only screen and (min-width: 1200px) {
-    .main-login {
-        padding: 6rem 13rem 0 13rem;
-    }
-    input[type=text],
-    input[type=passaword] {
-        width: 100%;
-    }
-    .bg-login {
-        padding: 5rem 10rem;
-    }
-    .div-login form {
-        margin: 0rem 5rem;
-    }
-}
-
-.div-login label {
-    margin-top: 2rem;
-}
-
-.div-login {
-    background-color: #ffffff2a;
-    text-align: center;
-    padding: 1.3rem;
-    border-radius: 1rem;
-}
-
-.div-login img {
-    width: 16rem;
-}
-
-.recup-contr {
-    margin: 5rem 0;
-}
-
-.div-login h3 {
-    font-size: 1rem;
-    text-decoration: none;
-    margin: 2rem 0 1rem 0;
-    color: #FA7838;
-}
-
-
-
-.recu-contr a:hover {
-    text-decoration: none;
-    color: #E5573E;
-}
-
-.logo-foot img {
-    margin: 2rem;
-    width: 55%;
-} */
-
-
 /* MAPS */
 
 #map {
@@ -291,12 +263,7 @@ input {
 }
 
 
-/* Forms */
-
-main {
-    background-color: #fff;
-    padding: 0 5rem;
-}
+/* Formularios */
 
 .legend {
     color: #57758d;
@@ -321,9 +288,5 @@ main {
     font-size: 1rem;
     text-align: left;
     border: none;
-    width: 100%;
-}
-
-textarea {
     width: 100%;
 }

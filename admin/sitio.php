@@ -1,3 +1,6 @@
+<?php
+include '../conexion/conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +38,7 @@
                     <a href="informes.php" class="list-group-item list-group-item-action bg-light">Informes</a>
                     <a href="clientes.php" class="list-group-item list-group-item-action bg-light">Clientes</a>
                     <a href="Empresas.php" class="list-group-item list-group-item-action bg-light">Empresas</a>
-                    <a href="Porductos.php" class="list-group-item list-group-item-action bg-light">Productos</a>
+                    <a href="Productos.php" class="list-group-item list-group-item-action bg-light">Productos</a>
                     <a href="Preguntas.php" class="list-group-item list-group-item-action bg-light">Preguntas</a>
                     <a href="sitio.php" class="list-group-item list-group-item-action bg-light">Sitio Turistico</a>
                 </div>
@@ -92,6 +95,39 @@
 
                 <div class="container-fluid">
                     <h1 class="mt-4">Sitio Turistico</h1>
+                        <form action="controlador/insertar_sitio.php" method="POST" name="add_form">
+                            <div class="form-group">
+                                <label> Nombre del sitio Turistico </label>
+                                <input type="text" id="nombre" name="nombre" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Latitud</label>
+                                <input type="text" id="latitud" name="latitud" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Longitud</label>
+                                <input type="text" id="longitud" name="longitud" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label> Descripcion del sitio </label>
+                                <textarea class="form-control rounded-0" id="descripcion" name="descripcion" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label> Servicios que Ofrece </label>
+                                <input type="text" id="servicios" name="servicios" class="form-control" requiered>
+                            </div>
+                            <div class="form-group">
+                                <label> Horario disponible </label>
+                                <input type="time" id="horario" name="horario" class="form-control" requiered>
+                            </div>
+                            <div class="form-group text-center mb-5">
+                                <button type="submit" class="btn btn-primary">Registrar</button>
+                            </div>
+                        
+                        
+                        
+                        
+                        </form>
                     
 
 

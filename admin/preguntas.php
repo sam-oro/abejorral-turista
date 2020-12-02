@@ -91,19 +91,18 @@
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="mt-4">Seccion de Preguntas Frecuentes</h1>
-                    
+                    <h1 class="mt-4">Sección de preguntas frecuentes</h1>
                     <form action="controlador/insertar_pregunta.php" name="add_form" method="post">
                         <div class="form-group">
-                            <label>Pregunta </label>
-                                <input type="text" id="pregunta" name="pregunta" class="form-control" placeholder="Como funciona la pagina?" required>
+                            <label>Pregunta:</label>
+                                <input type="text" id="pregunta" name="pregunta" class="form-control" placeholder="Ejemplo: ¿Cómo funciona la página?" required>
                         </div>
                         <div class="form-group">
-                            <label> Respuesta de la pregunta </label>
-                                <textarea id="respuesta" name="respuesta" class="form-control" cols="30" rows="10" placeholder="respuesta de la pregunta :v" required></textarea>
+                            <label> Descripción:</label>
+                                <textarea id="respuesta" name="respuesta" class="form-control" cols="30" rows="10" placeholder="Respuesta de la pregunta" required></textarea>
                         </div>
                         <div class="form-group text-center mb-5">
-                            <button type="submit" class="btn btn-color">Registrar</button>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
                         </div>
                     </form>
 

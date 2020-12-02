@@ -140,14 +140,6 @@ include '../conexion/conexion.php';
         </div>
     </div>
 
-                    
-
-
-
-
-
-
-
             </div>
             <!-- /#page-content-wrapper -->
 

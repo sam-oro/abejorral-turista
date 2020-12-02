@@ -1,3 +1,8 @@
+<?php
+
+include '../conexion/conexion.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,6 +98,49 @@
 
                 <div class="container-fluid">
                     <h1 class="mt-4">Productos</h1>
+
+                    <div class="mt-4">
+                        <table class="table table-hover">
+                            <thead class="thead">
+                                <th>Codigo</th>
+                                <th>Producto</th>
+                                <th>peso</th>
+                                <th>cantidad</th>
+                                <th>valor</th>
+                                <th>solicitud</th>
+                                <th>Empresa</th>
+                                <th>proveedor</th>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <?php 
+                            $sel = $conn ->query("SELECT `tblproducto`.`Cod_Producto`, `tblproducto`.`Nom_Producto`, `tblproducto`.`Peso_Producto`, `tblproducto`.`Cantidad`, `tblproducto`.`Valor`, `tblsolicitud`.`Tipo_Solicitud` AS `Nom_Solicitud`, `tblempresa`.`Nombre` AS `Empresa`, `tblproveedor_natural`.`Nombre` AS `Proveedor`
+                            FROM `tblproducto` 
+                                LEFT JOIN `tblsolicitud` ON `tblproducto`.`Cod_Solicitud` = `tblsolicitud`.`Cod_Solicitud` 
+                                LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa` 
+                                LEFT JOIN `tblproveedor_natural` ON `tblproducto`.`Cod_Prove` = `tblproveedor_natural`.`Cod_Prove`");
+                            while ($fila = $sel -> fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $fila['Cod_Producto'] ?></td>
+                                <td><?php echo $fila['Nom_Producto'] ?></td>
+                                <td><?php echo $fila['Peso_Producto'] ?></td>
+                                <td><?php echo $fila['Cantidad'] ?></td>
+                                <td><?php echo $fila['Valor'] ?></td>
+                                <td><?php echo $fila['Nom_Solicitud'] ?></td>
+                                <td><?php echo $fila['Empresa'] ?></td>
+                                <td><?php echo $fila['Proveedor'] ?></td>
+                                <td>
+                                <a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a>
+                            </td>
+                            <td>
+                                <a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a>
+                            </td>
+                            </tr>
+                            <?php } ?>
+                        </table>
+                </div>
+            </div>
                     
 
 

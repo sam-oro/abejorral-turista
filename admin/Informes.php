@@ -97,6 +97,17 @@
 
                 <h2>aqui van los informes</h2>
 
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        escoja un informe aqui
+                    </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Cantidad de empresas inscritas</a>
+                            <a class="dropdown-item" href="#">Catidad de productos por empresa</a>
+                            <a class="dropdown-item" href="#">etc</a>
+                        </div>
+                </div>
+
 
 
 

@@ -2,7 +2,7 @@
 
     //Los otros jaja
 $conn = new mysqli('localhost','root','','abejorral');
-$URL = "http://localhost/abejorral-turista/";
+$URL = "http://localhost/GIT/abejorral-turista/";
 
 
     //Samir

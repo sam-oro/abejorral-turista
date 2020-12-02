@@ -55,7 +55,7 @@
                 </div>
                 <div class="card">
                     <i class="fas fa-phone-alt"></i>
-                    <h2 class="titulo">Telefono</h2>
+                    <h2 class="titulo">Teléfono</h2>
                     <p><?php echo $row[3] ?></p>
                 </div>
                 <div class="card">

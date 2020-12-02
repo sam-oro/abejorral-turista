@@ -22,6 +22,8 @@ include '../conexion/conexion.php';
         <!-- Custom styles for this template -->
         <link href="simple-sidebar.css" rel="stylesheet">
 
+        <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
+
     </head>
 
     <body>
@@ -47,7 +49,7 @@ include '../conexion/conexion.php';
             <div id="page-content-wrapper">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <button class="btn btn-primary toggled" id="menu-toggle">Ocultar/mostar</button>
+                    <button class="btn btn-primary toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
                     <button
                         class="navbar-toggler"
@@ -115,7 +117,7 @@ include '../conexion/conexion.php';
                     <th></th>
                 </thead>
                 <?php 
-                $sel = $conn ->query("SELECT `tblempresa`.`Cod_Empresa`, `tblempresa`.`RUT_Empresa`, `tblempresa`.`Nombre`, `tblempresa`.`Cel`, `tblempresa`.`Telefono`, `tblempresa`.`Correo`, `tblmunicipios`.`nombre` AS `Municipio`, `tbldepartamentos`.`nombre` AS `Departamento`, `tblempresa`.`Direccion`, `tblempresa`.`Latitud`, `tblempresa`.`Longitud` FROM `tblempresa` LEFT JOIN `tblmunicipios` ON `tblempresa`.`Id_Municipio` = `tblmunicipios`.`id_Municipio` LEFT JOIN `tbldepartamentos` ON `tblmunicipios`.`Id_Departamento` = `tbldepartamentos`.`Id_Departamento");
+                $sel = $conn ->query("SELECT `tblempresa`.`Cod_Empresa`, `tblempresa`.`RUT_Empresa`, `tblempresa`.`Nombre`, `tblempresa`.`Cel`, `tblempresa`.`Telefono`, `tblempresa`.`Correo`, `tblmunicipios`.`nombre` AS `Municipio`, `tbldepartamentos`.`nombre` AS `Departamento`, `tblempresa`.`Direccion`, `tblempresa`.`Latitud`, `tblempresa`.`Longitud` FROM `tblempresa` LEFT JOIN `tblmunicipios` ON `tblempresa`.`Id_Municipio` = `tblmunicipios`.`id_Municipio` LEFT JOIN `tbldepartamentos` ON `tblmunicipios`.`Id_Departamento` = `tbldepartamentos`.`Id_Departamento`");
                 while ($fila = $sel -> fetch_assoc()) {
                 ?>
                 <tr>

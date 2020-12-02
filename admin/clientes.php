@@ -1,3 +1,9 @@
+<?php
+
+include '../conexion./conexion.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +24,8 @@
 
         <!-- Custom styles for this template -->
         <link href="simple-sidebar.css" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
     </head>
 
@@ -44,7 +52,7 @@
             <div id="page-content-wrapper">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <button class="btn btn-primary toggled" id="menu-toggle">Ocultar/mostar</button>
+                    <button class="btn btn-primary toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
                     <button
                         class="navbar-toggler"
@@ -91,7 +99,45 @@
                 <div class="container-fluid">
                     <h1 class="mt-4">Listas de los Clientes registrados</h1>
                     
-
+                    <div class="mt-4">
+            <table class="table table-hover">
+                <thead class="thead">
+                    <th>identificacion</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha nacimiento</th>
+                    <th>Celular</th>
+                    <th>Municipio</th>
+                    <th>Departamento</th>
+                    <th>Direccion</th>
+                    <th>Correo</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <?php 
+                $sel = $conn ->query("SELECT `tblcliente`.`Id_Cliente`, `tblcliente`.`Nombre`, `tblcliente`.`Apellidos`, `tblcliente`.`Fecha_Nacimiento`, `tblcliente`.`Cel`, `tblmunicipios`.`nombre` AS `Municipio`, `tbldepartamentos`.`nombre` AS `Departamento`, `tblcliente`.`Direccion`, `tblcliente`.`Correo`
+                FROM `tblcliente` 
+                    LEFT JOIN `tblmunicipios` ON `tblcliente`.`id_Municipio` = `tblmunicipios`.`id_Municipio` 
+                    LEFT JOIN `tbldepartamentos` ON `tblmunicipios`.`Id_Departamento` = `tbldepartamentos`.`Id_Departamento`;");
+                while ($fila = $sel -> fetch_assoc()) {
+                ?>
+                <tr>
+                    <td><?php echo $fila['Id_Cliente'] ?></td>
+                    <td><?php echo $fila['Nombre'] ?></td>
+                    <td><?php echo $fila['Apellidos'] ?></td>
+                    <td><?php echo $fila['Fecha_Nacimiento'] ?></td>
+                    <td><?php echo $fila['Cel'] ?></td>
+                    <td><?php echo $fila['Municipio'] ?></td>
+                    <td><?php echo $fila['Departamento'] ?></td>
+                    <td><?php echo $fila['Direccion'] ?></td>
+                    <td><?php echo $fila['Correo'] ?></td>
+                    <td><a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a></td>
+                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a></td>
+                </tr>
+                <?php } ?>
+            </table>
+        </div>
+    </div>
 
 
 

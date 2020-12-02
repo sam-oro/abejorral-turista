@@ -1,8 +1,8 @@
 <?php
 
     //Los otros jaja
- $conn = new mysqli('localhost','root','','abejorral');
- $URL = "http://localhost/GIT/eco-car-wash/";
+$conn = new mysqli('localhost','root','','abejorral');
+$URL = "http://localhost/abejorral-turista/";
 
 
     //Samir

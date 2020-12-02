@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--importacion boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" href="img/icono-pag.png">
 
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 
-<body class="bg-login">
+<body>
 
-    <main class="col-md-12 text-center main-login">
-        <div class="div-login col-md-12 text-center">
-            <img src="../../img/logo-color.png" alt="">
+    <section class="bg-login">
+
+        <div class="login col-12">
+
             <form action="validar_login.php" method="post">
 
-                <label for="">Correo</label>
-                <input type="text" class="otro form-control" name="Usuario">
+                <div class="text-center">
+                    <img src="../../img/logo-color.png">
+                </div>
 
-                <label for="">Contraseña</label>
-                <input type="passaword" class="otro form-control" name="Contraseña">
-                
-                <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
-                
+                <div class="form-group mt-4">
+                    <label for="">Correo</label>
+                    <input type="text" class="form-control" name="Usuario" placeholder="Ingresa tu correo">
+                </div>
 
-                <h3 class="recu-contr"><a href="#">Olvidaste tu contraseña?</a></h3>
+                <div class="form-group">
+                    <label for="">Contraseña</label>
+                    <input type="passaword" class="form-control" name="Contraseña" placeholder="Ingresa tu contraseña">
+                </div>
+
+
+                <div class="text-center">
+                    <h3 class="recu-contr"><a href="#">¿Olvidaste tu contraseña?</a></h3>
+                    <button type="submit" class="btn btn-color mt-3">Ingresar</button>
+                    <button type="button" class="btn btn-color mt-3">Registrarse</button>
+                </div>
             </form>
+
         </div>
-    </main>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

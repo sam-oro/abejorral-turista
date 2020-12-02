@@ -26,6 +26,7 @@
                 <input type="passaword" class="otro form-control" name="Contraseña">
                 
                 <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
+                
 
                 <h3 class="recu-contr"><a href="#">Olvidaste tu contraseña?</a></h3>
             </form>

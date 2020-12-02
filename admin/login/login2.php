@@ -46,6 +46,7 @@
                 <div class="text-center">
                     <h3 class="recu-contr"><a href="#">¿Olvidaste tu contraseña?</a></h3>
                     <button type="submit" class="btn btn-color mt-3">Ingresar</button>
+                    <button type="submit" class="btn btn-color mt-3">Registrarse</button>
                 </div>
             </form>
 

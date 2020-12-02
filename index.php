@@ -1,3 +1,6 @@
+<?php
+    include "conexion/conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,22 +10,21 @@
     <title>Document</title>
 
     <!--importacion boostrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
     <link rel="icon" type="image/png" href="img/icono-pag.png">
 
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-nav">
         <div class="col-sm-3 text-center">
             <a class="navbar-brand" href="<?php echo $URL ?>index.php">
@@ -30,9 +32,7 @@
             </a>
         </div>
 
-        <button class="navbar-toggler col-sm-3 ml-auto" type="button" data-toggle="collapse"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler col-sm-3 ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -47,7 +47,7 @@
                     <a class="nav-link" href="#">Informate</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Eco Turismo</a>
+                    <a class="nav-link" href="<?php echo $URL; ?>vistas/ecotour/ecotour.php">Eco Turismo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Nuestros Productos</a>
@@ -56,19 +56,18 @@
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-invi dropdown-toggle" data-toggle="dropdown"
-                        data-display="static" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-invi dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
                         Perfil
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                        <a href="<?php echo $URL; ?>Cliente/mi_perfil/mi_perfil.php"><button class="dropdown-item"
+                        <a href="<?php echo $URL; ?>vistasCliente/mi_perfil/mi_perfil.php"><button class="dropdown-item"
                                 type="button">Mi Perfil</button></a>
-                        <a href="<?php echo $URL; ?>Cliente/mi_vehiculo/mi_vehiculo.php"><button class="dropdown-item"
+                        <a href="<?php echo $URL; ?>vistasCliente/mi_vehiculo/mi_vehiculo.php"><button class="dropdown-item"
                                 type="button">Mi Vehículo</button></a>
-                        <a href="<?php echo $URL; ?>/Cliente/reservas/reservas.php"><button class="dropdown-item"
+                        <a href="<?php echo $URL; ?>vistas/Cliente/reservas/reservas.php"><button class="dropdown-item"
                                 type="button">Reservas</button></a>
                         <div class="dropdown-divider"></div>
-                        <a href="<?php echo $URL; ?>/Cliente/login/cerrar_sesion.php"><button class="dropdown-item"
+                        <a href="<?php echo $URL; ?>vistas/Cliente/login/cerrar_sesion.php"><button class="dropdown-item"
                                 type="button">Cerrar Sesión</button></a>
                     </div>
                 </div>
@@ -76,57 +75,8 @@
         </div>
     </nav>
 
-    <!--<header class="navheader">
-        <div class="container col-md-12 col-sm-6 bg-header">
-            <div class="row">
-                <div class="col-md-3 col-sm-0 log-home">
-                    <a href="#"> <img src="img/logotipo.png" alt=""> </a>
-                </div>
-                <div class="col-md-9 col-sm-3 mr-0 p-0 navbar-dark">
-                    <nav class="nav-prin navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Inicio<span class="sr-only"></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Nuestro Municipio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Informate</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Eco Turismo</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Nuestros Productos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contacto</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Contacto</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div> 
-    </header>-->
-
-    <section class="bg-img">
-        <div class="tex-inic">
-            <h1 class="">Abejorral Turistico</h1>
-        </div>
+    <section class="bg-index">
+        <h1>Bienvenidos</h1>
     </section>
 
     <section>
@@ -180,47 +130,64 @@
         </div>
     </section>
 
+    <section>
+        <div class="container my-3">
+            <div class="row iconos-index col-12">
+                <div class="col-12 col-md-3 text-center">
+                    <a href="">
+                        <img src="img/iconos-02.svg">
+                        <h3>Eco Turismo</h3>
+                    </a>
+                </div>
 
-    <footer class="footer bg-dark text-white py-4">
+                <div class="col-12 col-md-3 text-center">
+                    <a href="">
+                        <img src="img/iconos-03.svg">
+                        <h3>Sitios para visitar</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-3 text-center">
+                    <a href="">
+                        <img src="img/iconos-01.svg">
+                        <h3>Rutas históricas</h3>
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-3 text-center">
+                    <a href="">
+                        <img src="img/iconos-04.svg">
+                        <h3>Preguntas frecuentes</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer mt-4">
         <div class="container">
-            <nav class="row col-12 justify-content-center">
-                <ul class="col-sm-12 col-md-4 col-lg-4 list-unstyled">
-                    <li class="d-flex align-items-center justify-content-center mb-3 mb-md-0">
-                        <img src="img/logo-bl.png" alt="">
-                    </li>
-                </ul>
-
-                <ul class="col-sm-12 col-md-4 col-lg-4 list-unstyled">
-                    <li class="font-weigth-bold text-uppercase">Resourse</li>
-                    <li class="d-flex align-items-center justify-content-between">
-                        <p class="ppp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, odit voluptatibus
-                            mollitia sapiente in incidunt quam, ratione ipsam repellendus ducimus voluptate facere est.
-                            Neque iste quos quis vel perspiciatis eos.</p>
-                    </li>
-                </ul>
-
-                <ul class="col-sm-12 col-md-4 col-lg-4 list-unstyled">
-                    <li class="font-weigth-bold text-uppercase">Redes Sociales</li>
-                    <li class="red-soci d-flex justify-content-center">
-                        <a href="" class="text-reset"><i class="fab fa-twitter-square"></i></a>
-                        <a href="" class="text-reset"><i class="fab fa-facebook-square"></i></a>
-                        <a href="" class="text-reset"><i class="fab fa-instagram-square"></i></a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-3 text-lg-center text-center contac">
+                    <a href="#"></a>
+                    <h3 class="contach">Contáctenos</h3>
+                    </a>
+                </div>
+                <div class="col-lg-6 my-3 my-lg-0 text-lg-center text-center">
+                    <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>
+            </div>
         </div>
     </footer>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     <script src="vistas/js/paginacion.js"></script>
 </body>

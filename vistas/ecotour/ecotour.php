@@ -1,3 +1,6 @@
+<?php
+    include "../../conexion/conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -96,7 +99,7 @@
         </div>
     </section>
 
-    <section <div class="container">
+    <section class="container">
         <div class="row col-12 mt-5">
             <div class="col-12 col-md-6">
                 <h2>Historia</h2>
@@ -106,12 +109,55 @@
             </div>
 
             <div class="col-12 col-md-6">
-                <h2>Video</h2>
+                <?php
+                $sel = $conn ->query("SELECT * FROM tblvideo where cod='2'");
 
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum nesciunt veritatis optio voluptatibus. Fugit accusamus dolores tempore facilis saepe necessitatibus eius totam! Inventore ullam quisquam perspiciatis, aspernatur perferendis
-                    maxime ratione cupiditate quos. Nihil repellat delectus, iure accusantium provident in!</p>
+                while ($row=$sel->fetch_array()) {
+                    echo('<iframe width="560" height="315" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
+                }
+                ?>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Cambiar Video
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Cambiar Video</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <form action="../../video/video_ecotour/actu_video.php" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label>Nombre</label>
+                                            <input class="form-control" type="text" name="nombre">
+                                        </div>
+                                        <fieldset>
+                                            <legend>vídeo</legend>
+                                            <small class="form-text text-muted">Si inserta el video con un URL no es necesario
+                                                que seleccione un video desde su dispositivo y viceversa; Si rellena el campo
+                                                URL y selecciona un archivo desde su dispositivo, se dará prioridad al URL que
+                                                ingreso primero</small>
+                                            <div class="form-group">
+                                                <label>URL Vídeo</label>
+                                                <input class="form-control" type="text" name="url">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Seleccionar Vídeo</label>
+                                                <input class="form-control" type="file" name="video">
+                                            </div>
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 

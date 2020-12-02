@@ -123,11 +123,45 @@ include '../conexion/conexion.php';
                             <div class="form-group text-center mb-5">
                                 <button type="submit" class="btn btn-primary">Registrar</button>
                             </div>
-                        
-                        
-                        
-                        
                         </form>
+
+                        <div class="mt-4">
+                            <table class="table table-hover">
+                                <thead class="thead">
+                                    <th>Cod</th>
+                                    <th>Nombre</th>
+                                    <th>Latitud</th>
+                                    <th>Longitud</th>
+                                    <th>Latitud</th>
+                                    <th>Descripcion</th>
+                                    <th>Servicios</th>
+                                    <th>Horario</th>
+                                    <th>calificacion</th>
+                                    <th>Experiencia</th>
+                                    <th></th>
+                                    <th></th>
+                                </thead>
+                                <?php 
+                                $sel = $conn ->query("SELECT * FROM tblsitio ");
+                                while ($fila = $sel -> fetch_assoc()) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $fila['Cod_Sitio'] ?></td>
+                                    <td><?php echo $fila['Nombre'] ?></td>
+                                    <td><?php echo $fila['Latitud'] ?></td>
+                                    <td><?php echo $fila['Longitud'] ?></td>
+                                    <td><?php echo $fila['Detalle'] ?></td>
+                                    <td><?php echo $fila['Servicios'] ?></td>
+                                    <td><?php echo $fila['Horario'] ?></td>
+                                    <td><?php echo $fila['Calificacion'] ?></td>
+                                    <td><?php echo $fila['Experiencia'] ?></td>    
+                                    <td><a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a></td>
+                                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a></td>
+                            </tr>
+                            <?php } ?>
+                        </table>
+                        </div>
+                    </div>
                     
 
 

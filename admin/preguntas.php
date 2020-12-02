@@ -1,3 +1,10 @@
+<?php
+
+include '../conexion/conexion.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,6 +112,33 @@
                             <button type="submit" class="btn btn-primary">Registrar</button>
                         </div>
                     </form>
+                    
+                    <div class="mt-4">
+                        <table class="table table-hover">
+                            <thead class="thead">
+                                <th>Cod</th>
+                                <th>Pregunta</th>
+                                <th>Respuesta</th>
+                                <th></th>
+                                <th></th>
+                            </thead>
+                            <?php 
+                            $sel = $conn ->query("SELECT * FROM tblpreguntas ");
+                            while ($fila = $sel -> fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $fila['cod_pregunta'] ?></td>
+                                <td><?php echo $fila['Pregunta'] ?></td>
+                                <td><?php echo $fila['Respuesta'] ?></td>
+                                
+                                <td><a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a></td>
+                                <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a></td>
+                            </tr>
+                            <?php } ?>
+                        </table>
+                        </div>
+                    </div>
+
 
             </div>
             <!-- /#page-content-wrapper -->

@@ -34,6 +34,8 @@
                     <input class="form-control" type="text" name="Telefono" id="tel" placeholder="Telefono de la Empresa"><br><br>
                     <label class="label-frm" for="correo">Correo de la Empresa: </label><br>
                     <input class="form-control"  class="form-control" type="email" name="Correo" id="correo" placeholder="Correo de la Empresa"><br><br>
+                    <label class="label-frm" for="tel">Contraseña: </label><br>
+                    <input class="form-control" type="password-" name="contrasena" id="contrasena"><br><br>
                     <fieldset>
                         <legend class="legend">Ubicacion de la Empresa:</legend>
                         <label class="label-frm" for="departamento">Departamento: </label><br>

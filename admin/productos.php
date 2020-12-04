@@ -23,6 +23,8 @@ include '../conexion/conexion.php';
 
         <!-- Custom styles for this template -->
         <link href="simple-sidebar.css" rel="stylesheet">
+        
+        <link href="../css/style.css" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
@@ -52,7 +54,7 @@ include '../conexion/conexion.php';
             <div id="page-content-wrapper">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button class="btn btn-primary toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                <button class="btn btn-admin toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
                     <button
                         class="navbar-toggler"
@@ -131,11 +133,8 @@ include '../conexion/conexion.php';
                                 <td><?php echo $fila['Empresa'] ?></td>
                                 <td><?php echo $fila['Proveedor'] ?></td>
                                 <td>
-                                <a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a>
-                            </td>
-                            <td>
-                                <a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a>
-                            </td>
+                                <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
+                                <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Eliminar</button></td>
                             </tr>
                             <?php } ?>
                         </table>

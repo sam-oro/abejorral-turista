@@ -26,6 +26,8 @@ include '../conexion/conexion.php';
         <!-- Custom styles for this template -->
         <link href="simple-sidebar.css" rel="stylesheet">
 
+        <link href="../css/style.css" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
     </head>
@@ -53,7 +55,7 @@ include '../conexion/conexion.php';
             <div id="page-content-wrapper">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <button class="btn btn-primary toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <button class="btn btn-admin toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
                     <button
                         class="navbar-toggler"

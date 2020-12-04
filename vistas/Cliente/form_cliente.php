@@ -63,10 +63,10 @@
                         <input type="email" name="correo" id="correo" class="form-control" placeholder="Ingrese el Correo">
                         <br><br>
                         <label class="label-frm">Contraseña</label><br>
-                        <input type="password" name="contraseña" id="contraseña" class="form-control" placeholder="Ingrese la Contraseña">
+                        <input type="password" name="contrasena" id="contrasena" class="form-control" placeholder="Ingrese la Contraseña">
                         <br><br>
                         <label class="label-frm">Confirmar Contraseña</label><br>
-                        <input type="password" name="com-contraseña" id="com-contraseña" class="form-control" placeholder="Confirme la contraseña">
+                        <input type="password" name="com-contrasena" id="com-contraseña" class="form-control" placeholder="Confirme la contraseña">
                     </fieldset>
                 
                 <input type="submit" value="Enviar" class="boton">

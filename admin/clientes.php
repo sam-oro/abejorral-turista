@@ -16,7 +16,7 @@ include '../conexion./conexion.php';
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <title>Administrador Portal Abejorral</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -24,6 +24,8 @@ include '../conexion./conexion.php';
 
         <!-- Custom styles for this template -->
         <link href="simple-sidebar.css" rel="stylesheet">
+
+        <link href="../css/style.css" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
@@ -52,7 +54,7 @@ include '../conexion./conexion.php';
             <div id="page-content-wrapper">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <button class="btn btn-primary toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <button class="btn btn-admin toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
                     <button
                         class="navbar-toggler"
@@ -97,19 +99,19 @@ include '../conexion./conexion.php';
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="mt-4">Listas de los Clientes registrados</h1>
+                    <h1 class="mt-4">Lista de los clientes registrados</h1>
                     
                     <div class="mt-4">
             <table class="table table-hover">
                 <thead class="thead">
-                    <th>identificacion</th>
+                    <th>Identificación</th>
                     <th>Nombre</th>
                     <th>Apellidos</th>
-                    <th>Fecha nacimiento</th>
+                    <th>Fecha de nacimiento</th>
                     <th>Celular</th>
                     <th>Municipio</th>
                     <th>Departamento</th>
-                    <th>Direccion</th>
+                    <th>Dirección</th>
                     <th>Correo</th>
                     <th></th>
                     <th></th>
@@ -119,7 +121,9 @@ include '../conexion./conexion.php';
                 FROM `tblcliente` 
                     LEFT JOIN `tblmunicipios` ON `tblcliente`.`id_Municipio` = `tblmunicipios`.`id_Municipio` 
                     LEFT JOIN `tbldepartamentos` ON `tblmunicipios`.`Id_Departamento` = `tbldepartamentos`.`Id_Departamento`;");
+                    $cont=0;
                 while ($fila = $sel -> fetch_assoc()) {
+                    $cont++;
                 ?>
                 <tr>
                     <td><?php echo $fila['Id_Cliente'] ?></td>
@@ -131,13 +135,65 @@ include '../conexion./conexion.php';
                     <td><?php echo $fila['Departamento'] ?></td>
                     <td><?php echo $fila['Direccion'] ?></td>
                     <td><?php echo $fila['Correo'] ?></td>
-                    <td><a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a></td>
-                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a></td>
+                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
+                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Eliminar</button></td>
                 </tr>
+
+                    <!-- /Modal acutualzar usuario -->
+
+                    <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Editar Usuario</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+
+                                            <form action="restar_insumo.php?Id_Insumo=<?php echo $fila['Id_Insumo']?>" method="post">
+                                                <label>Identificación:</label>
+                                                <input type="text" class="form-control" name="id" value="<?php echo $fila['Id_Cliente'] ?>">
+                                                <label>Nombre cliente:</label>
+                                                <input type="text" class="form-control" name="nombre" value="<?php echo $fila['Nombre'] ?>">
+                                                <label>Apellido cliente:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <label>Fecha de nacimiento:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Fecha_Nacimiento']?>">
+                                                <label>Celular:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <label>Municipio:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <label>Departamento:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <label>Dirección:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <label>Correo:</label>
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-admin">Guardar</button>
+                                                    <button type="button" class="btn btn-admin" data-dismiss="modal">Cancelar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                <!-- /#Final Modal Actualizar usuario -->
+
+                    
                 <?php } ?>
             </table>
         </div>
     </div>
+
+            
 
 
 

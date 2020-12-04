@@ -13,7 +13,7 @@ include '../conexion/conexion.php';
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <title>Administracion Abejorral</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -21,6 +21,8 @@ include '../conexion/conexion.php';
 
         <!-- Custom styles for this template -->
         <link href="simple-sidebar.css" rel="stylesheet">
+
+        <link href="../css/style.css" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
@@ -49,7 +51,7 @@ include '../conexion/conexion.php';
             <div id="page-content-wrapper">
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button class="btn btn-primary toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                <button class="btn btn-admin toggled" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
                     <button
                         class="navbar-toggler"
@@ -94,10 +96,10 @@ include '../conexion/conexion.php';
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="mt-4">Sitio Turistico</h1>
+                    <h1 class="mt-4">Sitio turístico</h1>
                         <form action="controlador/insertar_sitio.php" method="POST" name="add_form">
                             <div class="form-group">
-                                <label> Nombre del sitio Turistico </label>
+                                <label> Nombre del sitio turístico </label>
                                 <input type="text" id="nombre" name="nombre" class="form-control" required>
                             </div>
                             <div class="form-group">
@@ -109,11 +111,11 @@ include '../conexion/conexion.php';
                                 <input type="text" id="longitud" name="longitud" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label> Descripcion del sitio </label>
+                                <label> Descripción del sitio </label>
                                 <textarea class="form-control rounded-0" id="descripcion" name="descripcion" rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label> Servicios que Ofrece </label>
+                                <label> Servicios</label>
                                 <input type="text" id="servicios" name="servicios" class="form-control" requiered>
                             </div>
                             <div class="form-group">
@@ -121,22 +123,22 @@ include '../conexion/conexion.php';
                                 <input type="time" id="horario" name="horario" class="form-control" requiered>
                             </div>
                             <div class="form-group text-center mb-5">
-                                <button type="submit" class="btn btn-primary">Registrar</button>
+                                <button type="submit" class="btn btn-admin">Registrar</button>
                             </div>
                         </form>
 
                         <div class="mt-4">
                             <table class="table table-hover">
                                 <thead class="thead">
-                                    <th>Cod</th>
+                                    <th>Código</th>
                                     <th>Nombre</th>
                                     <th>Latitud</th>
                                     <th>Longitud</th>
                                     <th>Latitud</th>
-                                    <th>Descripcion</th>
+                                    <th>Descripción</th>
                                     <th>Servicios</th>
                                     <th>Horario</th>
-                                    <th>calificacion</th>
+                                    <th>Calificación</th>
                                     <th>Experiencia</th>
                                     <th></th>
                                     <th></th>
@@ -155,8 +157,8 @@ include '../conexion/conexion.php';
                                     <td><?php echo $fila['Horario'] ?></td>
                                     <td><?php echo $fila['Calificacion'] ?></td>
                                     <td><?php echo $fila['Experiencia'] ?></td>    
-                                    <td><a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a></td>
-                                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a></td>
+                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
+                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Eliminar</button></td>
                             </tr>
                             <?php } ?>
                         </table>

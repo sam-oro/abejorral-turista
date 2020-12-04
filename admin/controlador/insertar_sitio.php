@@ -10,9 +10,9 @@ $servicios=$_POST['servicios'];
 $horario=$_POST['horario'];
 
 
-$sql="INSERT INTO tblsitio (Nombre, Latitud, Longitud, Detalle, Servicios, Horario, Calificacion, Experiencia ) Values ('$nombre', '$latitud', '$longitud', '$descripcion', '$servicios', '$horario', null, null)";
+$sql=$conn->query("INSERT INTO tblsitio (Nombre, Latitud, Longitud, Detalle, Servicios, Horario, Calificacion, Experiencia ) Values ('$nombre', '$latitud', '$longitud', '$descripcion', '$servicios', '$horario', null, null)");
 
-if ($conn->query($sql) === FALSE) {
+if ($sql==false) {
     echo "<script> alert('no se puedo registrar')</script>";
     echo "<script> 	location.href='../sitio.php'; </script>";
 } else {

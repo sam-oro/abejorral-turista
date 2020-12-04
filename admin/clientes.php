@@ -27,6 +27,9 @@ include '../conexion./conexion.php';
 
         <link href="../css/style.css" rel="stylesheet">
 
+        <!-- Sweet alerts -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
     </head>
@@ -136,7 +139,10 @@ include '../conexion./conexion.php';
                     <td><?php echo $fila['Direccion'] ?></td>
                     <td><?php echo $fila['Correo'] ?></td>
                     <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
-                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Eliminar</button></td>
+
+                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Cliente']?>)">ELIMINAR</a></td>
+
+
                 </tr>
 
                     <!-- /Modal acutualzar usuario -->
@@ -163,15 +169,15 @@ include '../conexion./conexion.php';
                                                 <label>Fecha de nacimiento:</label>
                                                 <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Fecha_Nacimiento']?>">
                                                 <label>Celular:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Cel']?>">
                                                 <label>Municipio:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Municipio']?>">
                                                 <label>Departamento:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Departamento']?>">
                                                 <label>Dirección:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Direccion']?>">
                                                 <label>Correo:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
+                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Correo']?>">
                                                 
                                                 <div class="modal-footer">
                                                     <button type="submit" class="btn btn-admin">Guardar</button>
@@ -217,6 +223,32 @@ include '../conexion./conexion.php';
     $("#wrapper").toggleClass("toggled");
     });
     </script>
+
+        <!-- pregunta antes de eliminar sweat alert -->
+        <script type="text/javascript">
+            function preguntar(id){
+            Swal
+                .fire({
+                    title: "¿Eliminar Cliente?",
+                    text: "¿Estas seguro de eliminar el Cliente?",
+                    icon: 'error',            
+                    showCancelButton: true,
+                    confirmButtonText: "Sí, eliminar",
+                    cancelButtonText: "Cancelar",
+                })
+                .then(resultado => {
+                    if (resultado.value) {
+                        // Hicieron click en "Sí"
+                        //console.log("*se elimina la venta*");
+                        window.location.href="controlador/eliminar_cliente.php?Id_Cliente="+id
+                    } else {
+                        // Dijeron que no
+                        console.log("*NO se elimina*");
+                    }
+                });
+
+            }
+        </script>
 
     </body>
 

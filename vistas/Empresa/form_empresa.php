@@ -53,11 +53,13 @@
                         <div id="municipio"></div>
                         <label class="label-frm" for="direccion">Direccion: </label><br>
                         <input class="form-control" type="text" name="Direccion" id="direccion" placeholder="Direccion de la Empresa"><br><br>
-                        <label class="label-frm" for="ubicacion">Ubicacion(Coordenadas): </label><br>
-                        <input class="form-control" type="text" name="Ubicacion" id="ubicacion" placeholder="Ubicacion de la Empresa"><br><br>
+                        <label class="label-frm" for="latitud">Latitud: </label><br>
+                        <input class="form-control" type="text" name="latitud" id="latitud" placeholder="Latitud de la Empresa"><br><br>
+                        <label class="label-frm" for="longitud">Longitud: </label><br>
+                        <input class="form-control" type="text" name="longitud" id="longitud" placeholder="Longitud de la Empresa"><br><br>
                     </fieldset>
                 </fieldset>
-                <input class="boton" type="submit" value="Enviar">
+                <input class="btn btn-color" type="submit" value="Enviar">
         </form>
             </div>
         </div>

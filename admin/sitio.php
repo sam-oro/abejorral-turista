@@ -134,7 +134,6 @@ include '../conexion/conexion.php';
                                     <th>Nombre</th>
                                     <th>Latitud</th>
                                     <th>Longitud</th>
-                                    <th>Latitud</th>
                                     <th>Descripción</th>
                                     <th>Servicios</th>
                                     <th>Horario</th>

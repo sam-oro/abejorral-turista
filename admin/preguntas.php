@@ -111,7 +111,7 @@ include '../conexion/conexion.php';
                                 <textarea id="respuesta" name="respuesta" class="form-control" cols="30" rows="10" placeholder="Respuesta de la pregunta" required></textarea>
                         </div>
                         <div class="form-group text-center mb-5">
-                            <button type="submit" class="btn btn-primary">Registrar</button>
+                            <button type="submit" class="btn btn-admin">Registrar</button>
                         </div>
                     </form>
                     
@@ -133,8 +133,22 @@ include '../conexion/conexion.php';
                                 <td><?php echo $fila['Pregunta'] ?></td>
                                 <td><?php echo $fila['Respuesta'] ?></td>
                                 
-                                <td><a href="frm_actu_padecimiento.php?padecimientoid=<?php echo $fila['padecimientoid'] ?>">EDITAR</a></td>
-                                <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Servicio']?>)">ELIMINAR</a></td>
+                                <td>
+                                            <button
+                                                type="button"
+                                                class="btn btn-admin"
+                                                data-toggle="modal"
+                                                data-target="#modal<?php echo $cont; ?>"
+                                                id="ingresar">Actualizar</button>
+                                        </td>
+                                        <td>
+                                            <button
+                                                type="button"
+                                                class="btn btn-admin"
+                                                data-toggle="modal"
+                                                data-target="#modal<?php echo $cont; ?>"
+                                                id="ingresar">Eliminar</button>
+                                        </td>
                             </tr>
                             <?php } ?>
                         </table>

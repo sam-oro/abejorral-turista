@@ -8,15 +8,16 @@ $Telefono = $_POST['Telefono'];
 $Correo = $_POST['Correo'];
 $Id_Municipio = $_POST['Id_Municipio'];
 $Direccion = $_POST['Direccion'];
-$Ubicacion = $_POST['Ubicacion'];
+$latitud = $_POST['latitud'];
+$longitud = $_POST['longitud'];
 $contrasena = $_POST['contrasena'];
 
-$sql = $conn->query("INSERT INTO tblempresa (RUT_Empresa,Nombre,Cel,Telefono,Correo,Id_Municipio,Direccion,Ubicacion,Id_Rol) VALUES ('$Rut', '$Nombre', '$Cel', '$Telefono', '$Correo', '$Id_Municipio' , '$Direccion', '$Ubicacion', 3)");
+$sql = $conn->query("INSERT INTO tblempresa (RUT_Empresa,Nombre,Cel,Telefono,Correo,Id_Municipio,Direccion,Latitud,Longitud,Id_Rol) VALUES ('$Rut', '$Nombre', '$Cel', '$Telefono', '$Correo', '$Id_Municipio' , '$Direccion', '$latitud', '$longitud', 3)");
 
 
 
 if ($sql==TRUE){
-    $sql2="INSERT INTO tbllogin (Usuario, Contraseña, Id_Cliente) VALUES ('$Correo', '$contrasena', (select Cod_Empresa from tblempresa order by  Cod_Empresa DESC limit 1 ))";
+    $sql2="INSERT INTO tbllogin (Usuario, Contraseña, Cod_Empresa) VALUES ('$Correo', '$contrasena', (select Cod_Empresa from tblempresa order by  Cod_Empresa DESC limit 1 ))";
         if ($conn->query($sql2)) {
             //echo "<script> location.href='../form_cliente.php'; </script>";
             echo "<script> alert('Correcto')</script>";

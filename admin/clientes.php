@@ -140,7 +140,7 @@ include '../conexion./conexion.php';
                     <td><?php echo $fila['Correo'] ?></td>
                     <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
 
-                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Cliente']?>)">ELIMINAR</a></td>
+                    <td><a href="#" onclick="preguntar(<?php echo $fila['Id_Cliente']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
 
 
                 </tr>
@@ -159,7 +159,7 @@ include '../conexion./conexion.php';
                                         <div class="modal-body">
 
 
-                                            <form action="restar_insumo.php?Id_Insumo=<?php echo $fila['Id_Insumo']?>" method="post">
+                                            <form action="controlador/actualizar_cliente?Id_Cliente=<?php echo $fila['Id_Cliente']?>" method="post">
                                                 <label>Identificación:</label>
                                                 <input type="text" class="form-control" name="id" value="<?php echo $fila['Id_Cliente'] ?>">
                                                 <label>Nombre cliente:</label>
@@ -167,17 +167,17 @@ include '../conexion./conexion.php';
                                                 <label>Apellido cliente:</label>
                                                 <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Apellidos']?>">
                                                 <label>Fecha de nacimiento:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Fecha_Nacimiento']?>">
+                                                <input type="text" class="form-control" name="fecha_naci" value="<?php echo $fila['Fecha_Nacimiento']?>">
                                                 <label>Celular:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Cel']?>">
+                                                <input type="text" class="form-control" name="celular" value="<?php echo $fila['Cel']?>">
                                                 <label>Municipio:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Municipio']?>">
+                                                <input type="text" class="form-control" name="municipio" value="<?php echo $fila['Municipio']?>">
                                                 <label>Departamento:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Departamento']?>">
+                                                <input type="text" class="form-control" name="departamento" value="<?php echo $fila['Departamento']?>">
                                                 <label>Dirección:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Direccion']?>">
+                                                <input type="text" class="form-control" name="direccion" value="<?php echo $fila['Direccion']?>">
                                                 <label>Correo:</label>
-                                                <input type="text" class="form-control" name="apellidos" value="<?php echo $fila['Correo']?>">
+                                                <input type="text" class="form-control" name="correo" value="<?php echo $fila['Correo']?>">
                                                 
                                                 <div class="modal-footer">
                                                     <button type="submit" class="btn btn-admin">Guardar</button>

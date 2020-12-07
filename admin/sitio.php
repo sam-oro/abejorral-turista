@@ -24,6 +24,9 @@ include '../conexion/conexion.php';
 
         <link href="../css/style.css" rel="stylesheet">
 
+        <!-- Sweet alerts -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
     </head>
@@ -157,7 +160,7 @@ include '../conexion/conexion.php';
                                     <td><?php echo $fila['Calificacion'] ?></td>
                                     <td><?php echo $fila['Experiencia'] ?></td>    
                                     <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
-                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Eliminar</button></td>
+                                    <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Sitio']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                             </tr>
                             <?php } ?>
                         </table>
@@ -188,6 +191,33 @@ include '../conexion/conexion.php';
     $("#wrapper").toggleClass("toggled");
     });
     </script>
+
+
+    <!-- pregunta antes de eliminar sweat alert -->
+    <script type="text/javascript">
+            function preguntar(id){
+            Swal
+                .fire({
+                    title: "¿Eliminar el sitio turistico?",
+                    text: "¿Estas seguro de eliminar el sitio?",
+                    icon: 'error',            
+                    showCancelButton: true,
+                    confirmButtonText: "Sí, eliminar",
+                    cancelButtonText: "Cancelar",
+                })
+                .then(resultado => {
+                    if (resultado.value) {
+                        // Hicieron click en "Sí"
+                        //console.log("*se elimina la venta*");
+                        window.location.href="controlador/eliminar_sitio.php?Cod_Sitio="+id
+                    } else {
+                        // Dijeron que no
+                        console.log("*NO se elimina*");
+                    }
+                });
+
+            }
+        </script>
 
     </body>
 

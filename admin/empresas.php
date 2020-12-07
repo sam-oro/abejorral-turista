@@ -13,7 +13,7 @@ include '../conexion/conexion.php';
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <title>Administracion Abejorral</title>
 
         <!-- Bootstrap core CSS -->
         <link
@@ -112,6 +112,7 @@ include '../conexion/conexion.php';
                                 <th>Rut</th>
                                 <th>Nombre</th>
                                 <th>Celular</th>
+                                <th>Teléfono</th>
                                 <th>Córreo</th>
                                 <th>Municipio</th>
                                 <th>Departamento</th>
@@ -150,7 +151,7 @@ include '../conexion/conexion.php';
                                         id="ingresar">Actualizar</button>
                                 </td>
                                 <td>
-                                    <a href="#" onclick="preguntar(<?php echo $fila['Cod_Empresa']?>)">ELIMINAR</a>
+                                <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Empresa']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                                 </td>
                             </tr>
                             <?php } ?>

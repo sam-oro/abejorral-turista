@@ -17,7 +17,7 @@ include '../conexion/conexion.php';
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Simple Sidebar - Start Bootstrap Template</title>
+        <title>Administrador abejorral</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -27,6 +27,9 @@ include '../conexion/conexion.php';
         <link href="simple-sidebar.css" rel="stylesheet">
 
         <link href="../css/style.css" rel="stylesheet">
+
+        <!-- Sweet alerts -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
         <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
 
@@ -122,7 +125,6 @@ include '../conexion/conexion.php';
                                 <th>Pregunta</th>
                                 <th>Respuesta</th>
                                 <th></th>
-                                <th></th>
                             </thead>
                             <?php 
                             $sel = $conn ->query("SELECT * FROM tblpreguntas ");
@@ -132,23 +134,7 @@ include '../conexion/conexion.php';
                                 <td><?php echo $fila['cod_pregunta'] ?></td>
                                 <td><?php echo $fila['Pregunta'] ?></td>
                                 <td><?php echo $fila['Respuesta'] ?></td>
-                                
-                                <td>
-                                            <button
-                                                type="button"
-                                                class="btn btn-admin"
-                                                data-toggle="modal"
-                                                data-target="#modal<?php echo $cont; ?>"
-                                                id="ingresar">Actualizar</button>
-                                        </td>
-                                        <td>
-                                            <button
-                                                type="button"
-                                                class="btn btn-admin"
-                                                data-toggle="modal"
-                                                data-target="#modal<?php echo $cont; ?>"
-                                                id="ingresar">Eliminar</button>
-                                        </td>
+                                <td><a href="#" onclick="preguntar(<?php echo $fila['cod_pregunta']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                             </tr>
                             <?php } ?>
                         </table>
@@ -173,6 +159,32 @@ include '../conexion/conexion.php';
     $("#wrapper").toggleClass("toggled");
     });
     </script>
+
+    <!-- pregunta antes de eliminar sweat alert -->
+    <script type="text/javascript">
+            function preguntar(id){
+            Swal
+                .fire({
+                    title: "¿Eliminar pregunta?",
+                    text: "¿Estas seguro de eliminar esta pregunta?",
+                    icon: 'error',            
+                    showCancelButton: true,
+                    confirmButtonText: "Sí, eliminar",
+                    cancelButtonText: "Cancelar",
+                })
+                .then(resultado => {
+                    if (resultado.value) {
+                        // Hicieron click en "Sí"
+                        //console.log("*se elimina la venta*");
+                        window.location.href="controlador/eliminar_pregunta.php?cod_pregunta="+id
+                    } else {
+                        // Dijeron que no
+                        console.log("*NO se elimina*");
+                    }
+                });
+
+            }
+        </script>
 
     </body>
 

@@ -174,6 +174,53 @@
         </section>
 
 
+        <section>
+            <div class="container col-12">
+                <div class="row col-12">
+                    <div class="col-12">
+                        <h1>Nuevo sitio</h1>
+                    </div>
+
+                    <div>
+                        <form action="insertar_sitio.php" method="post">
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre del Sitio: </label>
+                                <input class="form-control" type="text" name="Nombre" id="nombre" placeholder="Nombre del Sitio" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ubicacion">Ubicacion(Coordenadas): </label>
+                                <input class="form-control" type="text" name="Ubicacion" id="ubicacion" placeholder="Ubicacion del Sitio">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detalle">Detalles del Sitio: </label>
+                                <textarea class="form-control" name="Detalle" id="detalle" cols="30" rows="10" placeholder="Detalles del Sitio"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="servicios">Servicios del Sitio: </label>
+                                <textarea class="form-control" name="Servicios" id="servicios" cols="30" rows="10" placeholder="Servicios del Sitio"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="horario">Horario del Sitio: </label>
+                                <input class="form-control" type="time" name="Horario" id="horario" placeholder="Horario del Sitio">
+                            </div>
+
+                            <div class="tex-center">
+                                <button class="form-control" type="submit" class="btn btn-color" value="Enviar"></button>
+
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
         <footer class="footer mt-4">
             <div class="container">
                 <div class="row align-items-center">

@@ -31,7 +31,6 @@ main {
 }
 
 
-
 /* Recursos */
 
 .contenedor {
@@ -62,12 +61,12 @@ main {
     border-radius: 0.5rem;
 }
 
-.btn-admin{
+.btn-admin {
     background-color: #99C355;
     color: #fff;
 }
 
-.btn-admin:hover{
+.btn-admin:hover {
     background-color: #F97838;
     color: #fff;
 }
@@ -256,9 +255,10 @@ main {
     }
 }
 
-input {
+
+/* input {
     width: 10px;
-}
+} */
 
 .recu-contr a {
     text-decoration: none;

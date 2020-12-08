@@ -255,11 +255,6 @@ main {
     }
 }
 
-
-/* input {
-    width: 10px;
-} */
-
 .recu-contr a {
     text-decoration: none;
     color: #FA7838;
@@ -301,4 +296,9 @@ main {
     text-align: left;
     border: none;
     width: 100%;
+}
+
+.bg-forms {
+    background-image: linear-gradient(45deg, rgb(228, 87, 62) 0%, rgb(228, 87, 62) 5%, transparent 5%, transparent 38%, transparent 38%, transparent 60%, rgb(249, 120, 56) 60%, rgb(249, 120, 56) 100%), linear-gradient(135deg, rgb(251, 229, 105) 0%, rgb(251, 229, 105) 14%, rgb(153, 195, 85) 14%, rgb(153, 195, 85) 75%, rgb(91, 192, 230) 75%, rgb(91, 192, 230) 100%), linear-gradient(90deg, rgb(228, 87, 62), rgb(228, 87, 62));
+    min-height: 100vh;
 }

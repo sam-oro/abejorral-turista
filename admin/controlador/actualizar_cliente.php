@@ -3,7 +3,17 @@ include '../../conexion.php';
 
 
 $Id_Cliente=$_GET['Id_Cliente'];
-$
+
+$nombres=$_POST[''];
+$apellidos=$_POST[''];
+$fecha_naci=$_POST[''];
+$celular=$_POST[''];
+$municipio=$_POST[''];
+$departamento=$_POST[''];
+$direccion=$_POST[''];
+$correo=$_POST[''];
+
+
 
 $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE id='1'");
 

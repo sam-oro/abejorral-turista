@@ -159,9 +159,62 @@ include '../conexion/conexion.php';
                                     <td><?php echo $fila['Horario'] ?></td>
                                     <td><?php echo $fila['Calificacion'] ?></td>
                                     <td><?php echo $fila['Experiencia'] ?></td>    
-                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
+                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal">Actualizar</button></td>
                                     <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Sitio']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                             </tr>
+
+                                    <!-- /Modal acutualzar Sitio -->
+
+                            <div class="modal" tabindex="-1" role="dialog" id="modal">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Editar Sitio Turistico</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="controlador/actualizar_sitio.php?Cod_Sitio=<?php echo $fila['Cod_Sitio']?>" method="post">
+                                            <div class="form-group">
+                                                <label> Nombre del sitio turístico </label>
+                                                <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $fila['Nombre'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Latitud</label>
+                                                <input type="text" id="latitud" name="latitud" class="form-control" value="<?php echo $fila['Latitud'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Longitud</label>
+                                                <input type="text" id="longitud" name="longitud" class="form-control" value="<?php echo $fila['Longitud'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Descripción del sitio </label>
+                                                <textarea class="form-control rounded-0" id="descripcion" name="descripcion" rows="3"><?php echo $fila['Detalle'] ?></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Servicios</label>
+                                                <input type="text" id="servicios" name="servicios" class="form-control" value="<?php echo $fila['Servicios'] ?>" requiered>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Horario disponible </label>
+                                                <input type="time" id="horario" name="horario" class="form-control" value="<?php echo $fila['Horarios'] ?>" requiered>
+                                            </div>
+                                                
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-admin">Guardar</button>
+                                                    <button type="button" class="btn btn-admin" data-dismiss="modal">Cancelar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                <!-- /#Final Modal Actualizar Sitio -->
+
                             <?php } ?>
                         </table>
                         </div>

@@ -48,7 +48,7 @@ include '../conexion./conexion.php';
                     <a href="empresas.php" class="list-group-item list-group-item-action bg-light">Empresas</a>
                     <a href="productos.php" class="list-group-item list-group-item-action bg-light">Productos</a>
                     <a href="preguntas.php" class="list-group-item list-group-item-action bg-light">Preguntas</a>
-                    <a href="sitio" class="list-group-item list-group-item-action bg-light">Sitio</a>
+                    <a href="sitio" class="list-group-item list-group-item-action bg-light">Sitio Turistico</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -159,9 +159,9 @@ include '../conexion./conexion.php';
                                         <div class="modal-body">
 
 
-                                            <form action="controlador/actualizar_cliente?Id_Cliente=<?php echo $fila['Id_Cliente']?>" method="post">
+                                            <form action="controlador/actualizar_cliente.php?Id_Cliente=<?php echo $fila['Id_Cliente']?>" method="post">
                                                 <label>Identificación:</label>
-                                                <input type="text" class="form-control" name="id" value="<?php echo $fila['Id_Cliente'] ?>">
+                                                <input type="text" class="form-control" name="id" value="<?php echo $fila['Id_Cliente'] ?>" disabled>
                                                 <label>Nombre cliente:</label>
                                                 <input type="text" class="form-control" name="nombre" value="<?php echo $fila['Nombre'] ?>">
                                                 <label>Apellido cliente:</label>

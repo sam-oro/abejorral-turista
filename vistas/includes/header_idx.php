@@ -22,7 +22,7 @@
                     <a class="nav-link" href="<?php echo $URL ?>index.php">Inicio<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $URL ?>vistas/nues-munici/nstr-mun.php">Nuestro Municipio</a>
+                    <a class="nav-link" href="<?php echo $URL ?>vistas/nuestro_municipio/nuestro_municipio.php">Nuestro Municipio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Informate</a>

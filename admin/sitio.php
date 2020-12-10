@@ -147,7 +147,9 @@ include '../conexion/conexion.php';
                                 </thead>
                                 <?php 
                                 $sel = $conn ->query("SELECT * FROM tblsitio ");
+                                $cont=0;
                                 while ($fila = $sel -> fetch_assoc()) {
+                                    $cont++;
                                 ?>
                                 <tr>
                                     <td><?php echo $fila['Cod_Sitio'] ?></td>
@@ -159,13 +161,13 @@ include '../conexion/conexion.php';
                                     <td><?php echo $fila['Horario'] ?></td>
                                     <td><?php echo $fila['Calificacion'] ?></td>
                                     <td><?php echo $fila['Experiencia'] ?></td>    
-                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal">Actualizar</button></td>
+                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont;?>">Actualizar</button></td>
                                     <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Sitio']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                             </tr>
 
                                     <!-- /Modal acutualzar Sitio -->
 
-                            <div class="modal" tabindex="-1" role="dialog" id="modal">
+                            <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">

@@ -124,7 +124,9 @@ include '../conexion/conexion.php';
                                 LEFT JOIN `tblsolicitud` ON `tblproducto`.`Cod_Solicitud` = `tblsolicitud`.`Cod_Solicitud` 
                                 LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa` 
                                 LEFT JOIN `tblproveedor_natural` ON `tblproducto`.`Cod_Prove` = `tblproveedor_natural`.`Cod_Prove`");
+                                $cont=0;
                             while ($fila = $sel -> fetch_assoc()) {
+                                $cont++;
                             ?>
                             <tr>
                                 <td><?php echo $fila['Cod_Producto'] ?></td>
@@ -139,6 +141,59 @@ include '../conexion/conexion.php';
                                 <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
                                 <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Producto']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                             </tr>
+
+                            <!-- /Modal actualizar Producto -->
+
+                            <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Editar Producto</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="controlador/actualizar_sitio.php?Cod_Sitio=<?php echo $fila['Cod_Producto']?>" method="post">
+                                            <div class="form-group">
+                                                <label> Nombre del Producto </label>
+                                                <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $fila['Nom_Producto'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Peso Producto</label>
+                                                <input type="text" id="peso" name="peso" class="form-control" value="<?php echo $fila['Peso_Producto'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Cantidad</label>
+                                                <input type="number" id="cantidad" name="cantidad" class="form-control" value="<?php echo $fila['Cantidad'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Valor </label>
+                                                <input type="number" id="valor" name="valor" class="form-control" value="<?php echo $fila['Valor'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Nom_Solicitud</label>
+                                                <input type="text" id="solicitud" name="solicitud" class="form-control" value="<?php echo $fila['Nom_Solicitud'] ?>" requiered>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Proveedor </label>
+                                                <input type="text" id="proveedor" name="proveedor" class="form-control" value="<?php echo $fila['Proveedor'] ?>" requiered>
+                                            </div>
+                                                
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-admin">Guardar</button>
+                                                    <button type="button" class="btn btn-admin" data-dismiss="modal">Cancelar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                <!-- /#Final Modal Actualizar Sitio -->
+
                             <?php } ?>
                         </table>
                 </div>

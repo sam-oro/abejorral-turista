@@ -8,8 +8,13 @@
             if($_SESSION['rol'] ==2 ){
                 include '../includes/header_user.php';
             }else{
-                include '../includes/header_company.php';
+                if ($_SESSION['rol']==1){
+                    include '../includes/header_admin.php';
+                }else{
+                    include '../includes/header_company.php';
+                }
             }
+
         }
 ?>
     <!DOCTYPE html>

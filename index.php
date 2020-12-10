@@ -12,8 +12,13 @@
             if($_SESSION['rol'] ==2 ){
                 include 'vistas/includes/header_user.php';
             }else{
-                include 'vistas/includes/header_company.php';
+                if ($_SESSION['rol']==1){
+                    include 'vistas/includes/header_admin.php';
+                }else{
+                    include 'vistas/includes/header_company.php';
+                }
             }
+
         }
 
 ?>

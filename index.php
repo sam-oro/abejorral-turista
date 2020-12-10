@@ -1,5 +1,9 @@
 <?php
     include "conexion/conexion.php";
+    include "vistas/includes/header_idx.php";
+    include "vistas/includes/header_admin.php";
+    include "vistas/includes/header_user.php";
+    include "vistas/includes/header_company.php";
 ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -25,56 +29,6 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-nav">
-            <div class="col-sm-3 text-center">
-                <a class="navbar-brand" href="<?php echo $URL ?>index.php">
-                    <img src="img/logo-ver-ng.png" alt="">
-                </a>
-            </div>
-
-            <button class="navbar-toggler col-sm-3 ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nuestro Municipio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Informate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $URL; ?>vistas/ecotour/ecotour.php">Eco Turismo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nuestros Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-invi dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-                        Perfil
-                    </button>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                            <a href="<?php echo $URL; ?>vistasCliente/mi_perfil/mi_perfil.php"><button class="dropdown-item"
-                                type="button">Mi Perfil</button></a>
-                            <a href="<?php echo $URL; ?>vistasCliente/mi_vehiculo/mi_vehiculo.php"><button class="dropdown-item"
-                                type="button">Mi Vehículo</button></a>
-                            <a href="<?php echo $URL; ?>vistas/Cliente/reservas/reservas.php"><button class="dropdown-item"
-                                type="button">Reservas</button></a>
-                            <div class="dropdown-divider"></div>
-                            <a href="<?php echo $URL; ?>vistas/Cliente/login/cerrar_sesion.php"><button class="dropdown-item"
-                                type="button">Cerrar Sesión</button></a>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-        </nav>
-
         <section class="bg-index">
             <h1>Bienvenidos</h1>
         </section>

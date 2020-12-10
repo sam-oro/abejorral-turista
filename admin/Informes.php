@@ -2,15 +2,15 @@
 
 include '../conexion/conexion.php';
 
-    session_start();
-    if (!isset($_SESSION['rol'])){
-        echo "<script> location.href='../index.php'; </script>";
+    // session_start();
+    // if (!isset($_SESSION['rol'])){
+    //     echo "<script> location.href='../index.php'; </script>";
 
-    }else{
-        if($_SESSION['rol']!=1){
-            echo "<script> location.href='../index.php'; </script>";
-        }
-    }
+    // }else{
+    //     if($_SESSION['rol']!=1){
+    //         echo "<script> location.href='../index.php'; </script>";
+    //     }
+    // }
 
 ?>
 <!DOCTYPE html>

@@ -1,14 +1,4 @@
-<?php
-    include "../../conexion/conexion.php";
-    session_start();
-        if(!isset($_SESSION['rol'])){
-            header('location: ../login/login.php');
-        }else{
-            if($_SESSION['rol'] ==3 ){
-                include '../includes/header_company.php';
-            }
-        }
-?>
+
     <!DOCTYPE html>
 
     <html>

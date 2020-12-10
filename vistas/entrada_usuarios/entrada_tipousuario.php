@@ -38,7 +38,7 @@
     <section class="bg-usuarios" style="background-image:url(../../img/bg-tipousuario2.jpg); min-height: 50vh;">
         <a href="">
             <div class="p-4 p-sm-5">
-                <h1 class="text-center mb-3"> Usuario normal</h1>
+                <h1 class="text-center mb-3"> Usuario empresario</h1>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, vitae enim! Doloremque tenetur est quia omnis nisi tempore facere rem quas quisquam rerum, libero esse voluptatum enim aspernatur quis corporis magni praesentium sapiente?
                     A ad, aspernatur qui iste quis nesciunt repudiandae blanditiis quam suscipit omnis, nostrum facilis soluta. Modi, nobis!</p>

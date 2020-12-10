@@ -41,10 +41,10 @@
                     Panel Empresa
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                        <a href="#"><button class="dropdown-item" type="button">Mis productos</button></a>
+                        <a href="<?php echo $URL ?>vistas/Producto/form_producto.php"><button class="dropdown-item" type="button">Mis productos</button></a>
                         <a href="<?php echo $URL ?>vistas/Empresa/vista_empresa.php"><button class="dropdown-item" type="button">Mi empresa</button></a>
                         <div class="dropdown-divider"></div>
-                        <a href="#"><button class="dropdown-item" type="button">Cerrar Sesión</button></a>
+                        <a href="<?php echo $URL; ?>vistas/login/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar Sesión</button></a>
                     </div>
                 </div>
             </ul>

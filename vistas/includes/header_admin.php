@@ -48,7 +48,7 @@
                         <a href="<?php echo $URL; ?>admin/preguntas.php"><button class="dropdown-item" type="button">Preguntas</button></a>
                         <a href="<?php echo $URL; ?>admin/sitio.php"><button class="dropdown-item" type="button">Sitio turistico</button></a>
                         <div class="dropdown-divider"></div>
-                        <a href="#"><button class="dropdown-item" type="button">Cerrar Sesión</button></a>
+                        <a href="<?php echo $URL; ?>vistas/login/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar Sesión</button></a>
                     </div>
                 </div>
             </ul>

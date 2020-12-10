@@ -1,5 +1,16 @@
 <?php
     include "../../conexion/conexion.php";
+
+    session_start();
+        if(!isset($_SESSION['rol'])){
+            include '../includes/header_idx.php';
+        }else{
+            if($_SESSION['rol'] ==2 ){
+                include '../includes/header_user.php';
+            }else{
+                include '../includes/header_company.php';
+            }
+        }
 ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -25,7 +36,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-nav">
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-nav">
             <div class="col-sm-3 text-center">
                 <a class="navbar-brand" href="<?php echo $URL ?>index.php">
                     <img src="../../img/logo-ver-ng.png" alt="">
@@ -73,7 +84,7 @@
                     </div>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
 
         <section class="">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

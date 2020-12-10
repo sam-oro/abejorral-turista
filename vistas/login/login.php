@@ -1,3 +1,6 @@
+<?php 
+include '../../conexion/conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,6 +17,8 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f599362e7b.js" crossorigin="anonymous"></script>
+    <!-- Sweet alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <link rel="icon" type="image/png" href="img/icono-pag.png">
 
@@ -29,7 +34,7 @@
             <form action="validar_login.php" method="post">
 
                 <div class="text-center">
-                    <img src="../../img/logo-color.png">
+                <a href="<?php echo $URL ?>index.php"><img src="../../img/logo-color.png"></a>
                 </div>
 
                 <div class="form-group mt-4">
@@ -60,6 +65,41 @@
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+<?php
+    if(isset($_GET['msg'])){
+        if($_GET['msg']==1){
+    ?>
+
+    <script>
+        Swal.fire('Sesión cerrada correctamente')
+    </script>
+
+    <?php
+        }else{
+            if($_GET['msg']==2){
+    ?>
+
+    <script>
+        Swal.fire('Datos incorrectos')
+    </script>
+    
+    <?php
+        }else{
+            if($_GET['msg']==3){
+    ?>
+
+    <script>
+        Swal.fire('Registro existoso')
+    </script>
+
+    <?php
+            }
+            }
+        }
+    }
+    ?>
+
 </body>
 
 </html>

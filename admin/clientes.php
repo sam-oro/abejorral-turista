@@ -3,12 +3,12 @@ include '../conexion/conexion.php';
 
     session_start();
     if (!isset($_SESSION['rol'])){
-         echo "<script> location.href='../index.php'; </script>";
+        echo "<script> location.href='../index.php'; </script>";
 
-     }else{
+    }else{
         if($_SESSION['rol']!=1){
             echo "<script> location.href='../index.php'; </script>";
-         }
+        }
     }
 
 ?>
@@ -201,7 +201,13 @@ include '../conexion/conexion.php';
 
 
                 <!-- /#Final Modal Actualizar usuario -->
-
+                <?php 
+                    $fechaActual = date('Y-m-d');
+                    echo date("Y-m-d",strtotime($fechaActual."+ 1 days"));
+                    $fechamin=date("Y-m-d",strtotime($fechaActual."+ 1 days"));
+                    ?>
+                
+                    <input type="date" min=<?php echo $fechamin ?>>
                     
                 <?php } ?>
             </table>

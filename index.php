@@ -1,9 +1,21 @@
 <?php
     include "conexion/conexion.php";
-    include "vistas/includes/header_idx.php";
-    include "vistas/includes/header_admin.php";
-    include "vistas/includes/header_user.php";
-    include "vistas/includes/header_company.php";
+    //include "vistas/includes/header_idx.php";
+    //include "vistas/includes/header_admin.php";
+    //include "vistas/includes/header_user.php";
+    //include "vistas/includes/header_company.php";
+
+    session_start();
+        if(!isset($_SESSION['rol'])){
+            include 'vistas/includes/header_idx.php';
+        }else{
+            if($_SESSION['rol'] ==2 ){
+                include 'vistas/includes/header_user.php';
+            }else{
+                include 'vistas/includes/header_company.php';
+            }
+        }
+
 ?>
     <!DOCTYPE html>
     <html lang="es">

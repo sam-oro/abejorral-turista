@@ -83,6 +83,11 @@
                         <h2>falta municipio</h2>
 
                         <div class="form-group">
+                            <label class="label-frm" for="correo">Dirección: </label>
+                            <input class="form-control" class="form-control" type="text" name="direccion" id="direccion" placeholder=" Ingrese la dirección de la empresa">
+                        </div>
+
+                        <div class="form-group">
                             <label class="label-frm" for="latitud">Latitud: </label>
                             <input class="form-control" type="text" name="latitud" id="latitud" placeholder="Latitud de la Empresa">
                         </div>

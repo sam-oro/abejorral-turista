@@ -6,23 +6,22 @@ $Nombre = $_POST['Nombre'];
 $Cel = $_POST['Cel'];
 $Telefono = $_POST['Telefono'];
 $Correo = $_POST['Correo'];
-$Id_Municipio = $_POST['Id_Municipio'];
-$Direccion = $_POST['Direccion'];
+//$Id_Municipio = $_POST['Id_Municipio'];
+$Direccion = $_POST['direccion'];
 $latitud = $_POST['latitud'];
 $longitud = $_POST['longitud'];
 $contrasena = $_POST['contrasena'];
 
-$sql = $conn->query("INSERT INTO tblempresa (RUT_Empresa,Nombre,Cel,Telefono,Correo,Id_Municipio,Direccion,Latitud,Longitud,Id_Rol) VALUES ('$Rut', '$Nombre', '$Cel', '$Telefono', '$Correo', '$Id_Municipio' , '$Direccion', '$latitud', '$longitud', 3)");
-
+$sql=$conn->query("INSERT INTO tbllogin (Correo, Contraseña, Id_Rol) VALUES ('$Correo', '$contrasena', 3)");
 
 
 if ($sql==TRUE){
-    $sql2="INSERT INTO tbllogin (Usuario, Contraseña, Cod_Empresa) VALUES ('$Correo', '$contrasena', (select Cod_Empresa from tblempresa order by  Cod_Empresa DESC limit 1 ))";
-        if ($conn->query($sql2)) {
+    $sql2 = $conn->query("INSERT INTO tblempresa (RUT_Empresa,Nombre,Cel,Telefono,Correo,Id_Municipio,Direccion,Latitud,Longitud) VALUES ('$Rut', '$Nombre', '$Cel', '$Telefono', '$Correo', 1 , '$Direccion', '$latitud', '$longitud')");
+        if ($sql2==TRUE) {
             //echo "<script> location.href='../form_cliente.php'; </script>";
             echo "<script> alert('Correcto')</script>";
         }else{
-            $sql3=$conn->query("DELETE FROM tblempresa WHERE Id_Cliente='$Rut'");
+            $sql3=$conn->query("DELETE FROM tbllogin WHERE Correo='$Correo'");
             echo "Error: " . $sql2 . "<br>". $conn->error;
         }
 }else{

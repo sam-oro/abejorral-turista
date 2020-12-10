@@ -125,7 +125,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-3 text-lg-center text-center contac">
-                        <a href="#"></a>
+                        <a href="<?php echo $URL ?>vistas/Contacto/contacto.php">
                         <h3 class="contach">Contáctenos</h3>
                         </a>
                     </div>

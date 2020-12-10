@@ -1,6 +1,8 @@
 <?php
     require_once "../../conexion/conexion.php";
 
+    session_start();
+
     $Usuario = $_POST['Usuario'];
     $Contraseña = $_POST['Contraseña'];
     //$Contraseña=hash("sha256", $Contraseña); QUITAR EL COMENTARIO CUANDO EL LOGIN ESTÉ LISTO

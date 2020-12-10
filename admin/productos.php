@@ -154,7 +154,7 @@ include '../conexion/conexion.php';
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="controlador/actualizar_sitio.php?Cod_Sitio=<?php echo $fila['Cod_Producto']?>" method="post">
+                                            <form action="controlador/actualizar_producto.php?Cod_Producto=<?php echo $fila['Cod_Producto']?>" method="post">
                                             <div class="form-group">
                                                 <label> Nombre del Producto </label>
                                                 <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $fila['Nom_Producto'] ?>" required>
@@ -172,12 +172,12 @@ include '../conexion/conexion.php';
                                                 <input type="number" id="valor" name="valor" class="form-control" value="<?php echo $fila['Valor'] ?>" required>
                                             </div>
                                             <div class="form-group">
-                                                <label> Nom_Solicitud</label>
-                                                <input type="text" id="solicitud" name="solicitud" class="form-control" value="<?php echo $fila['Nom_Solicitud'] ?>" requiered>
+                                                <label> tipo de Solicitud</label>
+                                                <input type="text" id="solicitud" name="solicitud" class="form-control" value="<?php echo $fila['Nom_Solicitud'] ?>" disabled>
                                             </div>
                                             <div class="form-group">
                                                 <label>Proveedor </label>
-                                                <input type="text" id="proveedor" name="proveedor" class="form-control" value="<?php echo $fila['Proveedor'] ?>" requiered>
+                                                <input type="text" id="proveedor" name="proveedor" class="form-control" value="<?php echo $fila['Proveedor'] ?>" disabled>
                                             </div>
                                                 
                                                 <div class="modal-footer">

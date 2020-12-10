@@ -72,7 +72,7 @@ main {
 }
 
 .sesiones {
-    height: 40vh;
+    height: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,6 +91,18 @@ main {
     font-weight: 700;
     text-align: center;
     line-height: 4rem;
+}
+
+@media only screen and (max-width:765px) {
+    .sesiones h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width:250px) {
+    .sesiones h2 {
+        font-size: 2.5rem;
+    }
 }
 
 .sesiones h2:hover {

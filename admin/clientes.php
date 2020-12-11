@@ -154,7 +154,7 @@ include '../conexion/conexion.php';
 
                 </tr>
 
-                    <!-- /Modal acutualzar usuario -->
+                    <!-- /Modal acutualzar cliente -->
 
                     <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
                                 <div class="modal-dialog" role="document">
@@ -200,7 +200,7 @@ include '../conexion/conexion.php';
                             </div>
 
 
-                <!-- /#Final Modal Actualizar usuario -->
+                <!-- /#Final Modal Actualizar cliente -->
                 <?php 
                     $fechaActual = date('Y-m-d');
                     echo date("Y-m-d",strtotime($fechaActual."+ 1 days"));

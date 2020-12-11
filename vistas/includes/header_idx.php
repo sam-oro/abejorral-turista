@@ -42,8 +42,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                         <a href="<?php echo $URL ?>vistas/login/login.php"><button class="dropdown-item" type="button">Iniciar sesión</button></a>
-                        <a href="<?php echo $URL ?>vistas/Cliente/form_cliente.php"><button class="dropdown-item" type="button">Registro (Usuario)</button></a>
-                        <a href="<?php echo $URL ?>vistas/Empresa/form_empresa.php"><button class="dropdown-item" type="button">Registro (Empresa)</button></a>
+                        <a href="<?php echo $URL ?>vistas/entrada_usuarios/entrada_tipousuario.php"><button class="dropdown-item" type="button">Registro</button></a>
                     </div>
                 </div>
             </ul>

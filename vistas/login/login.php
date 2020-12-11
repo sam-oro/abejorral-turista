@@ -44,7 +44,7 @@ include '../../conexion/conexion.php';
 
                 <div class="form-group">
                     <label for="">Contraseña</label>
-                    <input type="passaword" class="form-control" name="Contraseña" placeholder="Ingresa tu contraseña">
+                    <input type="password" class="form-control" name="Contraseña" placeholder="Ingresa tu contraseña">
                 </div>
 
 

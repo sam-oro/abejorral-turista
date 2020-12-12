@@ -1,3 +1,7 @@
+<?php
+    include '../../conexion/conexion.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -25,7 +29,7 @@
 <body>
 
     <section class="bg-usuarios" style="background-image:url(../../img/bg-tipousuario1.jpg); min-height: 50vh;">
-        <a href="">
+        <a href="<?php echo $URL ?>vistas/Cliente/form_cliente.php">
             <div class="p-4 p-sm-5">
                 <h1 class="text-center mb-3"> Usuario normal</h1>
 
@@ -36,7 +40,7 @@
     </section>
 
     <section class="bg-usuarios" style="background-image:url(../../img/bg-tipousuario2.jpg); min-height: 50vh;">
-        <a href="">
+        <a href="<?php echo $URL ?>vistas/Empresa/form_empresa.php">
             <div class="p-4 p-sm-5">
                 <h1 class="text-center mb-3"> Usuario empresario</h1>
 

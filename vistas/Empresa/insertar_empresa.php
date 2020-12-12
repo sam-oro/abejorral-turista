@@ -20,6 +20,8 @@ if ($sql==TRUE){
         if ($sql2==TRUE) {
             //echo "<script> location.href='../form_cliente.php'; </script>";
             echo "<script> alert('Correcto')</script>";
+            echo "<script> 	location.href='../login/login.php'; </script>";
+
         }else{
             $sql3=$conn->query("DELETE FROM tbllogin WHERE Correo='$Correo'");
             echo "Error: " . $sql2 . "<br>". $conn->error;

@@ -17,6 +17,12 @@ h3 {
     font-weight: 700;
 }
 
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
 p {
     font-weight: 300;
 }
@@ -395,4 +401,58 @@ main {
     .bg-usuarios h1 {
         font-size: 3rem;
     }
+}
+
+
+/* Vista de informate */
+
+.bg-informate {
+    padding-top: 8rem;
+    background-image: url(../img/Abejorral-portada2.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-informate h1 {
+    color: #ffffff;
+    text-shadow: 4px 4px 10px #000000;
+    text-align: center;
+    font-size: 5rem;
+    filter: brightness(100%);
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+    .iconos-informate h3 {
+        margin-top: -4rem;
+        font-size: 1.8rem;
+    }
+    .bg-informate h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .bg-informate h1 {
+        font-size: 2rem;
+    }
+}
+
+.preguntas-frecuentes h4 {
+    color: #e4573e;
+    font-size: 2rem;
+}
+
+.preguntas-frecuentes p {
+    text-align: justify;
+    font-size: 1.4rem;
+    margin-left: 1rem;
 }

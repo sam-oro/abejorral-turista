@@ -2,14 +2,14 @@
 
 include '../conexion/conexion.php';
 
-     session_start();
-     if (!isset($_SESSION['rol'])){
-         echo "<script> location.href='../index.php'; </script>";
-     }else{
-         if($_SESSION['rol']!=1){
-             echo "<script> location.href='../index.php'; </script>";
-         }
-     }
+    session_start();
+    if (!isset($_SESSION['rol'])){
+        echo "<script> location.href='../index.php'; </script>";
+    }else{
+        if($_SESSION['rol']!=1){
+            echo "<script> location.href='../index.php'; </script>";
+        }
+    }
 
 ?>
 <!DOCTYPE html>
@@ -106,21 +106,23 @@ include '../conexion/conexion.php';
 
                 <div class="container-fluid">
                     <h1 class="mt-4">Informes</h1>
-                    
 
 
-                <h2>aqui van los informes</h2>
+                    <h2>aqui van los informes</h2>
 
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        escoja un informe aqui
-                    </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Cantidad de empresas inscritas</a>
-                            <a class="dropdown-item" href="#">Catidad de productos por empresa</a>
-                            <a class="dropdown-item" href="#">etc</a>
-                        </div>
-                </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            escoja un informe aqui
+                        </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="reportes/reportes.php">Cantidad de empresas inscritas</a>
+                                <a class="dropdown-item" href="#">Catidad de productos por empresa</a>
+                                <a class="dropdown-item" href="#">etc</a>
+                            </div>
+                    </div>
+
+
+
 
 
 

@@ -28,7 +28,7 @@
 
     <section>
         <div class="text-center my-4">
-            <a class="twitter-timeline" data-lang="es" data-width="650" data-height="525" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Etfw">Tweets Abejorral</a>
+            <a class="twitter-timeline" data-lang="es" data-width="70%" data-height="525" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Etfw">Tweets Abejorral</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </section>
@@ -37,6 +37,59 @@
         <div class="text-center my-4">
             <h2>Preguntas frecuentes</h2>
         </div>
+
+        <section>
+            <?php
+        $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
+
+        while ($row=$sel->fetch_array()) {
+            echo('<div class="col-12 text-center"><iframe class="vista-video" width="560" height="330" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+        }
+        ?>
+                <div class="text-center">
+                    <button type="button" class="btn btn-color" data-toggle="modal" data-target="#exampleModal">
+            Cambiar Video
+        </button>
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Cambiar Video</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <form action="video/video_idx/actu_video.php" method="post" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label>Nombre</label>
+                                            <input class="form-control" type="text" name="nombre">
+                                        </div>
+                                        <fieldset>
+                                            <legend>vídeo</legend>
+                                            <small class="form-text text-muted">Si inserta el video con un URL no es necesario
+                                        que seleccione un video desde su dispositivo y viceversa; Si rellena el campo
+                                        URL y selecciona un archivo desde su dispositivo, se dará prioridad al URL que
+                                        ingreso primero</small>
+                                            <div class="form-group">
+                                                <label>URL Vídeo</label>
+                                                <input class="form-control" type="text" name="url">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Seleccionar Vídeo</label>
+                                                <input class="form-control" type="file" name="video">
+                                            </div>
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
 
         <div class="preguntas-frecuentes ml-1 ml-md-4 p-4">
             <h4>

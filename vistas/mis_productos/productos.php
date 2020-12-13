@@ -45,7 +45,6 @@ include '../../conexion/conexion.php';
 
                 <div class="container-fluid">
                     <h1 class="mt-4">Productos</h1>
-
                     <div class="mt-4" style="height: 60vh; overflow: scroll;">
                         <table class="table table-hover">
                             <thead class="thead">
@@ -54,18 +53,12 @@ include '../../conexion/conexion.php';
                                 <th>peso</th>
                                 <th>cantidad</th>
                                 <th>valor</th>
-                                <th>solicitud</th>
-                                <th>Empresa</th>
-                                <th>proveedor</th>
                                 <th></th>
                                 <th></th>
                             </thead>
                             <?php 
-                            $sel = $conn ->query("SELECT `tblproducto`.`Cod_Producto`, `tblproducto`.`Nom_Producto`, `tblproducto`.`Peso_Producto`, `tblproducto`.`Cantidad`, `tblproducto`.`Valor`, `tblsolicitud`.`Tipo_Solicitud` AS `Nom_Solicitud`, `tblempresa`.`Nombre` AS `Empresa`, `tblproveedor_natural`.`Nombre` AS `Proveedor`
-                            FROM `tblproducto` 
-                                LEFT JOIN `tblsolicitud` ON `tblproducto`.`Cod_Solicitud` = `tblsolicitud`.`Cod_Solicitud` 
-                                LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa` 
-                                LEFT JOIN `tblproveedor_natural` ON `tblproducto`.`Cod_Prove` = `tblproveedor_natural`.`Cod_Prove`");
+                            $empresa = $_SESSION['cod_empr'];
+                            $sel = $conn ->query("SELECT `tblproducto`.`Cod_Producto`, `tblproducto`.`Nom_Producto`, `tblproducto`.`Peso_Producto`, `tblproducto`.`Cantidad`, `tblproducto`.`Valor` FROM `tblproducto` WHERE Cod_Empresa='$empresa'");
                                 $cont=0;
                             while ($fila = $sel -> fetch_assoc()) {
                                 $cont++;
@@ -76,9 +69,6 @@ include '../../conexion/conexion.php';
                                 <td><?php echo $fila['Peso_Producto'] ?></td>
                                 <td><?php echo $fila['Cantidad'] ?></td>
                                 <td><?php echo $fila['Valor'] ?></td>
-                                <td><?php echo $fila['Nom_Solicitud'] ?></td>
-                                <td><?php echo $fila['Empresa'] ?></td>
-                                <td><?php echo $fila['Proveedor'] ?></td>
                                 <td>
                                 <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
                                 <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Producto']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
@@ -96,7 +86,7 @@ include '../../conexion/conexion.php';
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form action="controlador/actualizar_producto.php?Cod_Producto=<?php echo $fila['Cod_Producto']?>" method="post">
+                                            <form action="actualizar_producto.php?Cod_Producto=<?php echo $fila['Cod_Producto']?>" method="post">
                                             <div class="form-group">
                                                 <label> Nombre del Producto </label>
                                                 <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $fila['Nom_Producto'] ?>" required>
@@ -113,14 +103,6 @@ include '../../conexion/conexion.php';
                                                 <label> Valor </label>
                                                 <input type="number" id="valor" name="valor" class="form-control" value="<?php echo $fila['Valor'] ?>" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label> tipo de Solicitud</label>
-                                                <input type="text" id="solicitud" name="solicitud" class="form-control" value="<?php echo $fila['Nom_Solicitud'] ?>" disabled>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Proveedor </label>
-                                                <input type="text" id="proveedor" name="proveedor" class="form-control" value="<?php echo $fila['Proveedor'] ?>" disabled>
-                                            </div>
                                                 
                                                 <div class="modal-footer">
                                                     <button type="submit" class="btn btn-admin">Guardar</button>
@@ -128,7 +110,6 @@ include '../../conexion/conexion.php';
                                                 </div>
                                             </form>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

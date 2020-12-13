@@ -1,5 +1,15 @@
     <?php
         require "../../conexion/conexion.php";
+        session_start();
+        if (!isset($_SESSION['rol'])){
+            echo "<script> location.href='../index.php'; </script>";
+
+        }else{
+            if($_SESSION['rol']!=3){
+                echo "<script> location.href='../index.php'; </script>";
+            }
+        }
+        include "../includes/header_company.php";
     ?>
     <!DOCTYPE html>
 
@@ -67,22 +77,6 @@
                             <input type="file" name="img1" required>
                             <input type="file" name="img2" required>
                             <input type="file" name="img3" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Empresa</label>
-                            <select name="empresa" id="empresa" class="form-control" required>
-                                <option value="0" selected disabled>-Seleccione la Empresa-</option>
-                                <?php 
-                                    $sel = $conn->query("SELECT * FROM tblempresa");
-                    
-                                    while ($row=$sel->fetch_array()) {
-                                ?>
-                                    <option value="<?php echo $row[0] ?>"> <?php echo $row[2] ?></option>
-                                <?php	
-                                }
-                                ?>
-                            </select>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-color" type="submit" value="enviar">Enviar</button>

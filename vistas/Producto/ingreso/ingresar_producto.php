@@ -1,6 +1,14 @@
 <?php
     require "../../../conexion/conexion.php";
+    session_start();
+    if (!isset($_SESSION['rol'])){
+        echo "<script> location.href='../../index.php'; </script>";
 
+    }else{
+        if($_SESSION['rol']!=3){
+            echo "<script> location.href='../../index.php'; </script>";
+        }
+    }
     if ($conn->connect_error) {
         die("Conección exitosa: " . $conn->connect_error);
     }
@@ -11,7 +19,7 @@
     $cantidad=$_POST['cantidad'];
     $valor=$_POST['valor'];
     //$solicitud=$_POST['solicitud'];
-    $empresa=$_POST['empresa'];
+    $empresa=$_SESSION['cod_empr'];
     //$proveedor=$_POST['proveedor'];
 
     //aqui se toman los nombres de las imagens a subir

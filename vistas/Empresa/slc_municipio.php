@@ -11,5 +11,5 @@ if ($_POST['departamento'] != 0) {
 }else{
     $select = $select.'<option value="ninguno" disabled selected>-Seleccione un Municipio-</option>';          
 }
-echo $select.'</select><br><br>';
+echo $select.'</select><br>';
 ?>

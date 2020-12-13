@@ -133,11 +133,19 @@
                     echo('<iframe class="col-12 vista-video" width="560" height="315" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
                 }
                 ?>
-                        <div class="col-12 text-center">
-                            <button type="button" class="btn btn-color" data-toggle="modal" data-target="#exampleModal">
-                        Cambiar Video
-                    </button>
-                        </div>
+                    <?php
+                    if(isset($_SESSION['rol'])){
+                        if ($_SESSION['rol']==1){
+                            ?>
+                            <div class="col-12 text-center">
+                                <button type="button" class="btn btn-color" data-toggle="modal" data-target="#exampleModal">
+                                Cambiar Video
+                                </button>
+                            </div>
+                            <?php
+                        }
+                    }
+                    ?>
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -172,7 +180,7 @@
                                                         <input class="form-control" type="file" name="video">
                                                     </div>
                                                 </fieldset>
-                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                                <button type="submit" class="btn btn-color">Enviar</button>
                                             </form>
                                         </div>
                                     </div>

@@ -1,4 +1,6 @@
-
+    <?php
+        require "../../conexion/conexion.php";
+    ?>
     <!DOCTYPE html>
 
     <html>
@@ -28,7 +30,7 @@
         <section class="bg-forms p-md-5 p-0">
             <div class="container">
                 <div class="col-12 p-4" style="background-color: #fff;">
-                    <form action="insertar_empresa.php" method="POST">
+                    <form action="ingreso/ingresar_producto.php" method="POST" enctype="multipart/form-data">
 
                         <div class="text-center">
                             <h1>Ingresar una nuevo producto</h1>
@@ -40,48 +42,39 @@
 
                         <div class="form-group">
                             <labe>Nombre del Producto</labe>
-                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto">
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto" required>
                         </div>
 
                         <h3>peso?</h3>
 
                         <div class="form-group">
                             <labe>Peso:</labe>
-                            <input type="text" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso">
+                            <input type="text" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso" required>
                         </div>
 
                         <div class="form-group">
                             <label>Cantidad:</label>
-                            <input type="text" name="cantidad" id="cantidad" class="form-control" placeholder="Ingrese la cantidad del producto">
+                            <input type="text" name="cantidad" id="cantidad" class="form-control" placeholder="Ingrese la cantidad del producto" required>
                         </div>
 
                         <div class="form-group">
                             <label>Valor/Precio:</label>
-                            <input type="text" name="valor" id="valor" class="form-control" placeholder="Ingrese el valor del producto">
+                            <input type="text" name="valor" id="valor" class="form-control" placeholder="Ingrese el valor del producto" required>
                         </div>
 
                         <div class="form-group">
-                            <label>Solicitud</label>
-                            <select name="solicitud" id="solicitud" class="form-control">
-                                <option value="0" selected disabled>-Seleccione la Solicitud-</option>
-                                <?php 
-                                    $sel = $conn ->query("SELECT * FROM tblsolicitud");
-                    
-                                    while ($row=$sel->fetch_array()) {
-                                ?>
-                                    <option value="<?php echo $row[0] ?>"> <?php echo $row[1] ?></option>
-                                <?php	
-                                }
-                                ?>
-                            </select>
+                            <label>Imgenes del producto</label>
+                            <input type="file" name="img1" required>
+                            <input type="file" name="img2" required>
+                            <input type="file" name="img3" required>
                         </div>
 
                         <div class="form-group">
                             <label>Empresa</label>
-                            <select name="empresa" id="empresa" class="form-control">
+                            <select name="empresa" id="empresa" class="form-control" required>
                                 <option value="0" selected disabled>-Seleccione la Empresa-</option>
                                 <?php 
-                                    $sel = $conn ->query("SELECT * FROM tblempresa");
+                                    $sel = $conn->query("SELECT * FROM tblempresa");
                     
                                     while ($row=$sel->fetch_array()) {
                                 ?>
@@ -91,23 +84,6 @@
                                 ?>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="">Proveedor</label>
-                            <select name="proveedor" id="proveedor" class="form-control">
-                                <option value="0" selected disabled>-Seleccione el Proveedor-</option>
-                                <?php 
-                                    $sel = $conn ->query("SELECT * FROM tblproveedor_natural");
-                    
-                                    while ($row=$sel->fetch_array()) {
-                                ?>
-                                    <option value="<?php echo $row[0] ?>"> <?php echo $row[2] ?></option>
-                                <?php	
-                                }
-                                ?>
-                            </select>
-                        </div>
-
                         <div class="text-center">
                             <button class="btn btn-color" type="submit" value="enviar">Enviar</button>
                         </div>

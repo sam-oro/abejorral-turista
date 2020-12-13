@@ -13,11 +13,11 @@ $up = $conn->query("UPDATE tblproducto SET Nom_Producto='$nombre', Peso_Producto
 
 
 if ($up) {
-    //echo "<script> 	alert('Se Actualizo Correctamente') </script>";
-    //echo "<script> 	location.href='../productos.php'; </script>";
+    echo "<script> 	alert('Se Actualizo Correctamente') </script>";
+    echo "<script> 	location.href='../productos.php';</script>";
 }
 else{
-	//echo "<script> 	location.href='../productos.php';</script>";
+	echo "<script> 	location.href='../productos.php';</script>";
 }
 
 ?>

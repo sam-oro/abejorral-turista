@@ -122,18 +122,14 @@ include '../conexion/conexion.php';
                                 <th>peso</th>
                                 <th>cantidad</th>
                                 <th>valor</th>
-                                <th>solicitud</th>
                                 <th>Empresa</th>
-                                <th>proveedor</th>
                                 <th></th>
                                 <th></th>
                             </thead>
                             <?php 
-                            $sel = $conn ->query("SELECT `tblproducto`.`Cod_Producto`, `tblproducto`.`Nom_Producto`, `tblproducto`.`Peso_Producto`, `tblproducto`.`Cantidad`, `tblproducto`.`Valor`, `tblsolicitud`.`Tipo_Solicitud` AS `Nom_Solicitud`, `tblempresa`.`Nombre` AS `Empresa`, `tblproveedor_natural`.`Nombre` AS `Proveedor`
+                            $sel = $conn ->query("SELECT `tblproducto`.`Cod_Producto`, `tblproducto`.`Nom_Producto`, `tblproducto`.`Peso_Producto`, `tblproducto`.`Cantidad`, `tblproducto`.`Valor`, `tblempresa`.`Nombre`
                             FROM `tblproducto` 
-                                LEFT JOIN `tblsolicitud` ON `tblproducto`.`Cod_Solicitud` = `tblsolicitud`.`Cod_Solicitud` 
-                                LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa` 
-                                LEFT JOIN `tblproveedor_natural` ON `tblproducto`.`Cod_Prove` = `tblproveedor_natural`.`Cod_Prove`");
+                                LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa`;");
                                 $cont=0;
                             while ($fila = $sel -> fetch_assoc()) {
                                 $cont++;
@@ -144,9 +140,7 @@ include '../conexion/conexion.php';
                                 <td><?php echo $fila['Peso_Producto'] ?></td>
                                 <td><?php echo $fila['Cantidad'] ?></td>
                                 <td><?php echo $fila['Valor'] ?></td>
-                                <td><?php echo $fila['Nom_Solicitud'] ?></td>
-                                <td><?php echo $fila['Empresa'] ?></td>
-                                <td><?php echo $fila['Proveedor'] ?></td>
+                                <td><?php echo $fila['Nombre'] ?></td>
                                 <td>
                                 <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
                                 <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Producto']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
@@ -182,12 +176,8 @@ include '../conexion/conexion.php';
                                                 <input type="number" id="valor" name="valor" class="form-control" value="<?php echo $fila['Valor'] ?>" required>
                                             </div>
                                             <div class="form-group">
-                                                <label> tipo de Solicitud</label>
-                                                <input type="text" id="solicitud" name="solicitud" class="form-control" value="<?php echo $fila['Nom_Solicitud'] ?>" disabled>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Proveedor </label>
-                                                <input type="text" id="proveedor" name="proveedor" class="form-control" value="<?php echo $fila['Proveedor'] ?>" disabled>
+                                                <label>Empresa </label>
+                                                <input type="text" id="empresa" name="empresa" class="form-control" value="<?php echo $fila['Nombre'] ?>" disabled>
                                             </div>
                                                 
                                                 <div class="modal-footer">

@@ -86,7 +86,7 @@
                         </div>
 
                         <div>
-                            <h2>aquí qué?:</h2>
+                            <h2>Localización:</h2>
                         </div>
 
                         <div class="form-group">
@@ -104,7 +104,7 @@
                             </select>
                         </div>
 
-                        <h2>Municipio?</h2>
+                        <div id="mun"></div>
 
                         <div class="text-center">
                             <button class="btn btn-color" type="submit" value="enviar">Enviar</button>
@@ -114,33 +114,32 @@
             </div>
         </section>
 
-        <script type="text/javascript">
-            $(document).ready(function() {
-                recargarLista();
-
-                $('#departamento').change(function() {
-                    recargarLista();
-                });
-            })
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
         </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+
         <script type="text/javascript">
-            function recargarLista() {
+            function recargarLista(){
                 $.ajax({
                     type: "POST",
                     url: "lista.php",
-                    data: "departamento=" + $('#departamento').val(),
-                    success: function(r) {
+                    data: "departamento="+$('#departamento').val(),
+                    success: function(r){
                         $('#mun').html(r);
                     }
                 });
             }
         </script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                recargarLista();
 
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+                $().change(function(){
+                    recargarLista();
+                });
+            })
         </script>
     </body>
 

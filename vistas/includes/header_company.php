@@ -25,7 +25,7 @@
                     <a class="nav-link" href="<?php echo $URL ?>vistas/nuestro_municipio/nuestro_municipio.php">Nuestro Municipio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Informate</a>
+                    <a class="nav-link" href="<?php echo $URL ?>vistas/informate/informate.php">Informate</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $URL; ?>vistas/ecotour/ecotour.php">Eco Turismo</a>
@@ -41,7 +41,7 @@
                     Panel Empresa
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                        <a href="<?php echo $URL ?>vistas/Producto/form_producto.php"><button class="dropdown-item" type="button">Mis productos</button></a>
+                        <a href="<?php echo $URL ?>vistas/mis_productos/productos.php"><button class="dropdown-item" type="button">Mis productos</button></a>
                         <a href="<?php echo $URL ?>vistas/Empresa/vista_empresa.php"><button class="dropdown-item" type="button">Mi empresa</button></a>
                         <div class="dropdown-divider"></div>
                         <a href="<?php echo $URL; ?>vistas/login/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar Sesión</button></a>

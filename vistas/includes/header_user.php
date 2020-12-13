@@ -25,7 +25,7 @@
                     <a class="nav-link" href="<?php echo $URL ?>vistas/nuestro_municipio/nuestro_municipio.php">Nuestro Municipio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Informate</a>
+                    <a class="nav-link" href="<?php echo $URL ?>vistas/informate/informate.php">Informate</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $URL; ?>vistas/ecotour/ecotour.php">Eco Turismo</a>

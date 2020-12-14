@@ -115,7 +115,7 @@ include '../conexion/conexion.php';
                             escoja un informe aqui
                         </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="reportes/reportes.php">Cantidad de empresas inscritas</a>
+                                <a class="dropdown-item" href="reportes/reportes.php" target="_blank">Cantidad de empresas inscritas</a>
                                 <a class="dropdown-item" href="#">Catidad de productos por empresa</a>
                                 <a class="dropdown-item" href="#">etc</a>
                             </div>

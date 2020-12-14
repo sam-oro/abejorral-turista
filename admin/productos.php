@@ -179,6 +179,7 @@ include '../conexion/conexion.php';
                                                 <label>Empresa </label>
                                                 <input type="text" id="empresa" name="empresa" class="form-control" value="<?php echo $fila['Nombre'] ?>" disabled>
                                             </div>
+
                                                 
                                                 <div class="modal-footer">
                                                     <button type="submit" class="btn btn-admin">Guardar</button>

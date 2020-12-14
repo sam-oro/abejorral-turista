@@ -97,8 +97,8 @@ include '../conexion/conexion.php';
                                     <a class="dropdown-item" href="../index.php">inicio</a>
                                     <a class="dropdown-item" href="#">otra direccion</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">otra direccion</a>
-                                </div>
+                                    <a class="dropdown-item" href="#">otra direccion</a> 
+                                </div> 
                             </li>
                         </ul>
                     </div>
@@ -115,11 +115,16 @@ include '../conexion/conexion.php';
                             escoja un informe aqui
                         </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="reportes/reportes.php" target="_blank">Cantidad de empresas inscritas</a>
-                                <a class="dropdown-item" href="#">Catidad de productos por empresa</a>
-                                <a class="dropdown-item" href="#">etc</a>
+                                <a class="dropdown-item" href="reportes/reportes.php" target="_blank">Cantidad de clientes registrados</a>
+                                <a class="dropdown-item" href="reportes/reporte_empresa.php" target="_blank">Empresas registradas</a>
+                                <a class="dropdown-item" href="reportes/reporte_productos.php" target="_blank">Reporte de prodcutos</a>
                             </div>
                     </div>
+
+
+                    <iframe src="reportes/reportes.php" title="iframe Example 1" width="800" height="800">
+                    <p>Your browser does not support iframes.</p>
+                    </iframe>
 
 
 

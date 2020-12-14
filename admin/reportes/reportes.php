@@ -10,12 +10,14 @@ class PDF extends FPDF
 // Cabecera de página
 function Header()
 {
+    // Logo
+    $this->Image('../../img/logo-ng.png',20,5,25);
     // Arial bold 15
     $this->SetFont('Arial','B',15);
     // Movernos a la derecha
     $this->Cell(50);
     // Título
-    $this->Cell(160,10,'Reporte De Clientes Registrados',0,0,'C');
+    $this->Cell(160,10,'Reporte de clientes registrados',0,0,'C');
     // Salto de línea
     $this->Ln(20);
 

@@ -98,13 +98,12 @@ include '../conexion/conexion.php';
                                     data-toggle="dropdown"
                                     aria-haspopup="true"
                                     aria-expanded="false">
-                                    Dropdown
+                                    Administrador
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="../index.php">inicio</a>
-                                    <a class="dropdown-item" href="#">otra direccion</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">otra direccion</a>
+                                    <a class="dropdown-item" href="<?php echo $url ?>vistas/login/cerrar_sesion.php">Cerrar Sesion</a>
                                 </div>
                             </li>
                         </ul>

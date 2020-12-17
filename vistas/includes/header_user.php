@@ -31,7 +31,7 @@
                     <a class="nav-link" href="<?php echo $URL; ?>vistas/ecotour/ecotour.php">Eco Turismo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nuestros Productos</a>
+                    <a class="nav-link" href="<?php echo $URL; ?>vistas/Producto/vista_productos.php">Nuestros Productos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $URL ?>vistas/Contacto/contacto.php">Contacto</a>

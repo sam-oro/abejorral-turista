@@ -111,9 +111,6 @@
                 </div>
         </section>
 
-        <section>
-        <a class="twitter-timeline" data-lang="es" data-width="650" data-height="525" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Etfw">Tweets by AAbejorral</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </section>
 
         <section>
             <div class="container my-3">

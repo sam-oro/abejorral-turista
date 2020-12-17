@@ -201,14 +201,6 @@ include '../conexion/conexion.php';
 
 
                 <!-- /#Final Modal Actualizar cliente -->
-                <?php 
-                    $fechaActual = date('Y-m-d');
-                    //echo date("Y-m-d",strtotime($fechaActual."+ 1 days"));
-                    $fechamin=date("Y-m-d",strtotime($fechaActual."+ 1 days"));
-                    
-                    ?>
-                
-                    <input type="date" min=<?php echo $fechamin ?>>
                     
                 <?php } ?>
             </table>

@@ -1,3 +1,23 @@
+<?php
+    include('../../conexion/conexion.php');
+
+    session_start();
+        if(!isset($_SESSION['rol'])){
+            include '../includes/header_idx.php';
+        }else{
+            if($_SESSION['rol'] ==2 ){
+                include '../includes/header_user.php';
+            }else{
+                if ($_SESSION['rol']==1){
+                    include '../includes/header_admin.php';
+                }else{
+                    include '../includes/header_company.php';
+                }
+            }
+
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 

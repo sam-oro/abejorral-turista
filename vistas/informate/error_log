@@ -1,0 +1,18 @@
+[21-Dec-2020 09:49:35 America/New_York] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hassorie_abejo'@'mocha3025' (using password: YES) in /home/hassorie/contigoabejorral.com/conexion/conexion.php on line 4
+[21-Dec-2020 09:49:35 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php on line 63
+[21-Dec-2020 09:49:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php:65
+Stack trace:
+#0 {main}
+  thrown in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php on line 65
+[21-Dec-2020 09:50:29 America/New_York] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hassorie_abejo'@'mocha3025' (using password: YES) in /home/hassorie/contigoabejorral.com/conexion/conexion.php on line 4
+[21-Dec-2020 09:50:29 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php on line 63
+[21-Dec-2020 09:50:29 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php:65
+Stack trace:
+#0 {main}
+  thrown in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php on line 65
+[21-Dec-2020 09:50:30 America/New_York] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hassorie_abejo'@'mocha3025' (using password: YES) in /home/hassorie/contigoabejorral.com/conexion/conexion.php on line 4
+[21-Dec-2020 09:50:30 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php on line 63
+[21-Dec-2020 09:50:30 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php:65
+Stack trace:
+#0 {main}
+  thrown in /home/hassorie/contigoabejorral.com/vistas/informate/informate.php on line 65

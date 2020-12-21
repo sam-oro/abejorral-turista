@@ -65,6 +65,30 @@
                     </div>
                 </div>
 
+                <?php $sel=$conn->query("SELECT * FROM tblproducto"); 
+                
+                while($fila=$sel->fetch_assoc()){
+                    ?>
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img" alt="..." whidth="80px" heigth="80px">
+                                <img src="<?php echo $urlimagen.$fila['img2']; ?>" class="card-img" alt="...">
+                                <img src="<?php echo $urlimagen.$fila['img3']; ?>" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                }
+                ?>
+
                 <div class="card m-2 col-12 col-md-3">
                     <img src="../../img/slider-02.jpg" class="card-img-top" alt="...">
                     <div class="card-body">

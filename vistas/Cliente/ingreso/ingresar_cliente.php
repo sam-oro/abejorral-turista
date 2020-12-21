@@ -16,7 +16,7 @@
     $contrasena=$_POST['contrasena'];
     //$Contraseña=hash("sha256", $Contraseña); QUITAR EL COMENTARIO CUANDO EL LOGIN ESTÉ LISTO
 
-    $sql=$conn->query("INSERT INTO tbllogin (Correo, Contraseña, Id_Rol) VALUES ('$correo', '$contrasena', 2)");
+    $sql=$conn->query("INSERT INTO tbllogin (Correo, Contrasena, Id_Rol) VALUES ('$correo', '$contrasena', 2)");
 
     if ($sql==true) {
         $sql2=$conn->query("INSERT INTO tblcliente (Id_Cliente, Nombre, Apellidos, Fecha_Nacimiento, Cel, id_Municipio, Direccion, Correo) VALUES ('$id', '$nombre', '$apellidos', '$fechanaci','$cel', 1 , '$direccion', '$correo')");

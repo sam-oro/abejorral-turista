@@ -12,7 +12,7 @@ $latitud = $_POST['latitud'];
 $longitud = $_POST['longitud'];
 $contrasena = $_POST['contrasena'];
 
-$sql=$conn->query("INSERT INTO tbllogin (Correo, Contraseña, Id_Rol) VALUES ('$Correo', '$contrasena', 3)");
+$sql=$conn->query("INSERT INTO tbllogin (Correo, Contrasena, Id_Rol) VALUES ('$Correo', '$contrasena', 3)");
 
 
 if ($sql==TRUE){

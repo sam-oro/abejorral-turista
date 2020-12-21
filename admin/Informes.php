@@ -48,7 +48,7 @@ include '../conexion/conexion.php';
                 <div class="sidebar-heading">Abejorral
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="informes.php" class="list-group-item list-group-item-action bg-light">Informes</a>
+                    <a href="Informes.php" class="list-group-item list-group-item-action bg-light">Informes</a>
                     <a href="clientes.php" class="list-group-item list-group-item-action bg-light">Clientes</a>
                     <a href="empresas.php" class="list-group-item list-group-item-action bg-light">Empresas</a>
                     <a href="productos.php" class="list-group-item list-group-item-action bg-light">Productos</a>
@@ -98,7 +98,7 @@ include '../conexion/conexion.php';
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="../index.php">inicio</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="<?php echo $url ?>vistas/login/cerrar_sesion.php">Cerrar Sesion</a>
+                                    <a class="dropdown-item" href="<?php echo $URL ?>vistas/login/cerrar_sesion.php">Cerrar Sesion</a>
                                 </div> 
                             </li>
                         </ul>

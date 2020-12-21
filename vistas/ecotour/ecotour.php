@@ -117,7 +117,7 @@
 
         <section class="container">
             <div class="row col-12 mt-5">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-3">
                     <h2>Historia</h2>
 
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum nesciunt veritatis optio voluptatibus. Fugit accusamus dolores tempore facilis saepe necessitatibus eius totam! Inventore ullam quisquam perspiciatis, aspernatur
@@ -125,12 +125,12 @@
                     </p>
                 </div>
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-9">
                     <?php
                 $sel = $conn ->query("SELECT * FROM tblvideo where cod='2'");
 
                 while ($row=$sel->fetch_array()) {
-                    echo('<iframe class="col-12 vista-video" width="560" height="315" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
+                    echo('<iframe class="col-12 vista-videoo" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
                 }
                 ?>
                     <?php

@@ -55,7 +55,7 @@
         $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
 
         while ($row=$sel->fetch_array()) {
-            echo('<div class="col-12 text-center"><iframe class="vista-video" width="560" height="315" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+            echo('<div class="col-12 text-center"><iframe class="vista-video" width="1280" height="720" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
         }
         ?>
                 <?php

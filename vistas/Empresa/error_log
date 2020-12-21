@@ -1,0 +1,6 @@
+[21-Dec-2020 10:12:22 America/New_York] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hassorie_abejo'@'localhost' (using password: YES) in /home/hassorie/contigoabejorral.com/conexion/conexion.php on line 4
+[21-Dec-2020 10:12:22 America/New_York] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/hassorie/contigoabejorral.com/vistas/Empresa/slc_municipio.php on line 7
+[21-Dec-2020 10:12:22 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on null in /home/hassorie/contigoabejorral.com/vistas/Empresa/slc_municipio.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/hassorie/contigoabejorral.com/vistas/Empresa/slc_municipio.php on line 8

@@ -52,12 +52,12 @@ include '../conexion/conexion.php';
                 <div class="sidebar-heading">Abejorral
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="informes.php" class="list-group-item list-group-item-action bg-light">Informes</a>
+                    <a href="Informes.php" class="list-group-item list-group-item-action bg-light">Informes</a>
                     <a href="clientes.php" class="list-group-item list-group-item-action bg-light">Clientes</a>
                     <a href="empresas.php" class="list-group-item list-group-item-action bg-light">Empresas</a>
                     <a href="productos.php" class="list-group-item list-group-item-action bg-light">Productos</a>
                     <a href="preguntas.php" class="list-group-item list-group-item-action bg-light">Preguntas</a>
-                    <a href="sitio" class="list-group-item list-group-item-action bg-light">Sitio Turistico</a>
+                    <a href="sitio.php" class="list-group-item list-group-item-action bg-light">Sitio Turistico</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -81,13 +81,6 @@ include '../conexion/conexion.php';
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Inicio
-                                    <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">inicio2</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a
                                     class="nav-link dropdown-toggle"

@@ -4,10 +4,10 @@
     session_start();
 
     $Usuario = $_POST['Usuario'];
-    $Contraseña = $_POST['Contraseña'];
+    $Contrasena = $_POST['Contrasena'];
     //$Contraseña=hash("sha256", $Contraseña); QUITAR EL COMENTARIO CUANDO EL LOGIN ESTÉ LISTO
 
-    $sel = $conn->query("SELECT * FROM tbllogin WHERE Correo='$Usuario' AND Contraseña='$Contraseña'");
+    $sel = $conn->query("SELECT * FROM tbllogin WHERE Correo='$Usuario' AND Contrasena='$Contrasena'");
 
     $row = mysqli_fetch_array($sel);
 
@@ -19,7 +19,7 @@
         if($row[2]==1){
             $_SESSION['Correo']=$row[0];
             $_SESSION['rol']=$row[2];
-            echo "<script> location.href='../../admin/informes.php'; </script>";
+            echo "<script> location.href='../../admin/Informes.php'; </script>";
         }elseif($row[2]==3){
             $_SESSION['Correo']=$row[0];
             $_SESSION['rol']=$row[2];

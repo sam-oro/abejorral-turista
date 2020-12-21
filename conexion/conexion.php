@@ -1,9 +1,9 @@
 <?php
 
     //Los otros jaja
-$conn = new mysqli('localhost','root','','abejorral','33065');
-$URL = "http://localhost/GIT/abejorral/";
-$urlimagen="http://localhost/GIT/abejorral/images/";
+$conn = new mysqli('localhost','root','','abejorral');
+$URL = "http://localhost/GIT/abejorral-turista/";
+$urlimagen="http://localhost/GIT/abejorral-turista/images/";
 
     //Servidor
 /* $conn = new mysqli('mysql1005.mochahost.com','hassorie_abejo','abejorral123','hassorie_abejorral2');

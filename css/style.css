@@ -346,7 +346,14 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+}
+
+@supports(object-fit: cover){
+    .card img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    }
 }
 
 .card-body i {

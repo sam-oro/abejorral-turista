@@ -59,9 +59,9 @@
                             <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <h3 style="text-transform:uppercase;">Nombre producto</h3>
+                                    <h3 style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
                                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <i class="fas fa-shopping-basket"> Precio </i>
+                                    <i class="fas fa-shopping-basket"> Precio: <?php echo $fila['Valor'] ?> </i>
                                 </div>
                                 <div class="text-center">
                                     <a href="#"><button class="btn btn-admin mt-3">Ver producto</button></a>

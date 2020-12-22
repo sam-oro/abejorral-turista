@@ -174,9 +174,9 @@ main {
 
 .bg-index {
     padding-top: 8rem;
-    background-image: url(../img/Abejorral-portada.jpg);
-    height: 60vh;
-    background-position: center;
+    background-image: url(../img/sec-01.jpg);
+    height: 50vh;
+    background-position: center 70px;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

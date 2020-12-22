@@ -52,22 +52,49 @@
         <section>
             <div class="row contenedor d-md-flex m-4 cards-info">
                 <?php $sel=$conn->query("SELECT * FROM tblproducto"); 
-                
+                $cont=0;
                 while($fila=$sel->fetch_assoc()){
+                    $cont++;
                     ?>
                         <div class="card m-2 col-12 col-md-3">
                             <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="text-center">
-                                    <h3 style="text-transform:uppercase;">Nombre producto</h3>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <i class="fas fa-shopping-basket"> Precio </i>
+                                    <h3 style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
+                                    <i class="fas fa-shopping-basket"> Precio: <?php echo $fila['Valor'] ?> </i>
                                 </div>
                                 <div class="text-center">
-                                    <a href="#"><button class="btn btn-admin mt-3">Ver producto</button></a>
+                                    <button type="button" class="btn btn-admin mt-3" data-toggle="modal" data-target="#modal<?php echo $cont; ?>">Ver producto</button>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h3 class="modal-title" style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body">
+
+                                <div class="col mt-3 card">
+                                    <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                                </div>
+                                <div class="col mt-3 card">
+                                    <img src="<?php echo $urlimagen.$fila['img2']; ?>" class="card-img-top" alt="...">
+                                </div>
+                                <div class="col mt-3 card">
+                                    <img src="<?php echo $urlimagen.$fila['img3']; ?>" class="card-img-top" alt="...">
+                                </div>
+                                
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                     <?php
                 }
                 ?>

@@ -141,7 +141,7 @@ include '../../conexion/conexion.php';
                     if (resultado.value) {
                         // Hicieron click en "Sí"
                         //console.log("*se elimina la venta*");
-                        window.location.href="controlador/eliminar_producto.php?Cod_Producto="+id
+                        window.location.href="eliminar_producto.php?Cod_Producto="+id
                     } else {
                         // Dijeron que no
                         console.log("*NO se elimina*");

@@ -58,9 +58,8 @@
     $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, img1, img2, img3, Cod_Empresa) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$name', '$name2', '$name3', '$empresa')";
 
     if ($conn->query($sql)){
-        //echo "<script> location.href='../form_producto.php'; </script>";
         echo "<script> alert('Correcto');</script>";
-        //echo "<script> location.href='../form_producto.php'; </script>";
+        echo "<script> location.href='../form_producto.php'; </script>";
     }else{
         echo "Error: " . $sql . "<br>". $conn->error;
     }

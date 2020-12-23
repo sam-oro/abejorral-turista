@@ -48,7 +48,7 @@
 
     <section>
             <?php
-            $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
+            $sel = $conn ->query("SELECT * FROM tblvideo where cod='3'");
 
             while ($row=$sel->fetch_array()) {
                 echo('<div class="col-12 text-center"><iframe class="vista-video" width="560" height="330" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
@@ -79,7 +79,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="container">
-                                <form action="video/video_idx/actu_video.php" method="post" enctype="multipart/form-data">
+                                <form action="../../video/video_informate/actu_video.php" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label>Nombre</label>
                                         <input class="form-control" type="text" name="nombre">

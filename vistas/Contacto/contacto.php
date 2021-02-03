@@ -54,27 +54,27 @@
 
                         <div class="form-group">
                             <label for="">Nombres: </label>
-                            <input class="form-control" type="text" name="nombres" placeholder="Ingrese un Nombre">
+                            <input class="form-control" type="text" name="nombres" placeholder="Ingrese un Nombre" required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Correo: </label>
-                            <input class="form-control" type="email" name="correo" placeholder="Ingrese un Correo">
+                            <input class="form-control" type="email" name="correo" placeholder="Ingrese un Correo" required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Celular: </label>
-                            <input class="form-control" type="tel" name="celular" placeholder="Ingrese un numero de celular">
+                            <input class="form-control" type="tel" name="celular" placeholder="Ingrese un numero de celular" required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Asunto: </label>
-                            <input class="form-control" type="text" name="asunto" placeholder="Ingrese un Asunto">
+                            <input class="form-control" type="text" name="asunto" placeholder="Ingrese un Asunto" required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Comentario:</label>
-                            <textarea class="form-control" name="comentario" rows="6" placeholder="Ingrese un comentario"></textarea>
+                            <textarea class="form-control" name="comentario" rows="6" placeholder="Ingrese un comentario" required></textarea>
                         </div>
 
                         <div class="text-center">

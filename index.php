@@ -116,28 +116,28 @@
             <div class="container my-3">
                 <div class="row iconos-index col-12">
                     <div class="col-12 col-md-3 text-center">
-                        <a href="">
+                        <a href="vistas/ecotour/ecotour.php">
                             <img src="img/iconos-02.svg">
                             <h3>Eco Turismo</h3>
                         </a>
                     </div>
 
                     <div class="col-12 col-md-3 text-center">
-                        <a href="">
+                        <a href="vistas/ecotour/ecotour.php">
                             <img src="img/iconos-03.svg">
                             <h3>Sitios para visitar</h3>
                         </a>
                     </div>
 
                     <div class="col-12 col-md-3 text-center">
-                        <a href="">
+                        <a href="vistas/ecotour/ecotour.php">
                             <img src="img/iconos-01.svg">
                             <h3>Rutas históricas</h3>
                         </a>
                     </div>
 
                     <div class="col-12 col-md-3 text-center">
-                        <a href="">
+                        <a href="vistas/informate/informate.php">
                             <img src="img/iconos-04.svg">
                             <h3>Preguntas frecuentes</h3>
                         </a>
@@ -156,8 +156,8 @@
                         </a>
                     </div>
                     <div class="col-lg-6 my-3 my-lg-0 text-lg-center text-center">
-                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="redes btn btn-social mx-3" target="_blank" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                        <a class="redes btn btn-social mx-3" target="_blank" href="https://www.facebook.com/alcaldia.abejorral/"><i class="fab fa-facebook-f"></i></a>
                         <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>

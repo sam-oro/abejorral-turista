@@ -55,21 +55,19 @@
                             <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto" required>
                         </div>
 
-                        <h3>peso?</h3>
-
                         <div class="form-group">
-                            <labe>Peso:</labe>
-                            <input type="text" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso" required>
+                            <labe>Peso</labe>
+                            <input type="text" name="peso" id="peso" class="form-control" placeholder="Peso del producto" required>
                         </div>
 
                         <div class="form-group">
                             <label>Cantidad:</label>
-                            <input type="text" name="cantidad" id="cantidad" class="form-control" placeholder="Ingrese la cantidad del producto" required>
+                            <input type="text" name="cantidad" id="cantidad" class="form-control" placeholder="Cantidad del producto" required>
                         </div>
 
                         <div class="form-group">
                             <label>Valor/Precio:</label>
-                            <input type="text" name="valor" id="valor" class="form-control" placeholder="Ingrese el valor del producto" required>
+                            <input type="text" name="valor" id="valor" class="form-control" placeholder="Valor del producto" required>
                         </div>
 
                         <div class="form-group">

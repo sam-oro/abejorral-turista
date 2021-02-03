@@ -81,6 +81,24 @@
                 
             </div>
         </div>
+
+        <footer class="footer mt-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-lg-center text-center contac">
+                        <a href="<?php echo $URL ?>vistas/Contacto/contacto.php">
+                        <h3 class="contach">Contáctenos</h3>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 my-3 my-lg-0 text-lg-center text-center">
+                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>
+                </div>
+            </div>
+        </footer>
         
 
     <script>

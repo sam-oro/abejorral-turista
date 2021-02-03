@@ -42,7 +42,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                         <a href="<?php echo $URL ?>vistas/mis_productos/productos.php"><button class="dropdown-item" type="button">Mis productos</button></a>
-                        <a href="<?php echo $URL ?>vistas/Empresa/vista_empresa.php"><button class="dropdown-item" type="button">Mi empresa</button></a>
+                        <a href="<?php echo $URL ?>vistas/Empresa/vista_empresa.php?Cod_Empresa=<?php echo $_SESSION['cod_empr'] ?>"><button class="dropdown-item" type="button">Mi empresa</button></a>
                         <div class="dropdown-divider"></div>
                         <a href="<?php echo $URL; ?>vistas/login/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar Sesión</button></a>
                     </div>

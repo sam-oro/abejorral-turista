@@ -43,7 +43,7 @@ if ($_POST['url'] != "") {
                 rename( 'videos/'.$nombv, 'videos/index.mp4');
                 echo "Archivo Guardado con exito";
 
-                $varPHP="video/video_idx/videos/index.mp4";
+                $varPHP="videos/index.mp4";
                 $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='1'");
 
                 if ($up) {
@@ -63,7 +63,7 @@ if ($_POST['url'] != "") {
             rename( 'videos/'.$nombv, 'videos/index.mp4');
             echo "Archivo Guardado con exito";
 
-            $varPHP="video/video_idx/videos/index.mp4";
+            $varPHP="videos/index.mp4";
             $up = $conn -> query("UPDATE tblvideo SET Nombre='$nombre', url='$varPHP' WHERE cod='1'");
 
             if ($up) {

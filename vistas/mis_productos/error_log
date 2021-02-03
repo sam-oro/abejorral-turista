@@ -1,0 +1,7 @@
+[22-Dec-2020 16:24:18 America/New_York] PHP Notice:  Array to string conversion in /home/hassorie/contigoabejorral.com/vistas/mis_productos/actualizar_producto.php on line 12
+[22-Dec-2020 16:24:18 America/New_York] PHP Notice:  Array to string conversion in /home/hassorie/contigoabejorral.com/vistas/mis_productos/actualizar_producto.php on line 12
+[22-Dec-2020 16:24:18 America/New_York] PHP Notice:  Array to string conversion in /home/hassorie/contigoabejorral.com/vistas/mis_productos/actualizar_producto.php on line 12
+[22-Dec-2020 16:24:43 America/New_York] PHP Warning:  unlink(../../images/20201222162113img-01.jpg): No such file or directory in /home/hassorie/contigoabejorral.com/vistas/mis_productos/eliminar_producto.php on line 19
+[22-Dec-2020 16:28:31 America/New_York] PHP Warning:  unlink(../../images/20201222162113img-01.jpg): No such file or directory in /home/hassorie/contigoabejorral.com/vistas/mis_productos/eliminar_producto.php on line 17
+[22-Dec-2020 16:28:31 America/New_York] PHP Warning:  unlink(../../images/20201222162113img-02.jpg): No such file or directory in /home/hassorie/contigoabejorral.com/vistas/mis_productos/eliminar_producto.php on line 18
+[22-Dec-2020 16:28:31 America/New_York] PHP Warning:  unlink(../../images/20201222162113img-01.jpg): No such file or directory in /home/hassorie/contigoabejorral.com/vistas/mis_productos/eliminar_producto.php on line 19

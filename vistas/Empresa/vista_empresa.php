@@ -91,8 +91,8 @@
                         </a>
                     </div>
                     <div class="col-lg-6 my-3 my-lg-0 text-lg-center text-center">
-                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="redes btn btn-social mx-3" target="_blank" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+                        <a class="redes btn btn-social mx-3" target="_blank" href="https://www.facebook.com/alcaldia.abejorral/"><i class="fab fa-facebook-f"></i></a>
                         <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>

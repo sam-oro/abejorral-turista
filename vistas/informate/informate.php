@@ -113,20 +113,23 @@
         <div class="text-center my-4">
             <h2>Preguntas frecuentes</h2>
         </div>
+        <div class="preguntas-frecuentes ml-1 ml-md-4 p-4">
 
         <?php
         $sel2 = $conn->query("SELECT * FROM tblpreguntas");
         while ($fila2 = $sel2->fetch_assoc()){
         ?>
-        <div class="preguntas-frecuentes ml-1 ml-md-4 p-4">
-            <h4>
-                <?php echo $fila2['Pregunta']?>
-            </h4>
-            <p class=""><?php echo $fila2['Respuesta']?></p>
-        </div>
+
+            <div class="cabecera">
+                <h3 class="cont-pregunta"><?php echo $fila2['Pregunta']?></h3>
+            </div>
+            <div class="pregunta">
+                <p class=""><?php echo $fila2['Respuesta']?></p>
+            </div>
         <?php
         }
         ?>
+        </div>
     </Section>
 
     <section>

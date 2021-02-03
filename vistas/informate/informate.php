@@ -16,6 +16,7 @@
             }
 
         }
+    
 ?>
 
 <!DOCTYPE html>
@@ -113,12 +114,19 @@
             <h2>Preguntas frecuentes</h2>
         </div>
 
+        <?php
+        $sel2 = $conn->query("SELECT * FROM tblpreguntas");
+        while ($fila2 = $sel2->fetch_assoc()){
+        ?>
         <div class="preguntas-frecuentes ml-1 ml-md-4 p-4">
             <h4>
-                tit. pregunta
+                <?php echo $fila2['Pregunta']?>
             </h4>
-            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti at magni necessitatibus.</p>
+            <p class=""><?php echo $fila2['Respuesta']?></p>
         </div>
+        <?php
+        }
+        ?>
     </Section>
 
     <section>

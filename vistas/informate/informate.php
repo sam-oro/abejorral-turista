@@ -25,7 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Informate</title>
 
     <!--importacion boostrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -48,15 +48,14 @@
     </section>
 
     <section>
-            <?php
+    <div class="row col-12">
+        <div class="col-12 col-md-6">
+        <?php
             $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
 
             while ($row=$sel->fetch_array()) {
                 echo('<div class="col-12 text-center"><iframe class="vista-video" width="560" height="330" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
             }
-            ?>
-
-            <?php
                 if(isset($_SESSION['rol'])){
                     if ($_SESSION['rol']==1){
                         ?>
@@ -107,10 +106,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="text-center my-4">
+                <a class="twitter-timeline" data-lang="es" data-width="100%" data-height="700" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Etfw">Tweets Abejorral</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        
+    </div>
+            
     </section>
 
-    <Section>
-        <div class="text-center my-4">
+    <section>
+    <div class="text-center mt-5">
             <h2>Preguntas frecuentes</h2>
         </div>
         <div class="preguntas-frecuentes ml-1 ml-md-4 p-4">
@@ -130,13 +140,7 @@
         }
         ?>
         </div>
-    </Section>
-
-    <section>
-        <div class="text-center my-4">
-            <a class="twitter-timeline" data-lang="es" data-width="50%" data-height="900" href="https://twitter.com/AAbejorral?ref_src=twsrc%5Etfw">Tweets Abejorral</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+        
     </section>
 
     <footer class="footer mt-4">

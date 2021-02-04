@@ -50,7 +50,19 @@
             <h1>Bienvenidos</h1>
         </section>
 
-        <section>
+        
+
+        <section class="container">
+            <div class="row col-12 mt-5">
+                <div class="col-12">
+                    <h2 class="text-center">ABEJORRAL</h2>
+                    
+                    <p>Abejorral es un municipio de Colombia, localizado en la subregión Oriente del departamento de Antioquia. Limita por el norte con los municipios de Montebello, La Ceja y La Unión, por el este con el municipio de Sonsón, por el sur con el departamento de Caldas y por el oeste con los municipios de Santa Bárbara y Montebello. Su cabecera dista 109 kilómetros de la ciudad de Medellín, capital del departamento de Antioquia. El municipio posee una extensión de 491 kilómetros cuadrados. Por ser cuna de muchos personajes ilustres de la historia de Colombia, Abejorral se conoce como "La Popayán Antioqueña" y "La Tierra de los Cien Señores". También se le ha llamado "Ciudad Astillero".</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
             <?php
         $sel = $conn ->query("SELECT * FROM tblvideo where cod='1'");
 

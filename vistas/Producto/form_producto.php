@@ -51,12 +51,20 @@
                         </div>
 
                         <div class="form-group">
-                            <labe>Nombre del Producto</labe>
+                            <label>Nombre del Producto</label>
                             <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto" required>
                         </div>
 
                         <div class="form-group">
-                            <labe>Peso</labe>
+                            <label>¿Es un Café?</label><br>
+                            <label class="switch">
+                                <input type="checkbox" name="cafe">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Peso</label>
                             <input type="text" name="peso" id="peso" class="form-control" placeholder="Peso del producto" required>
                         </div>
 
@@ -71,10 +79,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Imgenes del producto</label>
-                            <input type="file" name="img1" required>
-                            <input type="file" name="img2" required>
-                            <input type="file" name="img3" required>
+                            <label>Imgenes del producto</label><br>
+                            <input type="file" name="img1" required><br><br>
+                            <input type="file" name="img2" required><br><br>
+                            <input type="file" name="img3" required><br><br>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-color" type="submit" value="enviar">Enviar</button>

@@ -25,7 +25,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nuestro Municipio</title>
+        <title>Productos</title>
 
         <!--importacion boostrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -48,10 +48,14 @@
             <h1>Productos</h1>
         </section>
 
-
         <section>
+            <div class="row col-12 mt-5">
+                <div class="col-12">
+                    <h1 class="text-center">CAFES</h1>
+                </div>
+            </div>
             <div class="row contenedor d-md-flex m-4 cards-info">
-                <?php $sel=$conn->query("SELECT * FROM tblproducto"); 
+                <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=1"); 
                 $cont=0;
                 while($fila=$sel->fetch_assoc()){
                     $cont++;
@@ -112,6 +116,58 @@
                         </div>
                     </div>
                 </div> -->
+            </div>
+        </section>
+
+        <section>
+            <div class="row contenedor d-md-flex m-4 cards-info">
+                <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=0"); 
+                $cont=0;
+                while($fila=$sel->fetch_assoc()){
+                    $cont++;
+                    ?>
+                        <div class="card m-2 col-12 col-md-3">
+                            <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h3 style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
+                                    <i class="fas fa-shopping-basket"> Precio: <?php echo $fila['Valor'] ?> </i>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-admin mt-3" data-toggle="modal" data-target="#modal<?php echo $cont; ?>">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h3 class="modal-title" style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body">
+
+                                <div class="col mt-3 card">
+                                    <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                                </div>
+                                <div class="col mt-3 card">
+                                    <img src="<?php echo $urlimagen.$fila['img2']; ?>" class="card-img-top" alt="...">
+                                </div>
+                                <div class="col mt-3 card">
+                                    <img src="<?php echo $urlimagen.$fila['img3']; ?>" class="card-img-top" alt="...">
+                                </div>
+                                
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </section>
 

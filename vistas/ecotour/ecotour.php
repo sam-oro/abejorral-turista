@@ -118,7 +118,7 @@
         <section class="container">
             <div class="row col-12 mt-5">
                 <div class="col-12 col-md-3">
-                    <h2>Historia</h2>
+                    <h2>Eco Tour</h2>
 
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum nesciunt veritatis optio voluptatibus. Fugit accusamus dolores tempore facilis saepe necessitatibus eius totam! Inventore ullam quisquam perspiciatis, aspernatur
                         perferendis maxime ratione cupiditate quos. Nihil repellat delectus, iure accusantium provident in!

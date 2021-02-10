@@ -14,6 +14,12 @@
     }
     $hoy = date("YmdHis");
 
+    if(isset($_POST['cafe'])){
+        $cafe=1;
+    }else{
+        $cafe=0;
+    }
+
     $nombre=$_POST['nombre'];
     $peso=$_POST['peso'];
     $cantidad=$_POST['cantidad'];
@@ -55,7 +61,7 @@
 
 
 
-    $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, img1, img2, img3, Cod_Empresa) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$name', '$name2', '$name3', '$empresa')";
+    $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, cafe, img1, img2, img3, Cod_Empresa) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$cafe', '$name', '$name2', '$name3', '$empresa')";
 
     if ($conn->query($sql)){
         echo "<script> alert('Correcto');</script>";
@@ -63,8 +69,5 @@
     }else{
         echo "Error: " . $sql . "<br>". $conn->error;
     }
-
-
-
 
 ?>

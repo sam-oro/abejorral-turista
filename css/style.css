@@ -39,7 +39,7 @@ main {
 
 /* Recursos */
 
-.contenedor{
+.contenedor {
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -81,6 +81,19 @@ main {
 
 .sesiones {
     height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sesiones__turismo {
+    height: 30vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,7 +221,7 @@ main {
     height: 2px;
 }
 
-.index-titulo{
+.index-titulo {
     margin-left: 1rem;
 }
 
@@ -359,11 +372,12 @@ main {
 
 
 /* Productos */
-.color-index{
-    background-color: #fAfAfA;
+
+.color-index {
+    background-color: #f7f7f7;
 }
 
-.cont{
+.cont {
     margin: 0;
     padding: 0;
     display: flex;
@@ -371,18 +385,18 @@ main {
     align-items: center;
 }
 
-.productos{
+.productos {
     width: 90%;
 }
 
-.producto{
+.producto {
     border-radius: 2px;
     margin: 3rem;
     background-color: #FFFFFF;
     padding-bottom: 1rem;
 }
 
-.titulo-cafe{
+.titulo-cafe {
     background-color: #FA7838;
     height: 10vh;
     display: flex;
@@ -390,13 +404,13 @@ main {
     align-items: center;
 }
 
-.titulo-cafe h1{
+.titulo-cafe h1 {
     color: #ffffff;
     filter: brightness(100%);
     text-transform: uppercase;
 }
 
-.titulo-otros{
+.titulo-otros {
     background-color: #99c355;
     height: 10vh;
     display: flex;
@@ -404,7 +418,7 @@ main {
     align-items: center;
 }
 
-.titulo-otros h1{
+.titulo-otros h1 {
     color: #ffffff;
     filter: brightness(100%);
     text-transform: uppercase;
@@ -420,11 +434,11 @@ main {
     background-size: cover;
 }
 
-@supports(object-fit: cover){
-    .card img{
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
+@supports(object-fit: cover) {
+    .card img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 }
 
@@ -531,10 +545,11 @@ main {
     }
 }
 
+
 /* preguntas frecuentes */
 
-.cabecera{
-    background-color:#ebe9e9;
+.cabecera {
+    background-color: #ebe9e9;
     padding: 10px 12px;
     border-bottom: 1px solid #e4573e;
     overflow: hidden;
@@ -543,13 +558,14 @@ main {
     border-radius: 4px 4px 0 0;
 }
 
-.cont-pregunta{
+.cont-pregunta {
     color: #e4573e;
     font-size: 2rem;
     float: left;
     margin-right: 10px;
 }
-.pregunta{
+
+.pregunta {
     background-color: #ebe9e9;
     padding: 12px;
     -webkit-border-radius: 0 0 4px 4px;
@@ -560,29 +576,35 @@ main {
     font-size: 1.4rem;
 }
 
-.preguntas-frecuentes{
+.preguntas-frecuentes {
     height: 600px;
     overflow: scroll;
     margin-bottom: 5rem;
 }
 
+
 /* Switch Productos */
+
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
+}
 
-  /* Hide default HTML checkbox */
-  .switch input {
+
+/* Hide default HTML checkbox */
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
 
-  /* The slider */
-  .slider {
+
+/* The slider */
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -592,9 +614,9 @@ main {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
 
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -604,27 +626,29 @@ main {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
 
-  input:checked + .slider {
+input:checked+.slider {
     background-color: #99C355;
-  }
+}
 
-  input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #99C355;
-  }
+}
 
-  input:checked + .slider:before {
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
-  /* Rounded sliders */
-  .slider.round {
+
+/* Rounded sliders */
+
+.slider.round {
     border-radius: 34px;
-  }
+}
 
-  .slider.round:before {
+.slider.round:before {
     border-radius: 50%;
-  }
+}

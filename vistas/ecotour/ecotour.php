@@ -23,7 +23,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EcoTour</title>
+        <title>Turismo</title>
 
         <!--importacion boostrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -117,15 +117,15 @@
 
         <section class="container">
             <div class="row col-12 mt-5">
-                <div class="col-12 col-md-3">
-                    <h2>Eco Tour</h2>
+                <div class="col-12 col-md-5">
+                    <h2>Turismo</h2>
 
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum nesciunt veritatis optio voluptatibus. Fugit accusamus dolores tempore facilis saepe necessitatibus eius totam! Inventore ullam quisquam perspiciatis, aspernatur
                         perferendis maxime ratione cupiditate quos. Nihil repellat delectus, iure accusantium provident in!
                     </p>
                 </div>
 
-                <div class="col-12 col-md-9">
+                <div class="col-12 col-md-7">
                     <?php
                 $sel = $conn ->query("SELECT * FROM tblvideo where cod='2'");
 
@@ -191,7 +191,7 @@
             </div>
         </section>
 
-        <section class="sesiones mt-5" style="background-image: url(../../img/sec-01.jpg);">
+        <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
             <a href="">
                 <h2>Hola mundo</h2>
             </a>

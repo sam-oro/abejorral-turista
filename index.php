@@ -47,10 +47,12 @@
 
     <body>
         <section class="bg-index">
-            <h1>Bienvenidos</h1>
+            <div class="index-titulo">
+                <h1>Abejorral</h1>
+                <hr>
+                <h3>#EnAbejorralNoParamos</h3>
+            </div>
         </section>
-
-        
 
         <section class="container">
             <div class="row col-12 mt-5">

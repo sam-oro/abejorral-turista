@@ -174,7 +174,7 @@
                         <a class="redes btn btn-social mx-3" target="_blank" href="https://www.facebook.com/alcaldia.abejorral/"><i class="fab fa-facebook-f"></i></a>
                         <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>
+                    <div class="col-lg-3 text-lg-left text-center copy">©Tecnoparque-Abejorral<?php echo date('Y'); ?></div>
                 </div>
             </div>
         </footer>

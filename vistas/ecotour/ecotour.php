@@ -192,10 +192,23 @@
         </section>
 
         <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
-            <a href="">
-                <h2>Hola mundo</h2>
-            </a>
+                <div class="col-md-6 col-sm-12">
+                    <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/nBx3OJqe3R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <h2>Los Chorritos</h2>
+                </div>
         </section>
+        <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
+            <div class="col-md-6 col-sm-12">
+                <h2>La casa en el aire</h2>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/uGd0oHQDgfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        
 
         <footer class="footer mt-4">
             <div class="container">
@@ -210,7 +223,7 @@
                         <a class="redes btn btn-social mx-3" target="_blank" href="https://www.facebook.com/alcaldia.abejorral/"><i class="fab fa-facebook-f"></i></a>
                         <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>
+                    <div class="col-lg-3 text-lg-left text-center copy">©Tecnoparque-Abejorral<?php echo date('Y'); ?></div>
                 </div>
             </div>
         </footer>

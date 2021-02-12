@@ -48,12 +48,11 @@
     <section class="sesiones" style="background-image: url(../../img/sec-01.jpg);">
         <div class="container my-5">
             <div class="col-12 text-center">
-                <h2>Hola mundo</h2>
+                <h2>Fundación</h2>
             </div>
 
             <div class="col-12 mt-3">
-                <p style="color: #fff;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit neque, autem, cupiditate officia labore dolorum numquam obcaecati quae possimus corrupti aliquam odit ipsum suscipit voluptatibus. Nemo eveniet magni porro nesciunt cum exercitationem
-                    id possimus facere ducimus vero! Aliquam maxime sit aliquid rem quas ratione, vitae deleniti assumenda. Ipsum, magnam dignissimos.</p>
+                <p style="color: #fff;">El 15 de enero de 1811 ha sido fijado, como la fecha de la fundación de Abejorral. En este día el maestro Fundador, Don José Antonio Villegas, suscribió el acta de donación, fundación y repartición de terrenos.</p>
             </div>
         </div>
     </section>
@@ -61,12 +60,11 @@
     <section class="sesiones">
         <div class="container my-5">
             <div class="col-12 text-center">
-                <h2>Hola mundo</h2>
+                <h2>Misión</h2>
             </div>
 
             <div class="col-12 mt-3">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit neque, autem, cupiditate officia labore dolorum numquam obcaecati quae possimus corrupti aliquam odit ipsum suscipit voluptatibus. Nemo eveniet magni porro nesciunt cum exercitationem
-                    id possimus facere ducimus vero! Aliquam maxime sit aliquid rem quas ratione, vitae deleniti assumenda. Ipsum, magnam dignissimos.</p>
+                <p>Vigilar la conducta de quienes desempeñan funciones públicas a nivel municipal, salvaguardar el interés público y ciudadano y garantizar la protección de los derechos humanos, lo mismo que intervenir en los procesos policivos y penales en defensa de la ciudadanía.</p>
             </div>
         </div>
     </section>
@@ -74,12 +72,11 @@
     <section class="sesiones" style="background-image: url(../../img/sec-01.jpg);">
         <div class="container my-5">
             <div class="col-12 text-center">
-                <h2>Hola mundo</h2>
+                <h2>Funciones constitucionales</h2>
             </div>
 
             <div class="col-12 mt-3">
-                <p style="color: #fff;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit neque, autem, cupiditate officia labore dolorum numquam obcaecati quae possimus corrupti aliquam odit ipsum suscipit voluptatibus. Nemo eveniet magni porro nesciunt cum exercitationem
-                    id possimus facere ducimus vero! Aliquam maxime sit aliquid rem quas ratione, vitae deleniti assumenda. Ipsum, magnam dignissimos.</p>
+                <p style="color: #fff;">-Defender y promocionar los derechos humanos con fundamento en el orden jurídico establecido.<br>-Atender y apoyar los requerimientos de la comunidad para orientarla en todos los frentes, de tal forma que se cumpla con los principios de transparencia, equidad, oportunidad y efectividad.<br>-Asesorar y presenciar acciones constitucionales (tutela, orden de petición, habeas corpus etc.).<br>-Intervenir en la solución pacífica de conflictos y en la vigilancia de la conducta oficial.<br>-Información adicional: Desde la personería se están liderando dos planes piloto; el primero de ellos convertir los lustrabotas en una sociedad de "embellecedores de calzado" todos debidamente carnetizados y con un estudio y experiencia reconocida.<br>-El segundo de ellos una adecuada rehabilitación de los presos, es decir involucrarlos en asuntos deportivos y culturales del municipio.</p>
             </div>
         </div>
     </section>
@@ -97,7 +94,7 @@
                         <a class="redes btn btn-social mx-3" target="_blank" href="https://www.facebook.com/alcaldia.abejorral/"><i class="fab fa-facebook-f"></i></a>
                         <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <div class="col-lg-3 text-lg-left text-center copy">©Abejorral2020</div>
+                    <div class="col-lg-3 text-lg-left text-center copy">©Tecnoparque-Abejorral<?php echo date('Y'); ?></div>
                 </div>
             </div>
         </footer>

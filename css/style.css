@@ -93,7 +93,7 @@ main {
 }
 
 .sesiones__turismo {
-    height: 30vh;
+    height: 50vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,6 +103,7 @@ main {
     align-items: center;
     margin: 0;
     padding: 0;
+    padding-bottom: 2.5rem;
 }
 
 .sesiones h2 {

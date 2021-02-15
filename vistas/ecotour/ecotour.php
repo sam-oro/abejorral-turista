@@ -117,15 +117,14 @@
 
         <section class="container">
             <div class="row col-12 mt-5">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-6">
                     <h2>Turismo</h2>
 
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure harum nesciunt veritatis optio voluptatibus. Fugit accusamus dolores tempore facilis saepe necessitatibus eius totam! Inventore ullam quisquam perspiciatis, aspernatur
-                        perferendis maxime ratione cupiditate quos. Nihil repellat delectus, iure accusantium provident in!
+                    <p>En los últimos años en nuestro municipio, propios y  foráneos,   se han interesado por transformar ideas en realidades que finalmente terminan siendo sitios naturales de interés turístico para un sin número de visitantes, algunos de estos lugares ya muy conocidos por todos en general,  como El Parador Los Chorritos, los saltos de los ríos Aures y Buey, trapiches paneleros, rutas por caminos ancestrales donde algunas vez tuvieron su papel protagónico  las prácticas de arriería; también en este proceso han aparecido otros lugares que para los abejorraleños hubiesen sido en otro tiempo sitios un poco fantasiosos, como La Casa en el Aire, El Hostal La Peña, Los Peñoles, Utopía Casa Hotel, La Casa de RoRo,  Los Saltos Ecoparque, cada uno de estos con prácticas en la altura como cable vuelo, hamacas, péndulo, escalada en roca, vía ferrata, picnic aéreo, zona de Camping, senderismo, entre otros;  ya posicionados además  a nivel nacional e internacional y ni hablar del gran potencial en su fauna y flora, en sus prácticas agrícolas, en sus paisajes de gran valor para todos los que admiramos estas montañas llenas de tesoros, caminos de la colonización y asentamientos indígenas, que finalmente se convierten en un gran libro de historias escrito por nuestros abuelos. 
                     </p>
                 </div>
 
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-6">
                     <?php
                 $sel = $conn ->query("SELECT * FROM tblvideo where cod='2'");
 

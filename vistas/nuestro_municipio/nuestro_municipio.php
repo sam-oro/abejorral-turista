@@ -48,11 +48,11 @@
     <section class="sesiones" style="background-image: url(../../img/sec-01.jpg);">
         <div class="container my-5">
             <div class="col-12 text-center">
-                <h2>Fundación</h2>
+                <h2>Abejorral</h2>
             </div>
 
             <div class="col-12 mt-3">
-                <p style="color: #fff;">El 15 de enero de 1811 ha sido fijado, como la fecha de la fundación de Abejorral. En este día el maestro Fundador, Don José Antonio Villegas, suscribió el acta de donación, fundación y repartición de terrenos.</p>
+                <p style="color: #fff;">Asentado  en un ramal de la cordillera Central, Abejorral en su arquitectura particular de ladera, conjuga la tradición española y la herencia indígena, cuenta con uno de los centros urbanos más extensos declarados Bien de Interés Cultural del Ámbito  Nacional con 63 manzanas y 1335 predios, es conocida como “Tierra de Los Cien Señores”, a raíz de que ha sido uno de los municipios que ha dado a la República una de las más caudalosas nóminas de hombres ilustres, como se lee en la Monografía de Antioquia de 1941, También es llamada la “Ciudad Astillero” y la “Popayán antioqueña” por la belleza, la blancura de su centro histórico y tradiciones religiosas. Este municipio además de encantador a primera vista y  diverso en atractivos, gracias a su ubicación, a sus diferentes pisos térmicos, su fauna y flora.</p>
             </div>
         </div>
     </section>

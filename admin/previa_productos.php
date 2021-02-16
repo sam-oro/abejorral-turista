@@ -104,97 +104,58 @@ include '../conexion/conexion.php';
                     </div>
                 </nav>
 
-                <div class="container-fluid">
-                    <h1 class="mt-4">Productos</h1>
 
-                    <div class="mt-4">
-                        <table class="table table-hover">
-                            <thead class="thead">
-                                <th>Codigo</th>
-                                <th>Producto</th>
-                                <th>peso</th>
-                                <th>cantidad</th>
-                                <th>valor</th>
-                                <th>Empresa</th>
-                                <th></th>
-                                <th></th>
-                            </thead>
-                            <?php 
-                            $sel = $conn ->query("SELECT `tblproducto`.`Cod_Producto`, `tblproducto`.`Nom_Producto`, `tblproducto`.`Peso_Producto`, `tblproducto`.`Cantidad`, `tblproducto`.`Valor`, `tblempresa`.`Nombre`
-                            FROM `tblproducto` 
-                                LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa`;");
-                                $cont=0;
-                            while ($fila = $sel -> fetch_assoc()) {
+                <div class="producto">
+                    <div class="row contenedor d-md-flex m-4 cards-info">
+                        <?php 
+                            $sel=$conn->query("SELECT * FROM tblproducto WHERE estado=0"); 
+                            $cont=0;
+                            while($fila=$sel->fetch_assoc()){
                                 $cont++;
-                            ?>
-                            <tr>
-                                <td><?php echo $fila['Cod_Producto'] ?></td>
-                                <td><?php echo $fila['Nom_Producto'] ?></td>
-                                <td><?php echo $fila['Peso_Producto'] ?></td>
-                                <td><?php echo $fila['Cantidad'] ?></td>
-                                <td><?php echo $fila['Valor'] ?></td>
-                                <td><?php echo $fila['Nombre'] ?></td>
-                                <td>
-                                <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont; ?>" id="ingresar">Actualizar</button></td>
-                                <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Producto']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
-                            </tr>
-
-                            <!-- /Modal actualizar Producto -->
-
-                            <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Editar Producto</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                            </button>
+                        ?>
+                                <div class="card m-2 col-12 col-md-3">
+                                    <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="text-center">
+                                            <h3 style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
+                                            <i class="fas fa-shopping-basket"> Precio: <?php echo $fila['Valor'] ?> </i>
                                         </div>
-                                        <div class="modal-body">
-                                            <form action="controlador/actualizar_producto.php?Cod_Producto=<?php echo $fila['Cod_Producto']?>" method="post">
-                                            <div class="form-group">
-                                                <label> Nombre del Producto </label>
-                                                <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $fila['Nom_Producto'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Peso Producto</label>
-                                                <input type="text" id="peso" name="peso" class="form-control" value="<?php echo $fila['Peso_Producto'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Cantidad</label>
-                                                <input type="number" id="cantidad" name="cantidad" class="form-control" value="<?php echo $fila['Cantidad'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Valor </label>
-                                                <input type="number" id="valor" name="valor" class="form-control" value="<?php echo $fila['Valor'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Empresa </label>
-                                                <input type="text" id="empresa" name="empresa" class="form-control" value="<?php echo $fila['Nombre'] ?>" disabled>
-                                            </div>
-
-                                                
-                                                <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-admin">Guardar</button>
-                                                    <button type="button" class="btn btn-admin" data-dismiss="modal">Cancelar</button>
-                                                </div>
-                                            </form>
+                                        <div class="text-center">
+                                            <!-- <button type="button" class="btn btn-admin mt-3" data-toggle="modal" data-target="#modal<?php echo $cont; ?>">Ver producto</button> -->
+                                            <button type="button" class="btn btn-admin mt-3" href="#" onclick="preguntar(<?php echo $fila['Cod_Producto']?>)">Publicar</button>
+                                            <button type="button" class="btn btn-admin mt-3" href="#" onclick="preguntar1(<?php echo $fila['Cod_Producto']?>)">Eliminar</button>
                                         </div>
-
                                     </div>
                                 </div>
-                            </div>
 
-
-                <!-- /#Final Modal Actualizar Sitio -->
-
-                            <?php } ?>
-                        </table>
+                                <!-- <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" style="text-transform:uppercase;"><?php echo $fila['Nom_Producto'] ?></h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="col mt-3 card">
+                                                    <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                                                </div>
+                                                <div class="col mt-3 card">
+                                                    <img src="<?php echo $urlimagen.$fila['img2']; ?>" class="card-img-top" alt="...">
+                                                </div>
+                                                <div class="col mt-3 card">
+                                                    <img src="<?php echo $urlimagen.$fila['img3']; ?>" class="card-img-top" alt="...">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                        <?php
+                            }
+                        ?>
+                    </div>
                 </div>
-            </div>
-                    
-
-
 
 
 
@@ -221,7 +182,30 @@ include '../conexion/conexion.php';
 
     <!-- pregunta antes de eliminar sweat alert -->
     <script type="text/javascript">
-            function preguntar(id){
+        function preguntar(id){
+           Swal
+            .fire({
+                title: "¿Publicar?",
+                text: "¿Estas seguro de publicar el producto?",
+                icon: 'success',            
+                showCancelButton: true,
+                confirmButtonText: "Sí, publicar",
+                cancelButtonText: "Cancelar",
+            })
+            .then(resultado => {
+                if (resultado.value) {
+                    // Hicieron click en "Sí"
+                    //console.log("*se elimina la venta*");
+                    window.location.href="controlador/publicar_producto.php?id="+id
+                } else {
+                    // Dijeron que no
+                    console.log("*NO se elimina *");
+                }
+            });
+
+        }
+
+        function preguntar1(id){
             Swal
                 .fire({
                     title: "¿Eliminar Producto?",
@@ -242,8 +226,8 @@ include '../conexion/conexion.php';
                     }
                 });
 
-            }
-        </script>
+        }
+    </script>
 
 
     </body>

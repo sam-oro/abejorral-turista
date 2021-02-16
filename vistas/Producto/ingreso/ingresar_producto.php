@@ -61,7 +61,7 @@
 
 
 
-    $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, cafe, img1, img2, img3, Cod_Empresa) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$cafe', '$name', '$name2', '$name3', '$empresa')";
+    $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, cafe, img1, img2, img3, Cod_Empresa, estado) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$cafe', '$name', '$name2', '$name3', '$empresa', 0)";
 
     if ($conn->query($sql)){
         echo "<script> alert('Correcto');</script>";

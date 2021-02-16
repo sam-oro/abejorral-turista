@@ -54,7 +54,7 @@
                         <h1>CAFÉ</h1>
                     </div>
                     <div class="row contenedor d-md-flex m-4 cards-info">
-                        <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=1"); 
+                        <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=1 AND estado=1"); 
                         $cont=0;
                         while($fila=$sel->fetch_assoc()){
                             $cont++;
@@ -123,7 +123,7 @@
                         <h1>OTROS PRODUCTOS</h1>
                     </div>
                     <div class="row contenedor d-md-flex m-4 cards-info">
-                        <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=0"); 
+                        <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=0 AND estado=1"); 
                         $cont=0;
                         while($fila=$sel->fetch_assoc()){
                             $cont++;

@@ -4,6 +4,8 @@ include '../../conexion/conexion.php';
 
 $Cod_Producto=$_GET['Cod_Producto'];
 
+$nom = $conn -> query("SELECT * FROM tblproducto WHERE Cod_Producto='$Cod_Producto'");
+
 $fila=$nom->fetch_assoc();
     $img1=$fila['img1'];
     $img2=$fila['img2'];

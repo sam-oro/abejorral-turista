@@ -58,6 +58,7 @@ include '../conexion/conexion.php';
                     <a href="productos.php" class="list-group-item list-group-item-action bg-light">Productos</a>
                     <a href="preguntas.php" class="list-group-item list-group-item-action bg-light">Preguntas</a>
                     <a href="sitio.php" class="list-group-item list-group-item-action bg-light">Sitio Turistico</a>
+                    <a href="previa_productos.php" class="list-group-item list-group-item-action bg-light">Previa de Productos</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->

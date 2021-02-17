@@ -40,7 +40,7 @@
     </head>
 
     <body>
-        <section class="bg-index">
+        <section class="bg-historia">
             <h1>Nuestra Historia</h1>
         </section>
 

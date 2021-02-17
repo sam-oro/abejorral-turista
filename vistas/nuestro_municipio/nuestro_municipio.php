@@ -45,14 +45,14 @@
 
     <!-- git -->
 
-    <section class="sesiones" style="background-image: url(../../img/sec-01.jpg);">
+    <section class="sesiones" style="background-image: url(../../img/nuestro.jpg);">
         <div class="container my-5">
             <div class="col-12 text-center">
                 <h2>Abejorral</h2>
             </div>
 
             <div class="col-12 mt-3">
-                <p style="color: #fff;">Asentado  en un ramal de la cordillera Central, Abejorral en su arquitectura particular de ladera, conjuga la tradición española y la herencia indígena, cuenta con uno de los centros urbanos más extensos declarados Bien de Interés Cultural del Ámbito  Nacional con 63 manzanas y 1335 predios, es conocida como “Tierra de Los Cien Señores”, a raíz de que ha sido uno de los municipios que ha dado a la República una de las más caudalosas nóminas de hombres ilustres, como se lee en la Monografía de Antioquia de 1941, También es llamada la “Ciudad Astillero” y la “Popayán antioqueña” por la belleza, la blancura de su centro histórico y tradiciones religiosas. Este municipio además de encantador a primera vista y  diverso en atractivos, gracias a su ubicación, a sus diferentes pisos térmicos, su fauna y flora.</p>
+                <p style="color: #fff; text-shadow: 1px 1px 2px #000000;">Asentado  en un ramal de la cordillera Central, Abejorral en su arquitectura particular de ladera, conjuga la tradición española y la herencia indígena, cuenta con uno de los centros urbanos más extensos declarados Bien de Interés Cultural del Ámbito  Nacional con 63 manzanas y 1335 predios, es conocida como “Tierra de Los Cien Señores”, a raíz de que ha sido uno de los municipios que ha dado a la República una de las más caudalosas nóminas de hombres ilustres, como se lee en la Monografía de Antioquia de 1941, También es llamada la “Ciudad Astillero” y la “Popayán antioqueña” por la belleza, la blancura de su centro histórico y tradiciones religiosas. Este municipio además de encantador a primera vista y  diverso en atractivos, gracias a su ubicación, a sus diferentes pisos térmicos, su fauna y flora.</p>
             </div>
         </div>
     </section>
@@ -69,14 +69,14 @@
         </div>
     </section>
 
-    <section class="sesiones" style="background-image: url(../../img/sec-01.jpg);">
+    <section class="sesiones" style="background-image: url(../../img/nuestro.jpg);">
         <div class="container my-5">
             <div class="col-12 text-center">
                 <h2>Funciones constitucionales</h2>
             </div>
 
             <div class="col-12 mt-3">
-                <p style="color: #fff;">-Defender y promocionar los derechos humanos con fundamento en el orden jurídico establecido.<br>-Atender y apoyar los requerimientos de la comunidad para orientarla en todos los frentes, de tal forma que se cumpla con los principios de transparencia, equidad, oportunidad y efectividad.<br>-Asesorar y presenciar acciones constitucionales (tutela, orden de petición, habeas corpus etc.).<br>-Intervenir en la solución pacífica de conflictos y en la vigilancia de la conducta oficial.<br>-Información adicional: Desde la personería se están liderando dos planes piloto; el primero de ellos convertir los lustrabotas en una sociedad de "embellecedores de calzado" todos debidamente carnetizados y con un estudio y experiencia reconocida.<br>-El segundo de ellos una adecuada rehabilitación de los presos, es decir involucrarlos en asuntos deportivos y culturales del municipio.</p>
+                <p style="color: #fff; text-shadow: 1px 1px 2px #000000;">-Defender y promocionar los derechos humanos con fundamento en el orden jurídico establecido.<br>-Atender y apoyar los requerimientos de la comunidad para orientarla en todos los frentes, de tal forma que se cumpla con los principios de transparencia, equidad, oportunidad y efectividad.<br>-Asesorar y presenciar acciones constitucionales (tutela, orden de petición, habeas corpus etc.).<br>-Intervenir en la solución pacífica de conflictos y en la vigilancia de la conducta oficial.<br>-Información adicional: Desde la personería se están liderando dos planes piloto; el primero de ellos convertir los lustrabotas en una sociedad de "embellecedores de calzado" todos debidamente carnetizados y con un estudio y experiencia reconocida.<br>-El segundo de ellos una adecuada rehabilitación de los presos, es decir involucrarlos en asuntos deportivos y culturales del municipio.</p>
             </div>
         </div>
     </section>

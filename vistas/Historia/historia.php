@@ -47,7 +47,7 @@
         
 
         <section class="container">
-            <div class="row col-12 mt-5">
+            <div class="row col-12 my-5">
                 <div class="col-12">
                     <h2 class="text-center">Historia de Abejorral</h2>
                     
@@ -64,6 +64,27 @@
                     
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <section class="">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-04.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-05.jpg">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </section>
 

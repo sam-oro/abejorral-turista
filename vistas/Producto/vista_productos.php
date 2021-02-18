@@ -43,7 +43,7 @@
     </head>
 
     <body class="color-index">
-        <section class="bg-index">
+        <section class="bg-productos">
             <h1>Productos</h1>
         </section>
         

@@ -200,17 +200,16 @@
             <div class="tarjetas-sitios__contenedor">
 
                 <div class="tarjetas-sitios__img">
-                    <img src="../../img/historia.jpg" alt="">
+                    <img src="../../img/salto.jpg" alt="">
                 </div>
 
                 <div class="tarjetas-sitios__info">
                     <h3 class="tarjetas-sitios__titulo">
-                        Manolita
+                        Salto del Aures 
                     </h3>
 
                     <p class="tarjetas-sitios__parrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
-                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                        Conozca una caída de 460 metros formada por el rio Aures. Descienda por camino de herradura contemplando la profundidad del cañón y el salto de la Quebradona hasta el trapiche El Salto, tradicional hacienda panelera donde se brinda servicio de guianza, alimentación, alojamiento y el proceso de la molienda panelera. El Salto del Aures fue fuente de inspiración del poeta antioqueño Gregorio Gutiérrez González.
                     </p>
 
                     <div class="text-center">
@@ -219,24 +218,21 @@
                     </div>
                 </div>
 
-
             </div>
-
 
             <div class="tarjetas-sitios__contenedor">
 
                 <div class="tarjetas-sitios__img">
-                    <img src="../../img/slider-03.jpg" alt="">
+                    <img src="../../img/ruta-cafetera.jpg" alt="">
                 </div>
 
                 <div class="tarjetas-sitios__info">
                     <h3 class="tarjetas-sitios__titulo">
-                        Manolita
+                        Ruta cafetera
                     </h3>
 
                     <p class="tarjetas-sitios__parrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
-                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                        Saliendo desde la vereda Naranjal, disfrute de paisajes tradicionales, coloridas casas campesinas y del delicioso aroma de los cafetales hasta llegar al corregimiento de pantanillo, fundado hace 80 años a orillas del camino ¨rial¨ como posada para los arrieros que iban de Abejorral a la estación del Ferrocarril en la pintada. Sus montañas son montañas son pistas de parapente y miradores hacia Caldas, el Suroeste antioqueño y los cañones de los ríos Arna, Buey y Cauca.
                     </p>
 
                     <div class="text-center">
@@ -245,23 +241,21 @@
                     </div>
                 </div>
 
-
             </div>
-
 
             <div class="tarjetas-sitios__contenedor">
 
                 <div class="tarjetas-sitios__img">
-                    <img src="../../img/nuestro.jpg" alt="">
+                    <img src="../../img/cerro.jpg" alt="">
                 </div>
 
                 <div class="tarjetas-sitios__info">
                     <h3 class="tarjetas-sitios__titulo">
-                        Manolita
+                        Cerro San Vicente
                     </h3>
 
                     <p class="tarjetas-sitios__parrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
+                        Uno de los cerros tutelares de Abejorral donde las huellas de las prácticas guaperas hacen parte del paisaje. Allí, el brillo del sol descubre a lo lejos los cañones del Río Buey y el Cauca, se ven las nubes claras posarse sobre los Farallones del Citará y Cerro Bravo; los escaladores llegan a la cima para abrir sus brazos y echarse a volar en parapente.
                     </p>
 
                     <div class="text-center">
@@ -270,24 +264,21 @@
                     </div>
                 </div>
 
-
             </div>
-
 
             <div class="tarjetas-sitios__contenedor">
 
                 <div class="tarjetas-sitios__img">
-                    <img src="../../img/historia.jpg" alt="">
+                    <img src="../../img/chorritos.jpg" alt="">
                 </div>
 
                 <div class="tarjetas-sitios__info">
                     <h3 class="tarjetas-sitios__titulo">
-                        Manolita
+                        Parador los chorritos
                     </h3>
 
                     <p class="tarjetas-sitios__parrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
-                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                        A veinte minutos de Abejorral caminando por la vía Sonsón y a través de un bosque de pino pátula plantado en la rivera de la quebrada los Dolores se llega a una caída de agua que forma el charco más visitado por los abejorreños. Un baño en aguas cristalinas, donde a fuego de leña se puede cocinar sancocho; plan ideal en los días de verano.
                     </p>
 
                     <div class="text-center">
@@ -296,9 +287,53 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/santuario.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Santuario el Señor de los Milagros
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Desde varias regiones llegan profesando su fe los devotos al Señor de los Milagros, en un santuario en conjugación entre cielo y tierra, entre el olor a café y a la amabilidad de sus campesinos. Por la vía al corregimiento de Pantanillo, a borde de carretera hermosas fincas he imponentes paisajes de cañones y las cordilleras Central y Occidental. El templo del Señor de los milagros se alza en lo más alto de Chagualal, donde aún se conservan las tiendan de veredas y las casas de grandes corredores adornados de jardín.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
 
             </div>
 
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/miradores.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Miradores periurbanos
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Por potreros que rodean la Tierra de los Cien Señores se llega a ua colorida casa de jardines y balcones, a la feria de ganado y a las calles del barrio obrero. Se retoma el camino bordeando el pueblo hacia el sector los Balcones y la Bernardita, desde allí se camina cerca de cultivos de aguacates y fincas lecheras. En el alto de la Aguada, el paisaje urbano, de casas esquineras, ventanales y tejados, cuenta la historia de esta tierra madre de Cien Señores.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 

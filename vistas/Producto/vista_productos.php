@@ -89,7 +89,9 @@
                         <h1>CAFÉ</h1>
                     </div>
                     <div class="row contenedor d-md-flex m-4 cards-info">
-                        <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=1 AND estado=1"); 
+                        <?php $sel=$conn->query("SELECT `tblproducto`.`Nom_Producto`, `tblproducto`.`img1`, `tblproducto`.`img2`, `tblproducto`.`img3`, `tblproducto`.`Valor`, `tblproducto`.`descripcion`,  `tblempresa`.`Nombre`, `tblempresa`.`Cel`, `tblempresa`.`Correo`, `tblempresa`.`Direccion`
+                        FROM `tblproducto` 
+	                    LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa` WHERE `tblproducto`.`cafe`=1 AND `tblproducto`.`estado`=1"); 
                         $cont=0;
                         while($fila=$sel->fetch_assoc()){
                             $cont++;
@@ -102,12 +104,12 @@
                                             <i class="fas fa-shopping-basket"> Precio: <?php echo $fila['Valor'] ?> </i>
                                         </div>
                                         <div class="text-center">
-                                            <button type="button" class="btn btn-admin mt-3" data-toggle="modal" data-target="#modal<?php echo $cont; ?>">Ver producto</button>
+                                            <button type="button" class="btn btn-admin mt-3" data-toggle="modal" data-target="#modal1<?php echo $cont; ?>">Ver producto</button>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                                <div class="modal" tabindex="-1" role="dialog" id="modal1<?php echo $cont; ?>">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -121,8 +123,21 @@
                                                 <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
                                             </div>
                                             <div class="col mt-3 card">
-                                                <p><?php echo $fila['descripcion']; ?></p>
+                                                <label><?php echo $fila['descripcion']; ?></label>
                                             </div>
+
+                                            <div class="col mt-3 card">
+                                                <label><?php echo $fila['Nombre']; ?></label>
+                                            </div>
+
+                                            <div class="col mt-3 card">
+                                               <label><?php echo $fila['Cel']; ?></label>
+                                            </div>
+
+                                            <div class="col mt-3 card">
+                                                <label><?php echo $fila['Correo']; ?></label>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -181,7 +196,9 @@
                         <h1>OTROS PRODUCTOS</h1>
                     </div>
                     <div class="row contenedor d-md-flex m-4 cards-info">
-                        <?php $sel=$conn->query("SELECT * FROM tblproducto WHERE cafe=0 AND estado=1"); 
+                        <?php $sel=$conn->query("SELECT `tblproducto`.`Nom_Producto`, `tblproducto`.`img1`, `tblproducto`.`img2`, `tblproducto`.`img3`, `tblproducto`.`Valor`, `tblproducto`.`descripcion`,  `tblempresa`.`Nombre`, `tblempresa`.`Cel`, `tblempresa`.`Correo`, `tblempresa`.`Direccion`
+                        FROM `tblproducto` 
+	                    LEFT JOIN `tblempresa` ON `tblproducto`.`Cod_Empresa` = `tblempresa`.`Cod_Empresa` WHERE `tblproducto`.`cafe`=0 AND `tblproducto`.`estado`=1"); 
                         $cont=0;
                         while($fila=$sel->fetch_assoc()){
                             $cont++;
@@ -214,7 +231,19 @@
                                                 <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
                                             </div>
                                             <div class="col mt-3 card">
-                                                <p><?php echo $fila['descripcion']; ?></p>
+                                                <label><?php echo $fila['descripcion']; ?></label>
+                                            </div>
+
+                                            <div class="col mt-3 card">
+                                                <label><?php echo $fila['Nombre']; ?></label>
+                                            </div>
+
+                                            <div class="col mt-3 card">
+                                               <label><?php echo $fila['Cel']; ?></label>
+                                            </div>
+
+                                            <div class="col mt-3 card">
+                                                <label><?php echo $fila['Correo']; ?></label>
                                             </div>
                                         
                                         </div>

@@ -84,6 +84,11 @@
                             <input type="file" name="img2" required><br><br>
                             <input type="file" name="img3" required><br><br>
                         </div>
+
+                        <div class="form-group">
+                            <label>Descripcion del producto</label><br>
+                            <textarea type="text" name="descripcion" id="descripcion" class="form-control" placeholder="Máximo 250 Caracteres" max="250" required></textarea>
+                        </div>
                         <div class="text-center">
                             <button class="btn btn-color" type="submit" value="enviar">Enviar</button>
                         </div>

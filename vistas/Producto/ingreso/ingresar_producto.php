@@ -26,6 +26,7 @@
     $valor=$_POST['valor'];
     //$solicitud=$_POST['solicitud'];
     $empresa=$_SESSION['cod_empr'];
+    $descripcion = $_POST['descripcion'];
     //$proveedor=$_POST['proveedor'];
 
     //aqui se toman los nombres de las imagens a subir
@@ -61,7 +62,7 @@
 
 
 
-    $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, cafe, img1, img2, img3, Cod_Empresa, estado) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$cafe', '$name', '$name2', '$name3', '$empresa', 0)";
+    $sql="INSERT INTO tblproducto (Nom_Producto, Peso_Producto, Cantidad, Valor, cafe, img1, img2, img3, Cod_Empresa, estado, descripcion) VALUES ('$nombre', '$peso', '$cantidad','$valor', '$cafe', '$name', '$name2', '$name3', '$empresa', 0, '$descripcion')";
 
     if ($conn->query($sql)){
         echo "<script> alert('Correcto');</script>";

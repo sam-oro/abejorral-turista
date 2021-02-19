@@ -46,7 +46,42 @@
         <section class="bg-productos">
             <h1>Productos</h1>
         </section>
+
+        <section class="container">
+            <div class="row col-12 my-5">
+                <div class="col-12">
+                    
+                    <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus molestias, atque error rem laborum obcaecati, pariatur et magni omnis dolores harum. Perferendis sed cum, tempora doloremque in vel aut error repellendus. Fuga, labore aperiam dicta dolor esse exercitationem, molestiae deleniti assumenda ab rerum eius debitis eligendi nostrum delectus similique voluptates consequuntur aliquam ex? Distinctio sapiente quod ut laboriosam reiciendis soluta voluptates, praesentium doloribus itaque dolorum nemo quidem illum in at obcaecati illo ex unde vitae quis facilis, iusto libero quaerat ullam aperiam! Quod consequatur magni eius deserunt tempore cupiditate beatae, sint maiores quibusdam, nam dignissimos velit veniam voluptatibus omnis exercitationem vel voluptas placeat eos nisi neque ab. Laudantium magnam qui possimus at eos fugiat quasi rerum, voluptas nihil architecto dolores laborum quia repudiandae? Natus quam voluptatibus obcaecati doloribus maxime explicabo quidem blanditiis fugit ea suscipit architecto vel animi eveniet nesciunt, corrupti placeat corporis eum iusto dignissimos inventore. Corporis, vitae dolor doloremque nesciunt maxime eaque laborum minus illum mollitia id fugiat iste quis vel quam recusandae saepe perspiciatis dolorem consectetur at ducimus accusantium dignissimos adipisci animi quibusdam. Qui fugit dolores, id officia nihil quis quam. Ducimus id ab nostrum vitae deserunt iste! Quis fugiat officia quidem numquam nemo quam reiciendis quae, quas non maxime nam accusamus voluptates ducimus aperiam inventore fuga rem officiis sunt quaerat dolor vero illum esse asperiores impedit! Voluptas animi nulla iusto et distinctio ea odio magni amet natus, cupiditate laborum tempore ab, nobis fugiat sequi veniam eius! Laborum non blanditiis sunt iure saepe eligendi asperiores, officia voluptas!
+                    </p>
+                </div>
+            </div>
+        </section>
         
+        <section class="mt-5">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-06.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-07.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-08.jpg">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
         <div class="cont">
             <div class="productos">
                 <div class="producto">
@@ -82,17 +117,12 @@
                                                 </button>
                                         </div>
                                         <div class="modal-body">
-
-                                        <div class="col mt-3 card">
-                                            <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="col mt-3 card">
-                                            <img src="<?php echo $urlimagen.$fila['img2']; ?>" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="col mt-3 card">
-                                            <img src="<?php echo $urlimagen.$fila['img3']; ?>" class="card-img-top" alt="...">
-                                        </div>
-                                        
+                                            <div class="col mt-3 card">
+                                                <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="col mt-3 card">
+                                                <p><?php echo $fila['descripcion']; ?></p>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -117,7 +147,35 @@
                         </div> -->
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <section class="mt-5">
+            <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel1">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-09.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-10.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 sli-img" src="../../img/slider-11.jpg">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="cont">
+            <div class="productos">
                 <div class="producto">
                     <div class="col-12 titulo-otros">
                         <h1>OTROS PRODUCTOS</h1>
@@ -152,15 +210,12 @@
                                         </div>
                                         <div class="modal-body">
 
-                                        <div class="col mt-3 card">
-                                            <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="col mt-3 card">
-                                            <img src="<?php echo $urlimagen.$fila['img2']; ?>" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="col mt-3 card">
-                                            <img src="<?php echo $urlimagen.$fila['img3']; ?>" class="card-img-top" alt="...">
-                                        </div>
+                                            <div class="col mt-3 card">
+                                                <img src="<?php echo $urlimagen.$fila['img1']; ?>" class="card-img-top" alt="...">
+                                            </div>
+                                            <div class="col mt-3 card">
+                                                <p><?php echo $fila['descripcion']; ?></p>
+                                            </div>
                                         
                                         </div>
 

@@ -52,14 +52,18 @@
                 <div class="col-12">
 
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus molestias, atque error rem laborum obcaecati, pariatur et magni omnis dolores harum. Perferendis sed cum, tempora doloremque in vel aut error repellendus. Fuga, labore aperiam dicta
-                        dolor esse exercitationem, molestiae deleniti assumenda ab rerum eius debitis eligendi nostrum delectus similique voluptates consequuntur aliquam ex? Distinctio sapiente quod ut laboriosam reiciendis soluta voluptates, praesentium
-                        doloribus itaque dolorum nemo quidem illum in at obcaecati illo ex unde vitae quis facilis, iusto libero quaerat ullam aperiam! Quod consequatur magni eius deserunt tempore cupiditate beatae, sint maiores quibusdam, nam dignissimos
-                        velit veniam voluptatibus omnis exercitationem vel voluptas placeat eos nisi neque ab. Laudantium magnam qui possimus at eos fugiat quasi rerum, voluptas nihil architecto dolores laborum quia repudiandae? Natus quam voluptatibus
-                        obcaecati doloribus maxime explicabo quidem blanditiis fugit ea suscipit architecto vel animi eveniet nesciunt, corrupti placeat corporis eum iusto dignissimos inventore. Corporis, vitae dolor doloremque nesciunt maxime eaque laborum
-                        minus illum mollitia id fugiat iste quis vel quam recusandae saepe perspiciatis dolorem consectetur at ducimus accusantium dignissimos adipisci animi quibusdam. Qui fugit dolores, id officia nihil quis quam. Ducimus id ab nostrum
-                        vitae deserunt iste! Quis fugiat officia quidem numquam nemo quam reiciendis quae, quas non maxime nam accusamus voluptates ducimus aperiam inventore fuga rem officiis sunt quaerat dolor vero illum esse asperiores impedit! Voluptas
-                        animi nulla iusto et distinctio ea odio magni amet natus, cupiditate laborum tempore ab, nobis fugiat sequi veniam eius! Laborum non blanditiis sunt iure saepe eligendi asperiores, officia voluptas!
+                        Abejorral es un municipio con una población de 6.765 habitantes en la zona urbana y 12.331 en la zona rural, lo que lo convierte en un territorio en su mayor parte campesino. El sábado es el día de mercado, los campesinos sacan los productos cultivados en sus fincas para la comercialización local y regional.
+                        <br><br>
+                        La diversidad de climas que tiene el municipio, permiten que la oferta en alimentos sea amplia. Maíz, frijol, plátano, cacao, tomate, frutales como mango, mandarina, guanábana, granadilla, entre otros, aquí se cultivan y muchos de estos son tipo exportación.
+                        <br><br>
+                        En el primer reglón de la economía abejorraleña se ubica el café. Abejorral es el principal productor en el oriente Antioqueño con 3.556 hectáreas en producción.
+                        <br>
+                        La ganadería de leche produce alrededor de 60.000 litros por día, cuenta con 36.000 hectáreas en pastos y se ubica en el segundo renglón de la economía local.
+                        <br>
+                        Abejorral es el cuarto municipio en Antioquia con mayor cantidad d predios certificados en buenas prácticas agrícolas en aguacate tipo exportación, siendo este el tercer renglón de la economía.
+                        <br>
+                        La floricultura, aunque en menor parte, también hace parte de la economía de Abejorral, generando mejores condiciones de vida a la población.
+
                     </p>
                 </div>
             </div>

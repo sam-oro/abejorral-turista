@@ -743,7 +743,7 @@ input:checked+.slider:before {
 }
 
 .tarjetas-sitios__contenedor {
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     padding: 1rem;
     box-shadow: 10px 10px 11px #b6b6b6;
     margin: 4rem 0;
@@ -753,6 +753,14 @@ input:checked+.slider:before {
     width: 100%;
     margin: 0 0 -1rem 0;
     transform: translate(0, -2rem);
+}
+
+.tarjetas-sitios__img img {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
 
 .tarjetas-sitios__titulo {

@@ -226,7 +226,7 @@
             <div class="tarjetas-sitios__contenedor">
 
                 <div class="tarjetas-sitios__img">
-                    <img src="../../img/historia.jpg" alt="">
+                    <img src="../../img/slider-03.jpg" alt="">
                 </div>
 
                 <div class="tarjetas-sitios__info">
@@ -237,6 +237,31 @@
                     <p class="tarjetas-sitios__parrafo">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
                         ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/nuestro.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Manolita
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
                     </p>
 
                     <div class="text-center">
@@ -275,54 +300,7 @@
             </div>
 
 
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/historia.jpg" alt="">
-                </div>
-
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Manolita
-                    </h3>
-
-                    <p class="tarjetas-sitios__parrafo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
-                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
-                    </p>
-
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-
-
         </section>
-
-        <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
-            <div class="col-md-6 col-sm-12">
-                <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/nBx3OJqe3R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <h2>Los Chorritos</h2>
-            </div>
-        </section>
-        <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
-            <div class="col-md-6 col-sm-12">
-                <h2>La casa en el aire</h2>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/uGd0oHQDgfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-
 
 
         <footer class="footer mt-4">

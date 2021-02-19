@@ -690,7 +690,8 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
- /* HISTORIA */
+
+/* HISTORIA */
 
 .bg-historia {
     padding-top: 8rem;
@@ -726,4 +727,53 @@ input:checked+.slider:before {
     background-color: #F97838;
     text-shadow: 4px 4px 10px #000000;
     height: 2px;
+}
+
+
+/* Eco Tour */
+
+.tarjetas-sitios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: #f2f2f2;
+    margin-top: 1rem;
+}
+
+.tarjetas-sitios__contenedor {
+    background-color: #f3f3f3;
+    padding: 1rem;
+    box-shadow: 10px 10px 11px #b6b6b6;
+    margin: 4rem 0;
+}
+
+.tarjetas-sitios__img {
+    width: 100%;
+    margin: 0 0 -1rem 0;
+    transform: translate(0, -2rem);
+}
+
+.tarjetas-sitios__titulo {
+    color: #e4573e;
+}
+
+@media (min-width: 768px) {
+    .tarjetas-sitios {
+        display: flex;
+        padding: 5rem 7rem;
+    }
+    .tarjetas-sitios__contenedor {
+        display: flex;
+    }
+    .tarjetas-sitios__img {
+        width: 4000px;
+        margin: 0 3rem 0 3rem;
+        transform: translate(0, -3rem);
+    }
+    .tarjetas-sitios__info {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -120,7 +120,12 @@
                 <div class="col-12 col-md-6">
                     <h2>Turismo</h2>
 
-                    <p>En los últimos años en nuestro municipio, propios y  foráneos,   se han interesado por transformar ideas en realidades que finalmente terminan siendo sitios naturales de interés turístico para un sin número de visitantes, algunos de estos lugares ya muy conocidos por todos en general,  como El Parador Los Chorritos, los saltos de los ríos Aures y Buey, trapiches paneleros, rutas por caminos ancestrales donde algunas vez tuvieron su papel protagónico  las prácticas de arriería; también en este proceso han aparecido otros lugares que para los abejorraleños hubiesen sido en otro tiempo sitios un poco fantasiosos, como La Casa en el Aire, El Hostal La Peña, Los Peñoles, Utopía Casa Hotel, La Casa de RoRo,  Los Saltos Ecoparque, cada uno de estos con prácticas en la altura como cable vuelo, hamacas, péndulo, escalada en roca, vía ferrata, picnic aéreo, zona de Camping, senderismo, entre otros;  ya posicionados además  a nivel nacional e internacional y ni hablar del gran potencial en su fauna y flora, en sus prácticas agrícolas, en sus paisajes de gran valor para todos los que admiramos estas montañas llenas de tesoros, caminos de la colonización y asentamientos indígenas, que finalmente se convierten en un gran libro de historias escrito por nuestros abuelos. 
+                    <p>En los últimos años en nuestro municipio, propios y foráneos, se han interesado por transformar ideas en realidades que finalmente terminan siendo sitios naturales de interés turístico para un sin número de visitantes, algunos de estos
+                        lugares ya muy conocidos por todos en general, como El Parador Los Chorritos, los saltos de los ríos Aures y Buey, trapiches paneleros, rutas por caminos ancestrales donde algunas vez tuvieron su papel protagónico las prácticas
+                        de arriería; también en este proceso han aparecido otros lugares que para los abejorraleños hubiesen sido en otro tiempo sitios un poco fantasiosos, como La Casa en el Aire, El Hostal La Peña, Los Peñoles, Utopía Casa Hotel, La
+                        Casa de RoRo, Los Saltos Ecoparque, cada uno de estos con prácticas en la altura como cable vuelo, hamacas, péndulo, escalada en roca, vía ferrata, picnic aéreo, zona de Camping, senderismo, entre otros; ya posicionados además
+                        a nivel nacional e internacional y ni hablar del gran potencial en su fauna y flora, en sus prácticas agrícolas, en sus paisajes de gran valor para todos los que admiramos estas montañas llenas de tesoros, caminos de la colonización
+                        y asentamientos indígenas, que finalmente se convierten en un gran libro de historias escrito por nuestros abuelos.
                     </p>
                 </div>
 
@@ -132,7 +137,7 @@
                     echo('<iframe class="col-12 vista-videoo" src="'.$row[2].'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');	
                 }
                 ?>
-                    <?php
+                        <?php
                     if(isset($_SESSION['rol'])){
                         if ($_SESSION['rol']==1){
                             ?>
@@ -145,58 +150,169 @@
                         }
                     }
                     ?>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Cambiar Video</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Cambiar Video</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <form action="../../video/video_ecotour/actu_video.php" method="post" enctype="multipart/form-data">
-                                                <div class="form-group">
-                                                    <label>Nombre</label>
-                                                    <input class="form-control" type="text" name="nombre">
-                                                </div>
-                                                <fieldset>
-                                                    <legend>vídeo</legend>
-                                                    <small class="form-text text-muted">Si inserta el video con un URL no es
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <form action="../../video/video_ecotour/actu_video.php" method="post" enctype="multipart/form-data">
+                                                        <div class="form-group">
+                                                            <label>Nombre</label>
+                                                            <input class="form-control" type="text" name="nombre">
+                                                        </div>
+                                                        <fieldset>
+                                                            <legend>vídeo</legend>
+                                                            <small class="form-text text-muted">Si inserta el video con un URL no es
                                                 necesario
                                                 que seleccione un video desde su dispositivo y viceversa; Si rellena el
                                                 campo
                                                 URL y selecciona un archivo desde su dispositivo, se dará prioridad al
                                                 URL que
                                                 ingreso primero</small>
-                                                    <div class="form-group">
-                                                        <label>URL Vídeo</label>
-                                                        <input class="form-control" type="text" name="url">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>Seleccionar Vídeo</label>
-                                                        <input class="form-control" type="file" name="video">
-                                                    </div>
-                                                </fieldset>
-                                                <button type="submit" class="btn btn-color">Enviar</button>
-                                            </form>
+                                                            <div class="form-group">
+                                                                <label>URL Vídeo</label>
+                                                                <input class="form-control" type="text" name="url">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Seleccionar Vídeo</label>
+                                                                <input class="form-control" type="file" name="video">
+                                                            </div>
+                                                        </fieldset>
+                                                        <button type="submit" class="btn btn-color">Enviar</button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
                 </div>
             </div>
         </section>
 
+        <section class="tarjetas-sitios">
+
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/historia.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Manolita
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
+                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/historia.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Manolita
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
+                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/historia.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Manolita
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
+                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="tarjetas-sitios__contenedor">
+
+                <div class="tarjetas-sitios__img">
+                    <img src="../../img/historia.jpg" alt="">
+                </div>
+
+                <div class="tarjetas-sitios__info">
+                    <h3 class="tarjetas-sitios__titulo">
+                        Manolita
+                    </h3>
+
+                    <p class="tarjetas-sitios__parrafo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quae, maxime iste autem temporibus quia accusantium neque, aut delectus similique assumenda dicta cumque! Eligendi unde voluptatum officiis accusamus fugiat sunt. Excepturi doloremque
+                        ad magni nihil eum ab quam praesentium id est ducimus, qui quas perferendis, alias veritatis neque dolores voluptatum officia aliquid! Ipsum magni adipisci consectetur numquam, tenetur labore autem.
+                    </p>
+
+                    <div class="text-center">
+                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
+                        <button class="btn btn-color">Hola</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </section>
+
         <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
-                <div class="col-md-6 col-sm-12">
-                    <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/nBx3OJqe3R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <h2>Los Chorritos</h2>
-                </div>
+            <div class="col-md-6 col-sm-12">
+                <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/nBx3OJqe3R8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h2>Los Chorritos</h2>
+            </div>
         </section>
         <section class="sesiones sesiones__turismo mt-5" style="background-image: url(../../img/sec-01.jpg);">
             <div class="col-md-6 col-sm-12">
@@ -206,15 +322,15 @@
                 <iframe class="col-12 vista-videoo" src="https://www.youtube.com/embed/uGd0oHQDgfU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
-        
-        
+
+
 
         <footer class="footer mt-4">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-3 text-lg-center text-center contac">
                         <a href="<?php echo $URL ?>vistas/Contacto/contacto.php">
-                        <h3 class="contach">Contáctenos</h3>
+                            <h3 class="contach">Contáctenos</h3>
                         </a>
                     </div>
                     <div class="col-lg-6 my-3 my-lg-0 text-lg-center text-center">
@@ -222,7 +338,9 @@
                         <a class="redes btn btn-social mx-3" target="_blank" href="https://www.facebook.com/alcaldia.abejorral/"><i class="fab fa-facebook-f"></i></a>
                         <a class="redes btn btn-social mx-3" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
-                    <div class="col-lg-3 text-lg-left text-center copy">©Tecnoparque-Abejorral<?php echo date('Y'); ?></div>
+                    <div class="col-lg-3 text-lg-left text-center copy">©Tecnoparque-Abejorral
+                        <?php echo date('Y'); ?>
+                    </div>
                 </div>
             </div>
         </footer>

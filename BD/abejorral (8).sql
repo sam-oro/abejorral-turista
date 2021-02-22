@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2020 a las 09:15:26
+-- Tiempo de generación: 22-02-2021 a las 15:07:13
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -43,7 +43,9 @@ CREATE TABLE `tblcliente` (
 --
 
 INSERT INTO `tblcliente` (`Id_Cliente`, `Nombre`, `Apellidos`, `Fecha_Nacimiento`, `Cel`, `id_Municipio`, `Direccion`, `Correo`) VALUES
-(111112111, 'mauricio', 'perez', '2020-12-12', '300785647', 1, 'Calle 21 #22-17', 'maurox9522@gmail.com');
+(888888, 'Admintrador', 'castaño', '2020-12-08', '3001587894', 1059, 'sdsdsd 22233', 'maurox9522@gmail.com'),
+(999999, 'qwqwq', 'qwqwq', '2020-12-08', '2121212', 171, 'cada 21212', 'colanta@gmail.com'),
+(111112111, 'joselo', 'perez', '2020-12-12', '300785647', 1, 'Calle 21 #22-17', 'maurox9522@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -115,6 +117,15 @@ CREATE TABLE `tblempresa` (
   `Longitud` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `tblempresa`
+--
+
+INSERT INTO `tblempresa` (`Cod_Empresa`, `RUT_Empresa`, `Nombre`, `Cel`, `Telefono`, `Correo`, `Id_Municipio`, `Direccion`, `Latitud`, `Longitud`) VALUES
+(1003, '555555', 'colanta', '3001875789', '550123', 'colanta@gmail.com', 1, 'Calle 21 #22-17', '232323', '11111'),
+(1004, '555555', 'noel', '3001875789', '550123', 'noel@gmail.com', 1, 'Calle 21 #22-17', '11111', '2222'),
+(1005, '123456789', 'abejorral_admin', '3001875789', '55012', 'abejorraladmin@gmail.com', 1, 'N/N', '00000', '00000');
+
 -- --------------------------------------------------------
 
 --
@@ -123,7 +134,7 @@ CREATE TABLE `tblempresa` (
 
 CREATE TABLE `tbllogin` (
   `Correo` varchar(50) NOT NULL,
-  `Contraseña` varchar(50) NOT NULL,
+  `Contrasena` varchar(50) NOT NULL,
   `Id_Rol` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -131,8 +142,11 @@ CREATE TABLE `tbllogin` (
 -- Volcado de datos para la tabla `tbllogin`
 --
 
-INSERT INTO `tbllogin` (`Correo`, `Contraseña`, `Id_Rol`) VALUES
-('maurox9522@gmail.com', '123', 1);
+INSERT INTO `tbllogin` (`Correo`, `Contrasena`, `Id_Rol`) VALUES
+('abejorraladmin@gmail.com', 'abejorral123', 3),
+('colanta@gmail.com', '123', 3),
+('maurox9522@gmail.com', '123', 1),
+('noel@gmail.com', '123', 3);
 
 -- --------------------------------------------------------
 
@@ -1296,7 +1310,8 @@ CREATE TABLE `tblpreguntas` (
 --
 
 INSERT INTO `tblpreguntas` (`cod_pregunta`, `Pregunta`, `Respuesta`) VALUES
-(2, 'pregunta de pruebaa', 'asdadasdasdasd');
+(2, 'Donde queda abejorral?', 'Abejorral  queda a 108 kilometros de medellin. Tiene tres vias de acceso, que son por el oriente por el municipio de LA UNION, y LA CEJA via el guaico y por el sur occidente por el municipio de SANTA BARBARA via el cairo, cuenta con muy buen transporte, que son cootrabe que es una empresa de Abejorral con exelentes buses lo mismo que transportes unidos la ceja y sonson argelia.\r\nCelebra las fiestas del ARCO en octubre. Sus gentes son muy amables y hospitalarias por algo le llaman el pueblo de los cien señores.'),
+(3, 'pregunta de prueba', 'pregunta de pruba 2');
 
 -- --------------------------------------------------------
 
@@ -1310,13 +1325,28 @@ CREATE TABLE `tblproducto` (
   `Peso_Producto` varchar(20) DEFAULT NULL,
   `Cantidad` int(11) DEFAULT NULL,
   `Valor` double(8,2) DEFAULT NULL,
+  `cafe` tinyint(1) NOT NULL,
   `img1` varchar(300) NOT NULL,
   `img2` varchar(300) NOT NULL,
   `img3` varchar(300) NOT NULL,
-  `Cod_Solicitud` int(2) DEFAULT NULL,
   `Cod_Empresa` int(11) DEFAULT NULL,
-  `Cod_Prove` int(11) DEFAULT NULL
+  `estado` tinyint(1) NOT NULL,
+  `descripcion` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tblproducto`
+--
+
+INSERT INTO `tblproducto` (`Cod_Producto`, `Nom_Producto`, `Peso_Producto`, `Cantidad`, `Valor`, `cafe`, `img1`, `img2`, `img3`, `Cod_Empresa`, `estado`, `descripcion`) VALUES
+(63, 'Vinos', '2 litros', 10, 50000.00, 0, '20201222162250img-13.jpg', '20201222162250Abejorral-portada-04.jpg', '20201222162250img-13.jpg', 1005, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(65, 'Mermelada maracuyÃ¡', '2 kilos', 10, 500000.00, 0, '20201222162515Abejorral-portada-03.jpg', '20201222162515img-03.jpg', '20201222162515img-04.jpg', 1005, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(66, 'Arequipe', '2 kilos', 10, 10000.00, 0, '20201222162544img-05.jpg', '20201222162544img-06.jpg', '20201222162544img-07.jpg', 1005, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(67, 'Jugo maracuyÃ¡', '2 litros', 10, 15000.00, 0, '20201222162637img-15.jpg', '20201222162637img-14.jpg', '20201222162637img-16.jpg', 1005, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(68, 'Mermeladas Varias', '12 kilos', 10, 50000.00, 0, '20201222162725img-09.jpg', '20201222162725img-10.jpg', '20201222162725img-08.jpg', 1005, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(69, 'Pastel de arequipe', '10 kilos', 10, 50000.00, 0, '20201222162813Abejorral-portada-05.jpg', '20201222162813img-17.jpg', '20201222162813Abejorral-portada-05.jpg', 1005, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(70, 'Cafe', '10 kilos', 5, 50000.00, 1, '20201222162902img-01.jpg', '20201222162902img-02.jpg', '20201222162902img-01.jpg', 1005, 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.'),
+(73, 'Prueba1', '1', 2, 12354.00, 1, '2021021615500520210203111235ninguno.jpg', '202102161550052021020311123520210105224947147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg', '20210216155005202102031112352021010709585682732925_p0.png', 1003, 0, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis felis ac augue rhoncus, ac interdum lectus vestibulum. Aenean mi elit, interdum iaculis laoreet vel, malesuada ut turpis. Interdum et malesuada fames ac ante ipsum primis in id.');
 
 -- --------------------------------------------------------
 
@@ -1336,6 +1366,13 @@ CREATE TABLE `tblproveedor_natural` (
   `Id_Municipio` bigint(20) DEFAULT NULL,
   `Ubicacion` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tblproveedor_natural`
+--
+
+INSERT INTO `tblproveedor_natural` (`Cod_Prove`, `Id_Prove`, `Nombre`, `Apellido`, `Fecha_Naci`, `Cel`, `Telefono`, `Correo`, `Id_Municipio`, `Ubicacion`) VALUES
+(1, '10354124', 'joseee', 'perez', '2020-12-02', '3001587894', '550123', 'jose@gmail.com', 618, 'adaedqawedq');
 
 -- --------------------------------------------------------
 
@@ -1366,21 +1403,23 @@ INSERT INTO `tblrol` (`Id_Rol`, `Nombre`) VALUES
 CREATE TABLE `tblsitio` (
   `Cod_Sitio` int(11) NOT NULL,
   `Nombre` varchar(50) DEFAULT NULL,
-  `Latitud` varchar(20) NOT NULL,
-  `Longitud` varchar(20) NOT NULL,
+  `Latitud` varchar(20) DEFAULT NULL,
+  `Longitud` varchar(20) DEFAULT NULL,
   `Detalle` varchar(200) DEFAULT NULL,
   `Servicios` varchar(50) DEFAULT NULL,
-  `Horario` time NOT NULL,
+  `Horario` time DEFAULT NULL,
   `Calificacion` int(11) DEFAULT NULL,
-  `Experiencia` varchar(2000) DEFAULT NULL
+  `Experiencia` varchar(2000) DEFAULT NULL,
+  `img` varchar(200) NOT NULL,
+  `tipo_sitio` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tblsitio`
 --
 
-INSERT INTO `tblsitio` (`Cod_Sitio`, `Nombre`, `Latitud`, `Longitud`, `Detalle`, `Servicios`, `Horario`, `Calificacion`, `Experiencia`) VALUES
-(3, 'adsdasdfasd', '11111', '11111', 'asfadasda', 'baño. wifi, psina, camas, turco, tobogan, plomo el', '00:00:00', NULL, NULL);
+INSERT INTO `tblsitio` (`Cod_Sitio`, `Nombre`, `Latitud`, `Longitud`, `Detalle`, `Servicios`, `Horario`, `Calificacion`, `Experiencia`, `img`, `tipo_sitio`) VALUES
+(16, 'asdas', '232323', '2323232', 'asdasda', 'baño. wifi, psina, camas, turco, tobogan, plomo el', '12:12:00', NULL, NULL, '20210222150532horda.jpg', 'Sitios De Aventura');
 
 -- --------------------------------------------------------
 
@@ -1412,7 +1451,9 @@ CREATE TABLE `tblvideo` (
 --
 
 INSERT INTO `tblvideo` (`cod`, `Nombre`, `url`) VALUES
-(1, 'aaa', 'https://www.youtube.com/embed/be1Fdq0NwKw');
+(1, 'abejorral 1', 'https://www.youtube.com/embed/BXKN3yTOmok'),
+(2, 'eco turismo', 'https://www.youtube.com/embed/2BCwNaxDftw'),
+(3, 'teaser', 'https://www.youtube.com/embed/OZa_tl8_DrU');
 
 --
 -- Índices para tablas volcadas
@@ -1465,9 +1506,7 @@ ALTER TABLE `tblpreguntas`
 --
 ALTER TABLE `tblproducto`
   ADD PRIMARY KEY (`Cod_Producto`),
-  ADD KEY `fk_tblProducto_tblSolicitud1_idx` (`Cod_Solicitud`),
-  ADD KEY `fk_tblProducto_tblEmpresa1_idx` (`Cod_Empresa`),
-  ADD KEY `fk_tblProducto_tblProveedor_Natural1_idx` (`Cod_Prove`);
+  ADD KEY `fk_tblProducto_tblEmpresa1_idx` (`Cod_Empresa`);
 
 --
 -- Indices de la tabla `tblproveedor_natural`
@@ -1508,43 +1547,43 @@ ALTER TABLE `tblvideo`
 -- AUTO_INCREMENT de la tabla `tblempresa`
 --
 ALTER TABLE `tblempresa`
-  MODIFY `Cod_Empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1003;
+  MODIFY `Cod_Empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1006;
 
 --
 -- AUTO_INCREMENT de la tabla `tblpreguntas`
 --
 ALTER TABLE `tblpreguntas`
-  MODIFY `cod_pregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cod_pregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `tblproducto`
 --
 ALTER TABLE `tblproducto`
-  MODIFY `Cod_Producto` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `Cod_Producto` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT de la tabla `tblproveedor_natural`
 --
 ALTER TABLE `tblproveedor_natural`
-  MODIFY `Cod_Prove` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Cod_Prove` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tblsitio`
 --
 ALTER TABLE `tblsitio`
-  MODIFY `Cod_Sitio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Cod_Sitio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `tblsolicitud`
 --
 ALTER TABLE `tblsolicitud`
-  MODIFY `Cod_Solicitud` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `Cod_Solicitud` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tblvideo`
 --
 ALTER TABLE `tblvideo`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
@@ -1580,15 +1619,7 @@ ALTER TABLE `tblmunicipios`
 -- Filtros para la tabla `tblproducto`
 --
 ALTER TABLE `tblproducto`
-  ADD CONSTRAINT `fk_tblProducto_tblEmpresa1` FOREIGN KEY (`Cod_Empresa`) REFERENCES `tblempresa` (`Cod_Empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_tblProducto_tblProveedor_Natural1` FOREIGN KEY (`Cod_Prove`) REFERENCES `tblproveedor_natural` (`Cod_Prove`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_tblProducto_tblSolicitud1` FOREIGN KEY (`Cod_Solicitud`) REFERENCES `tblsolicitud` (`Cod_Solicitud`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `tblproveedor_natural`
---
-ALTER TABLE `tblproveedor_natural`
-  ADD CONSTRAINT `fk_tblProveedor_Natural_tblMunicipios1` FOREIGN KEY (`Id_Municipio`) REFERENCES `tblmunicipios` (`id_Municipio`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_tblProducto_tblEmpresa1` FOREIGN KEY (`Cod_Empresa`) REFERENCES `tblempresa` (`Cod_Empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

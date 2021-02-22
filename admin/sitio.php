@@ -105,10 +105,24 @@ include '../conexion/conexion.php';
 
                 <div class="container-fluid">
                     <h1 class="mt-4">Sitio turístico</h1>
-                        <form action="controlador/insertar_sitio.php" method="POST" name="add_form">
+                        <form action="controlador/insertar_sitio.php" method="POST" name="add_form" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label> Nombre del sitio turístico </label>
                                 <input type="text" id="nombre" name="nombre" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Imagen</label>
+                                <input type="file" id="img" name="img1" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo De Sitio</label>
+                                    <select class="form-control form-control-lg" name="tipo_sitio">
+                                        <option value="Hospedaje">Hospedaje</option>
+                                        <option value="Restaurante">Restaurante</option>
+                                        <option value="Sitios De Aventura">Sitios De Aventura</option>
+                                        <option value="Rutas Hisoricas">Rutas Hisoricas</option>
+                                        <option value="Rutas Naturales">Rutas Naturales</option>
+                                    </select>
                             </div>
                             <div class="form-group">
                                 <label>Latitud</label>
@@ -140,13 +154,11 @@ include '../conexion/conexion.php';
                                 <thead class="thead">
                                     <th>Código</th>
                                     <th>Nombre</th>
-                                    <th>Latitud</th>
-                                    <th>Longitud</th>
                                     <th>Descripción</th>
                                     <th>Servicios</th>
-                                    <th>Horario</th>
-                                    <th>Calificación</th>
-                                    <th>Experiencia</th>
+                                    <th>Imagen</th>
+                                    <!-- <th>Calificación</th>
+                                    <th>Experiencia</th> -->
                                     <th></th>
                                     <th></th>
                                 </thead>
@@ -159,68 +171,11 @@ include '../conexion/conexion.php';
                                 <tr>
                                     <td><?php echo $fila['Cod_Sitio'] ?></td>
                                     <td><?php echo $fila['Nombre'] ?></td>
-                                    <td><?php echo $fila['Latitud'] ?></td>
-                                    <td><?php echo $fila['Longitud'] ?></td>
                                     <td><?php echo $fila['Detalle'] ?></td>
                                     <td><?php echo $fila['Servicios'] ?></td>
-                                    <td><?php echo $fila['Horario'] ?></td>
-                                    <td><?php echo $fila['Calificacion'] ?></td>
-                                    <td><?php echo $fila['Experiencia'] ?></td>    
-                                    <td><button type="button" class="btn btn-admin" data-toggle="modal" data-target="#modal<?php echo $cont;?>">Actualizar</button></td>
+                                    <td><img src="<?php echo $URL."/images/".$fila['img'];?>" width="150px"></td>  
                                     <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Sitio']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                             </tr>
-
-                                    <!-- /Modal acutualzar Sitio -->
-
-                            <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Editar Sitio turistico</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form action="controlador/actualizar_sitio.php?Cod_Sitio=<?php echo $fila['Cod_Sitio']?>" method="post">
-                                            <div class="form-group">
-                                                <label> Nombre del sitio turístico </label>
-                                                <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $fila['Nombre'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Latitud</label>
-                                                <input type="text" id="latitud" name="latitud" class="form-control" value="<?php echo $fila['Latitud'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Longitud</label>
-                                                <input type="text" id="longitud" name="longitud" class="form-control" value="<?php echo $fila['Longitud'] ?>" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Descripción del sitio </label>
-                                                <textarea class="form-control rounded-0" id="descripcion" name="descripcion" rows="3"><?php echo $fila['Detalle'] ?></textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Servicios</label>
-                                                <input type="text" id="servicios" name="servicios" class="form-control" value="<?php echo $fila['Servicios'] ?>" requiered>
-                                            </div>
-                                            <div class="form-group">
-                                                <label> Horario disponible </label>
-                                                <input type="time" id="horario" name="horario" class="form-control" value="<?php echo $fila['Horarios'] ?>" requiered>
-                                            </div>
-                                                
-                                                <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-admin">Guardar</button>
-                                                    <button type="button" class="btn btn-admin" data-dismiss="modal">Cancelar</button>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                <!-- /#Final Modal Actualizar Sitio -->
 
                             <?php } ?>
                         </table>

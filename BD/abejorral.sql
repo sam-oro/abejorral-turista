@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-02-2021 a las 15:07:13
+-- Tiempo de generación: 22-02-2021 a las 17:18:45
 -- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.4.10
+-- Versión de PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1403,10 +1403,9 @@ INSERT INTO `tblrol` (`Id_Rol`, `Nombre`) VALUES
 CREATE TABLE `tblsitio` (
   `Cod_Sitio` int(11) NOT NULL,
   `Nombre` varchar(50) DEFAULT NULL,
-  `Latitud` varchar(20) DEFAULT NULL,
-  `Longitud` varchar(20) DEFAULT NULL,
+  `Telefono` varchar(20) DEFAULT NULL,
+  `Web` varchar(100) DEFAULT NULL,
   `Detalle` varchar(200) DEFAULT NULL,
-  `Servicios` varchar(50) DEFAULT NULL,
   `Horario` time DEFAULT NULL,
   `Calificacion` int(11) DEFAULT NULL,
   `Experiencia` varchar(2000) DEFAULT NULL,
@@ -1418,8 +1417,11 @@ CREATE TABLE `tblsitio` (
 -- Volcado de datos para la tabla `tblsitio`
 --
 
-INSERT INTO `tblsitio` (`Cod_Sitio`, `Nombre`, `Latitud`, `Longitud`, `Detalle`, `Servicios`, `Horario`, `Calificacion`, `Experiencia`, `img`, `tipo_sitio`) VALUES
-(16, 'asdas', '232323', '2323232', 'asdasda', 'baño. wifi, psina, camas, turco, tobogan, plomo el', '12:12:00', NULL, NULL, '20210222150532horda.jpg', 'Sitios De Aventura');
+INSERT INTO `tblsitio` (`Cod_Sitio`, `Nombre`, `Telefono`, `Web`, `Detalle`, `Horario`, `Calificacion`, `Experiencia`, `img`, `tipo_sitio`) VALUES
+(16, 'asdas', '1111111', 'https://www.google.com/', 'asdasda', '12:12:00', NULL, NULL, '2021020311123520210105224947147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg', 'Sitios De Aventura'),
+(17, 'asdas', '222222', 'https://www.google.com/', 'asdasda', '12:12:00', NULL, NULL, '202102031112352021010709585682732925_p0.png', 'Hospedaje'),
+(18, 'asdas', '333333333', 'https://www.google.com/', 'asdasda', '12:12:00', NULL, NULL, 'salto.jpg', 'Restaurante'),
+(19, 'asdas', '4444444', 'https://www.google.com/', 'asdasda', '12:12:00', NULL, NULL, '202102031112352021010709585682732925_p0.png', 'Rutas Hisoricas');
 
 -- --------------------------------------------------------
 
@@ -1571,7 +1573,7 @@ ALTER TABLE `tblproveedor_natural`
 -- AUTO_INCREMENT de la tabla `tblsitio`
 --
 ALTER TABLE `tblsitio`
-  MODIFY `Cod_Sitio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `Cod_Sitio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `tblsolicitud`

@@ -196,143 +196,219 @@
         </section>
 
         <section class="tarjetas-sitios">
-
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/salto.jpg" alt="">
+            <?php
+            $sel1 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Hospedaje' ORDER BY Cod_Sitio DESC");
+            ?>
+            <div class="tipo-sitio">
+                <div class="row">
+                    <h1>HOSPEDAJES</h1>
                 </div>
+                    <?php 
+                    if (($sel1->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+                <div class="row" style="overflow: scroll; height: 72vh;">
+                    <?php
+                        while ($fila1 = $sel1 -> fetch_assoc()) {
+                    ?>
+                    <div class="tarjetas-sitios__contenedor">
+                        <div class="tarjetas-sitios__img">
+                            <img src="<?php echo $urlimagen.$fila1['img']?>" alt="">
+                        </div>
 
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Salto del Aures 
-                    </h3>
+                        <div class="tarjetas-sitios__info">
+                            <h3 class="tarjetas-sitios__titulo">
+                                <?php echo $fila1['Nombre']?>
+                            </h3>
 
-                    <p class="tarjetas-sitios__parrafo">
-                        Conozca una caída de 460 metros formada por el rio Aures. Descienda por camino de herradura contemplando la profundidad del cañón y el salto de la Quebradona hasta el trapiche El Salto, tradicional hacienda panelera donde se brinda servicio de guianza, alimentación, alojamiento y el proceso de la molienda panelera. El Salto del Aures fue fuente de inspiración del poeta antioqueño Gregorio Gutiérrez González.
-                    </p>
+                            <p class="tarjetas-sitios__parrafo">
+                                <?php echo $fila1['Detalle']?>
+                            </p>
 
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
+                            <div class="text-center">
+                                <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i><?php echo $fila1['Telefono']?></button>
+                                <a href="<?php echo $fila1['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                            </div>
+                        </div>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
+                <?php } ?>
+            </div>
+            
+            <?php
+            $sel2 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Restaurante' ORDER BY Cod_Sitio DESC");
+            ?>
+            <div class="tipo-sitio">
+                <div class="row">
+                    <h1>RESTAURANTES</h1>
+                </div>
+                    <?php 
+                    if (($sel2->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+                <div class="row" style="overflow: scroll; height: 72vh;">
+                    <?php
+                        while ($fila2 = $sel2 -> fetch_assoc()) {
+                    ?>
+                    <div class="tarjetas-sitios__contenedor">
+                        <div class="tarjetas-sitios__img">
+                            <img src="<?php echo $urlimagen.$fila2['img']?>" alt="">
+                        </div>
 
+                        <div class="tarjetas-sitios__info">
+                            <h3 class="tarjetas-sitios__titulo">
+                                <?php echo $fila2['Nombre']?>
+                            </h3>
+
+                            <p class="tarjetas-sitios__parrafo">
+                                <?php echo $fila2['Detalle']?>
+                            </p>
+
+                            <div class="text-center">
+                                <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i><?php echo $fila2['Telefono']?></button>
+                                <a href="<?php echo $fila2['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+                <?php } ?>
             </div>
 
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/ruta-cafetera.jpg" alt="">
+            <?php
+            $sel3 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Sitios De Aventura' ORDER BY Cod_Sitio DESC");
+            ?>
+            <div class="tipo-sitio">
+                <div class="row">
+                    <h1>SITIOS DE AVENTURA</h1>
                 </div>
+                    <?php 
+                    if (($sel3->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+                <div class="row" style="overflow: scroll; height: 72vh;">
+                    <?php
+                        while ($fila3 = $sel3 -> fetch_assoc()) {
+                    ?>
+                    <div class="tarjetas-sitios__contenedor">
+                        <div class="tarjetas-sitios__img">
+                            <img src="<?php echo $urlimagen.$fila3['img']?>" alt="">
+                        </div>
 
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Ruta cafetera
-                    </h3>
+                        <div class="tarjetas-sitios__info">
+                            <h3 class="tarjetas-sitios__titulo">
+                                <?php echo $fila3['Nombre']?>
+                            </h3>
 
-                    <p class="tarjetas-sitios__parrafo">
-                        Saliendo desde la vereda Naranjal, disfrute de paisajes tradicionales, coloridas casas campesinas y del delicioso aroma de los cafetales hasta llegar al corregimiento de pantanillo, fundado hace 80 años a orillas del camino ¨rial¨ como posada para los arrieros que iban de Abejorral a la estación del Ferrocarril en la pintada. Sus montañas son montañas son pistas de parapente y miradores hacia Caldas, el Suroeste antioqueño y los cañones de los ríos Arna, Buey y Cauca.
-                    </p>
+                            <p class="tarjetas-sitios__parrafo">
+                                <?php echo $fila3['Detalle']?>
+                            </p>
 
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
+                            <div class="text-center">
+                                <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i><?php echo $fila3['Telefono']?></button>
+                                <a href="<?php echo $fila3['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                            </div>
+                        </div>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-
+                <?php } ?>
             </div>
 
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/cerro.jpg" alt="">
+            <?php
+            $sel4 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Rutas Hisoricas'");
+            ?>
+            <div class="tipo-sitio">
+                <div class="row">
+                    <h1>RUTAS HISTORICAS</h1>
                 </div>
+                    <?php 
+                    if (($sel4->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+                <div class="row" style="overflow: scroll; height: 72vh;">
+                    <?php
+                        while ($fila4 = $sel4 -> fetch_assoc()) {
+                    ?>
+                    <div class="tarjetas-sitios__contenedor">
+                        <div class="tarjetas-sitios__img">
+                            <img src="<?php echo $urlimagen.$fila4['img']?>" alt="">
+                        </div>
 
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Cerro San Vicente
-                    </h3>
+                        <div class="tarjetas-sitios__info">
+                            <h3 class="tarjetas-sitios__titulo">
+                                <?php echo $fila4['Nombre']?>
+                            </h3>
 
-                    <p class="tarjetas-sitios__parrafo">
-                        Uno de los cerros tutelares de Abejorral donde las huellas de las prácticas guaperas hacen parte del paisaje. Allí, el brillo del sol descubre a lo lejos los cañones del Río Buey y el Cauca, se ven las nubes claras posarse sobre los Farallones del Citará y Cerro Bravo; los escaladores llegan a la cima para abrir sus brazos y echarse a volar en parapente.
-                    </p>
+                            <p class="tarjetas-sitios__parrafo">
+                                <?php echo $fila4['Detalle']?>
+                            </p>
 
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
+                            <div class="text-center">
+                                <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i><?php echo $fila4['Telefono']?></button>
+                                <a href="<?php echo $fila4['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                            </div>
+                        </div>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-
+                <?php } ?>
             </div>
 
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/chorritos.jpg" alt="">
+            <?php
+            $sel5 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Rutas Naturales'");
+            ?>
+            <div class="tipo-sitio">
+                <div class="row">
+                    <h1>RUTAS NATURALES</h1>
                 </div>
+                    <?php 
+                    if (($sel5->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+                <div class="row" style="overflow: scroll; height: 72vh;">
+                    <?php
+                        while ($fila5 = $sel5 -> fetch_assoc()) {
+                    ?>
+                    <div class="tarjetas-sitios__contenedor">
+                        <div class="tarjetas-sitios__img">
+                            <img src="<?php echo $urlimagen.$fila5['img']?>" alt="">
+                        </div>
 
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Parador los chorritos
-                    </h3>
+                        <div class="tarjetas-sitios__info">
+                            <h3 class="tarjetas-sitios__titulo">
+                                <?php echo $fila5['Nombre']?>
+                            </h3>
 
-                    <p class="tarjetas-sitios__parrafo">
-                        A veinte minutos de Abejorral caminando por la vía Sonsón y a través de un bosque de pino pátula plantado en la rivera de la quebrada los Dolores se llega a una caída de agua que forma el charco más visitado por los abejorreños. Un baño en aguas cristalinas, donde a fuego de leña se puede cocinar sancocho; plan ideal en los días de verano.
-                    </p>
+                            <p class="tarjetas-sitios__parrafo">
+                                <?php echo $fila5['Detalle']?>
+                            </p>
 
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
+                            <div class="text-center">
+                                <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i><?php echo $fila5['Telefono']?></button>
+                                <a href="<?php echo $fila5['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                            </div>
+                        </div>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-
-            </div>
-
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/santuario.jpg" alt="">
-                </div>
-
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Santuario el Señor de los Milagros
-                    </h3>
-
-                    <p class="tarjetas-sitios__parrafo">
-                        Desde varias regiones llegan profesando su fe los devotos al Señor de los Milagros, en un santuario en conjugación entre cielo y tierra, entre el olor a café y a la amabilidad de sus campesinos. Por la vía al corregimiento de Pantanillo, a borde de carretera hermosas fincas he imponentes paisajes de cañones y las cordilleras Central y Occidental. El templo del Señor de los milagros se alza en lo más alto de Chagualal, donde aún se conservan las tiendan de veredas y las casas de grandes corredores adornados de jardín.
-                    </p>
-
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="tarjetas-sitios__contenedor">
-
-                <div class="tarjetas-sitios__img">
-                    <img src="../../img/miradores.jpg" alt="">
-                </div>
-
-                <div class="tarjetas-sitios__info">
-                    <h3 class="tarjetas-sitios__titulo">
-                        Miradores periurbanos
-                    </h3>
-
-                    <p class="tarjetas-sitios__parrafo">
-                        Por potreros que rodean la Tierra de los Cien Señores se llega a ua colorida casa de jardines y balcones, a la feria de ganado y a las calles del barrio obrero. Se retoma el camino bordeando el pueblo hacia el sector los Balcones y la Bernardita, desde allí se camina cerca de cultivos de aguacates y fincas lecheras. En el alto de la Aguada, el paisaje urbano, de casas esquineras, ventanales y tejados, cuenta la historia de esta tierra madre de Cien Señores.
-                    </p>
-
-                    <div class="text-center">
-                        <button class="btn btn-color"><i class="fab fa-whatsapp mr-2"></i>Whatsapp</button>
-                        <button class="btn btn-color">Hola</button>
-                    </div>
-                </div>
-
+                <?php } ?>
             </div>
 
         </section>

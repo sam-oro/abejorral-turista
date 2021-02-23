@@ -37,6 +37,19 @@
         <link rel="icon" type="image/png" href="img/icono-pag.png">
 
         <link rel="stylesheet" href="../../css/style.css">
+
+        <!-- js para el librito de historia -->
+        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=UTF-8">
+
+        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.mousewheel.min.js"></script>
+        <script type="text/javascript" src="../js/three.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.onebook3d-2.33.js?2"></script>
+        <script type="text/javascript" src="../js/libro.js"></script>
+
+
+        
+
     </head>
 
     <body>
@@ -88,6 +101,16 @@
             </div>
         </section>
 
+        <section>
+        
+        <div class="section red">
+        <div style="padding:30px;">
+            <div id="photobook" style="height:100px;"></div> 
+        </div>
+        </div>
+
+        </section>
+
 
 
         <footer class="footer mt-4">
@@ -108,13 +131,13 @@
             </div>
         </footer>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
         </script>
-        <script src="vistas/js/paginacion.js"></script>
+        <!-- <script src="vistas/js/paginacion.js"></script> -->
     </body>
 
     </html>

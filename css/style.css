@@ -23,6 +23,10 @@ h6 {
     font-weight: 500;
 }
 
+a {
+    text-decoration: none;
+}
+
 p {
     font-weight: 300;
 }
@@ -792,4 +796,30 @@ input:checked+.slider:before {
     .tarjetas-sitios__img img {
         min-height: 100%;
     }
+}
+
+.tarjetas-sitios::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.tarjetas-sitios::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.tarjetas-sitios::-webkit-scrollbar-button:increment,.tarjetas-sitios::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.tarjetas-sitios::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.tarjetas-sitios::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.tarjetas-sitios::-webkit-scrollbar-track {
+    border-radius: 10px;
 }

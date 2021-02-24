@@ -175,6 +175,10 @@ main {
 
 .contach {
     color: #4b4b4b;
+}
+
+.contac a,
+h3 {
     text-decoration: none;
 }
 
@@ -185,6 +189,19 @@ main {
 
 .copy {
     color: #4b4b4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copy__img {
+    width: 60%;
+}
+
+@media (min-width: 991px) {
+    .copy__img {
+        width: 100%;
+    }
 }
 
 
@@ -759,7 +776,7 @@ input:checked+.slider:before {
     transform: translate(0, -2rem);
 }
 
-.tarjetas-sitios__info{
+.tarjetas-sitios__info {
     max-width: 100%;
 }
 
@@ -803,12 +820,13 @@ input:checked+.slider:before {
 }
 
 .tarjetas-sitios::-webkit-scrollbar:vertical {
-    width:10px;
+    width: 10px;
 }
 
-.tarjetas-sitios::-webkit-scrollbar-button:increment,.tarjetas-sitios::-webkit-scrollbar-button {
+.tarjetas-sitios::-webkit-scrollbar-button:increment,
+.tarjetas-sitios::-webkit-scrollbar-button {
     display: none;
-} 
+}
 
 .tarjetas-sitios::-webkit-scrollbar:horizontal {
     height: 10px;

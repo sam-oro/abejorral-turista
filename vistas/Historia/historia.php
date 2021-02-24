@@ -145,7 +145,7 @@
                 </div>
                 <div class="col-lg-3 text-lg-left text-center copy">
                     <div class="copy__img">
-                        <img src="img/logo-tecno.png" alt="">
+                        <img src="../../img/logo-tecno.png" alt="">
                     </div>
                     <div class="copy__texto">
                         ©Abejorral

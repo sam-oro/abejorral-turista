@@ -212,6 +212,93 @@
 
     <section class="tarjetas-sitios">
         <?php
+            $sel5 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Rutas Naturales'");
+            ?>
+        <div class="tipo-sitio">
+            <div class="row">
+                <h1>RUTAS NATURALES</h1>
+            </div>
+            <?php 
+                    if (($sel5->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+            <div class="row" style="overflow: scroll; height: 72vh;">
+                <?php
+                        while ($fila5 = $sel5 -> fetch_assoc()) {
+                    ?>
+                <div class="tarjetas-sitios__contenedor">
+                    <div class="tarjetas-sitios__img">
+                        <img src="<?php echo $urlimagen.$fila5['img']?>" alt="">
+                    </div>
+
+                    <div class="tarjetas-sitios__info">
+                        <h3 class="tarjetas-sitios__titulo">
+                            <?php echo $fila5['Nombre']?>
+                        </h3>
+
+                        <p class="tarjetas-sitios__parrafo">
+                            <?php echo $fila5['Detalle']?>
+                        </p>
+
+                        <div class="text-center">
+                            <button class="btn btn-color"><i
+                                    class="fab fa-whatsapp mr-2"></i><?php echo $fila5['Telefono']?></button>
+                            <a href="<?php echo $fila5['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    }
+                    ?>
+            </div>
+            <?php } ?>
+        </div>
+
+        <?php
+            $sel4 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Rutas Hisoricas'");
+            ?>
+        <div class="tipo-sitio">
+            <div class="row">
+                <h1>RUTAS HISTORICAS</h1>
+            </div>
+            <?php 
+                    if (($sel4->num_rows)==0) {
+                        echo "<h1>No hubo resultados en la busqueda</h1>";
+                    }else{
+                    ?>
+            <div class="row" style="overflow: scroll; height: 72vh;">
+                <?php
+                        while ($fila4 = $sel4 -> fetch_assoc()) {
+                    ?>
+                <div class="tarjetas-sitios__contenedor">
+                    <div class="tarjetas-sitios__img">
+                        <img src="<?php echo $urlimagen.$fila4['img']?>" alt="">
+                    </div>
+
+                    <div class="tarjetas-sitios__info">
+                        <h3 class="tarjetas-sitios__titulo">
+                            <?php echo $fila4['Nombre']?>
+                        </h3>
+
+                        <p class="tarjetas-sitios__parrafo">
+                            <?php echo $fila4['Detalle']?>
+                        </p>
+
+                        <div class="text-center">
+                            <button class="btn btn-color"><i
+                                    class="fab fa-whatsapp mr-2"></i><?php echo $fila4['Telefono']?></button>
+                            <a href="<?php echo $fila4['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    }
+                    ?>
+            </div>
+            <?php } ?>
+        </div>
+        <?php
             $sel1 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Hospedaje' ORDER BY Cod_Sitio DESC");
             ?>
         <div class="tipo-sitio">
@@ -299,138 +386,6 @@
             <?php } ?>
         </div>
 
-        <?php
-            $sel3 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Sitios De Aventura' ORDER BY Cod_Sitio DESC");
-            ?>
-        <div class="tipo-sitio">
-            <div class="row">
-                <h1>SITIOS DE AVENTURA</h1>
-            </div>
-            <?php 
-                    if (($sel3->num_rows)==0) {
-                        echo "<h1>No hubo resultados en la busqueda</h1>";
-                    }else{
-                    ?>
-            <div class="row" style="overflow: scroll; height: 72vh;">
-                <?php
-                        while ($fila3 = $sel3 -> fetch_assoc()) {
-                    ?>
-                <div class="tarjetas-sitios__contenedor">
-                    <div class="tarjetas-sitios__img">
-                        <img src="<?php echo $urlimagen.$fila3['img']?>" alt="">
-                    </div>
-
-                    <div class="tarjetas-sitios__info">
-                        <h3 class="tarjetas-sitios__titulo">
-                            <?php echo $fila3['Nombre']?>
-                        </h3>
-
-                        <p class="tarjetas-sitios__parrafo">
-                            <?php echo $fila3['Detalle']?>
-                        </p>
-
-                        <div class="text-center">
-                            <button class="btn btn-color"><i
-                                    class="fab fa-whatsapp mr-2"></i><?php echo $fila3['Telefono']?></button>
-                            <a href="<?php echo $fila3['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                    }
-                    ?>
-            </div>
-            <?php } ?>
-        </div>
-
-        <?php
-            $sel4 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Rutas Hisoricas'");
-            ?>
-        <div class="tipo-sitio">
-            <div class="row">
-                <h1>RUTAS HISTORICAS</h1>
-            </div>
-            <?php 
-                    if (($sel4->num_rows)==0) {
-                        echo "<h1>No hubo resultados en la busqueda</h1>";
-                    }else{
-                    ?>
-            <div class="row" style="overflow: scroll; height: 72vh;">
-                <?php
-                        while ($fila4 = $sel4 -> fetch_assoc()) {
-                    ?>
-                <div class="tarjetas-sitios__contenedor">
-                    <div class="tarjetas-sitios__img">
-                        <img src="<?php echo $urlimagen.$fila4['img']?>" alt="">
-                    </div>
-
-                    <div class="tarjetas-sitios__info">
-                        <h3 class="tarjetas-sitios__titulo">
-                            <?php echo $fila4['Nombre']?>
-                        </h3>
-
-                        <p class="tarjetas-sitios__parrafo">
-                            <?php echo $fila4['Detalle']?>
-                        </p>
-
-                        <div class="text-center">
-                            <button class="btn btn-color"><i
-                                    class="fab fa-whatsapp mr-2"></i><?php echo $fila4['Telefono']?></button>
-                            <a href="<?php echo $fila4['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                    }
-                    ?>
-            </div>
-            <?php } ?>
-        </div>
-
-        <?php
-            $sel5 = $conn -> query("SELECT * FROM tblsitio WHERE tipo_sitio = 'Rutas Naturales'");
-            ?>
-        <div class="tipo-sitio">
-            <div class="row">
-                <h1>RUTAS NATURALES</h1>
-            </div>
-            <?php 
-                    if (($sel5->num_rows)==0) {
-                        echo "<h1>No hubo resultados en la busqueda</h1>";
-                    }else{
-                    ?>
-            <div class="row" style="overflow: scroll; height: 72vh;">
-                <?php
-                        while ($fila5 = $sel5 -> fetch_assoc()) {
-                    ?>
-                <div class="tarjetas-sitios__contenedor">
-                    <div class="tarjetas-sitios__img">
-                        <img src="<?php echo $urlimagen.$fila5['img']?>" alt="">
-                    </div>
-
-                    <div class="tarjetas-sitios__info">
-                        <h3 class="tarjetas-sitios__titulo">
-                            <?php echo $fila5['Nombre']?>
-                        </h3>
-
-                        <p class="tarjetas-sitios__parrafo">
-                            <?php echo $fila5['Detalle']?>
-                        </p>
-
-                        <div class="text-center">
-                            <button class="btn btn-color"><i
-                                    class="fab fa-whatsapp mr-2"></i><?php echo $fila5['Telefono']?></button>
-                            <a href="<?php echo $fila5['Web']?>" target="_blank" class="btn btn-color">pagina Web</a>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                    }
-                    ?>
-            </div>
-            <?php } ?>
-        </div>
-
     </section>
 
 
@@ -452,6 +407,7 @@
                 </div>
                 <div class="col-lg-3 text-lg-left text-center copy">
                     <div class="copy__img">
+                        <h5>Apoyado por:</h5>
                         <img src="../../img/logo-tecno.png" alt="">
                     </div>
                     <div class="copy__texto">

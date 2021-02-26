@@ -119,7 +119,6 @@ include '../conexion/conexion.php';
                                     <select class="form-control form-control-lg" name="tipo_sitio">
                                         <option value="Hospedaje">Hospedaje</option>
                                         <option value="Restaurante">Restaurante</option>
-                                        <option value="Sitios De Aventura">Sitios De Aventura</option>
                                         <option value="Rutas Hisoricas">Rutas Hisoricas</option>
                                         <option value="Rutas Naturales">Rutas Naturales</option>
                                     </select>

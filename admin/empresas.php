@@ -109,7 +109,7 @@ include '../conexion/conexion.php';
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="mt-4">Empresar Registradas</h1>
+                    <h1 class="mt-4">Empresas Registradas</h1>
                     <div class="mt-4">
                         <table class="table table-hover">
                             <thead class="thead">
@@ -132,7 +132,9 @@ include '../conexion/conexion.php';
                 FROM `tblempresa` 
                     LEFT JOIN `tblmunicipios` ON `tblempresa`.`Id_Municipio` = `tblmunicipios`.`id_Municipio` 
                     LEFT JOIN `tbldepartamentos` ON `tblmunicipios`.`Id_Departamento` = `tbldepartamentos`.`Id_Departamento`;");
+                    $cont=0;
                 while ($fila = $sel -> fetch_assoc()) {
+                    $cont++;
                 ?>
                             <tr>
                                 <td><?php echo $fila['Cod_Empresa'] ?></td>
@@ -159,6 +161,88 @@ include '../conexion/conexion.php';
                                 <td><a href="#" onclick="preguntar(<?php echo $fila['Cod_Empresa']?>)"><button class="btn btn-admin">Eliminar</button></a></td>
                                 </td>
                             </tr>
+
+                            <!-- modal actualizar empresa -->
+                            <div class="modal" tabindex="-1" role="dialog" id="modal<?php echo $cont; ?>">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Actualizar Empresa<strong> <?php echo $fila['Nombre'] ?></strong></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <form action="controlador/actualizar_empresa.php" method="POST">
+
+                                        <!-- <label>Codigo empresa:</label> -->
+                                        <input type="text" class="form-control" name="cod_empresa" value="<?php echo $fila['Cod_Empresa'] ?>" hidden>
+
+                                        <br>
+
+                                        <label>RUT:</label>
+                                        <input type="text" class="form-control" name="rut" value="<?php echo $fila['RUT_Empresa'] ?>" required>
+
+                                        <br>
+
+                                        <label>Nombre:</label>
+                                        <input type="text" class="form-control" name="nombre" value="<?php echo $fila['Nombre'] ?>" required>
+
+                                        <label>Celular:</label>
+                                        <input type="text" class="form-control" name="celular" value="<?php echo $fila['Cel'] ?>" required>
+
+                                        <br>
+
+                                        <label>Telefono:</label>
+                                        <input type="text" class="form-control" name="telefono" value="<?php echo $fila['Telefono'] ?>" required>
+
+                                        <br>
+
+                                        <label>Correo:</label>
+                                        <input type="email
+                                        " class="form-control" name="correo" value="<?php echo $fila['Correo'] ?>" required>
+
+                                        <br>
+
+                                        <label>Departamento:</label>
+                                        <input type="text" class="form-control" name="dep" value="<?php echo $fila['departamento'] ?>" required disabled>
+                                        
+                                        <br>
+                                        
+
+                                        <label>Municipio:</label>
+                                        <input type="text" class="form-control" name="mun" value="<?php echo $fila['municipio'] ?>" required disabled>
+
+                                        <br>
+
+                                        <label>Dirección:</label>
+                                        <input type="text" class="form-control" name="direccion" value="<?php echo $fila['Direccion'] ?>" required>
+
+                                        <br>
+
+                                        <label>Latitud:</label>
+                                        <input type="text" class="form-control" name="latitud" value="<?php echo $fila['Latitud'] ?>" required>
+
+                                        <br>
+
+                                        <label>Longitud:</label>
+                                        <input type="text" class="form-control" name="longitud" value="<?php echo $fila['Longitud'] ?>" required>
+
+                                    
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-admin" type="submit">Actualizar</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fin del modal actualizar  -->
+                            
                             <?php } ?>
                         </table>
                     </div>
@@ -171,10 +255,9 @@ include '../conexion/conexion.php';
         <!-- /#wrapper -->
 
         <!-- Bootstrap core JavaScript -->
-        <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
@@ -187,6 +270,31 @@ include '../conexion/conexion.php';
                 $("#wrapper").toggleClass("toggled");
             });
         </script>
+
+            <!-- script para recargar los municipios -->
+
+            <!-- <script type="text/javascript">
+            $(document).ready(function() {
+                recargarLista();
+
+                $('#departamento').change(function() {
+                    recargarLista();
+                });
+            })
+        </script>
+        <script type="text/javascript">
+            function recargarLista() {
+                $.ajax({
+                    type: "POST",
+                    url: "../vistas/Empresa/slc_municipio.php",
+                    data: "departamento=" + $('#departamento').val(),
+                    success: function(r) {
+                        $('#municipio').html(r);
+                    }
+                });
+            }
+        </script> -->
+        
 
 
         <!-- pregunta antes de eliminar sweat alert -->
